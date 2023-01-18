@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model ref="r:d6d027de-21bd-4f4c-ab92-9d2d731a68fc(DeMAFSandbox.demaf)">
+  <persistence version="9" />
+  <languages>
+    <use id="f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c" name="EDMM" version="0" />
+    <use id="ddc037a1-a551-4922-9271-aa3b6cf83a39" name="Kubernetes" version="-1" />
+  </languages>
+  <imports />
+  <registry>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
+        <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+    <language id="f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c" name="EDMM">
+      <concept id="2620860285162130305" name="EDMM.structure.Property" flags="ng" index="VmU4a">
+        <property id="2620860285162130306" name="key" index="VmU49" />
+        <property id="2620860285162130308" name="value" index="VmU4f" />
+      </concept>
+      <concept id="2620860285162130347" name="EDMM.structure.Artifact" flags="ng" index="VmU4w" />
+      <concept id="2620860285162130341" name="EDMM.structure.Operation" flags="ng" index="VmU4I">
+        <child id="2620860285162130352" name="artifacts" index="VmU4V" />
+      </concept>
+      <concept id="2620860285162130361" name="EDMM.structure.ComponentType" flags="ng" index="VmU4M" />
+      <concept id="2620860285162130367" name="EDMM.structure.Relation" flags="ng" index="VmU4O" />
+      <concept id="2620860285162130364" name="EDMM.structure.RelationType" flags="ng" index="VmU4R" />
+      <concept id="2620860285162130372" name="EDMM.structure.Component" flags="ng" index="VmU5f">
+        <reference id="2620860285162130373" name="type" index="VmU5e" />
+      </concept>
+      <concept id="2620860285162130297" name="EDMM.structure.DeploymentModel" flags="ng" index="VmU7M">
+        <child id="2620860285162130338" name="properties" index="VmU4D" />
+        <child id="2620860285162130303" name="modelEntities" index="VmU7O" />
+      </concept>
+      <concept id="2620860285162130300" name="EDMM.structure.ModelEntity" flags="ng" index="VmU7R">
+        <child id="2620860285162130344" name="operations" index="VmU4z" />
+        <child id="2620860285162130336" name="properties" index="VmU4F" />
+      </concept>
+    </language>
+  </registry>
+  <node concept="VmU7M" id="2hvaCGv1fQ4">
+    <node concept="VmU7R" id="4wLeArqymsT" role="VmU7O" />
+    <node concept="VmU7R" id="4wLeArqxR5R" role="VmU7O" />
+    <node concept="VmU7R" id="4wLeArqxGBp" role="VmU7O" />
+    <node concept="VmU7R" id="4wLeArqx2zB" role="VmU7O" />
+    <node concept="VmU7R" id="4wLeArqvilp" role="VmU7O" />
+    <node concept="VmU7R" id="4wLeArqvbDu" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6emp" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6elT" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6elq" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6ekW" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6ekv" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6ek3" role="VmU7O" />
+    <node concept="VmU4a" id="2hvaCGv1hLm" role="VmU4D">
+      <property role="VmU49" value="version" />
+      <property role="VmU4f" value="1.3" />
+    </node>
+    <node concept="VmU4a" id="3p0Gq6Vc3Gs" role="VmU4D" />
+    <node concept="VmU4a" id="2hvaCGv1hLo" role="VmU4D">
+      <property role="VmU49" value="x" />
+      <property role="VmU4f" value="3" />
+    </node>
+    <node concept="VmU4a" id="2hvaCGv1hLr" role="VmU4D">
+      <property role="VmU49" value="y" />
+      <property role="VmU4f" value="5" />
+    </node>
+    <node concept="VmU4a" id="4wLeArqxR5M" role="VmU4D" />
+    <node concept="VmU4a" id="21VM_ct8YDy" role="VmU4D" />
+    <node concept="VmU7R" id="4wLeArqvbAY" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6ehJ" role="VmU7O" />
+    <node concept="VmU7R" id="2vIIXJQ0RyO" role="VmU7O" />
+    <node concept="VmU7R" id="2vIIXJQ0RyH" role="VmU7O" />
+    <node concept="VmU7R" id="2vIIXJQ0RyB" role="VmU7O" />
+    <node concept="VmU7R" id="2vIIXJQ0Ryy" role="VmU7O" />
+    <node concept="VmU7R" id="2vIIXJQ0Ryu" role="VmU7O" />
+    <node concept="VmU7R" id="2vIIXJQ0Ryr" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6ejC" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6eje" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6eiP" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6eit" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6ei6" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6ehr" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6eh8" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6egQ" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6eg_" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6egl" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6eg6" role="VmU7O" />
+    <node concept="VmU7R" id="2vIIXJQ0YiZ" role="VmU7O" />
+    <node concept="VmU7R" id="2vIIXJQ0YiM" role="VmU7O" />
+    <node concept="VmU7R" id="2vIIXJQ0YiA" role="VmU7O" />
+    <node concept="VmU7R" id="2vIIXJQ0Yir" role="VmU7O" />
+    <node concept="VmU7R" id="2vIIXJQ0UUu" role="VmU7O" />
+    <node concept="VmU7R" id="4wLeArqvbAk" role="VmU7O" />
+    <node concept="VmU7R" id="4wLeArqvb_F" role="VmU7O" />
+    <node concept="VmU7R" id="4wLeArqvb_3" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6epI" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6ep8" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6eoz" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6enZ" role="VmU7O" />
+    <node concept="VmU7R" id="1s6BsNW6ens" role="VmU7O" />
+    <node concept="VmU4O" id="4wLeArqvGn9" role="VmU7O">
+      <node concept="VmU4a" id="4wLeArqwC_V" role="VmU4F" />
+      <node concept="VmU4a" id="4wLeArqwC_X" role="VmU4F" />
+      <node concept="VmU4a" id="4wLeArqwCA0" role="VmU4F" />
+      <node concept="VmU4I" id="4wLeArqxd90" role="VmU4z">
+        <property role="TrG5h" value="op1" />
+        <node concept="VmU4w" id="4wLeArqxd9P" role="VmU4V" />
+        <node concept="VmU4w" id="4wLeArqxnDq" role="VmU4V" />
+        <node concept="VmU4w" id="4wLeArqxnDt" role="VmU4V" />
+      </node>
+    </node>
+    <node concept="VmU7R" id="4wLeArqxnC_" role="VmU7O" />
+    <node concept="VmU7R" id="4wLeArqxd92" role="VmU7O" />
+    <node concept="VmU7R" id="4wLeArqxd8f" role="VmU7O" />
+    <node concept="VmU7R" id="4wLeArqx2yS" role="VmU7O" />
+    <node concept="VmU7R" id="4wLeArqx2ya" role="VmU7O" />
+    <node concept="VmU4O" id="4wLeArqymtN" role="VmU7O" />
+    <node concept="VmU5f" id="21VM_ct6ZFD" role="VmU7O">
+      <ref role="VmU5e" node="21VM_ct7ahg" resolve="x" />
+      <node concept="VmU4I" id="21VM_ct7mdD" role="VmU4z">
+        <node concept="VmU4w" id="21VM_ct7TYz" role="VmU4V" />
+      </node>
+      <node concept="VmU4I" id="21VM_ct7TYw" role="VmU4z" />
+      <node concept="VmU4a" id="21VM_ct7mdw" role="VmU4F" />
+      <node concept="VmU4a" id="21VM_ct7mdy" role="VmU4F" />
+      <node concept="VmU4a" id="21VM_ct7md_" role="VmU4F" />
+    </node>
+    <node concept="VmU4M" id="21VM_ct7ahg" role="VmU7O">
+      <property role="TrG5h" value="x" />
+      <node concept="VmU4a" id="21VM_ct8YDn" role="VmU4F" />
+      <node concept="VmU4a" id="21VM_ct9dkE" role="VmU4F" />
+      <node concept="VmU4a" id="21VM_ct9dkH" role="VmU4F" />
+    </node>
+    <node concept="VmU4R" id="21VM_ct7mck" role="VmU7O">
+      <property role="TrG5h" value="DependsOn" />
+      <node concept="VmU4a" id="21VM_ct7mdi" role="VmU4F" />
+      <node concept="VmU4a" id="21VM_ct7mdk" role="VmU4F" />
+      <node concept="VmU4a" id="21VM_ct7mdn" role="VmU4F" />
+      <node concept="VmU4a" id="21VM_ct7mdr" role="VmU4F" />
+      <node concept="VmU4I" id="21VM_ct7U0S" role="VmU4z" />
+    </node>
+    <node concept="VmU7R" id="21VM_ct7TZI" role="VmU7O" />
+    <node concept="VmU7R" id="21VM_ct7TY_" role="VmU7O" />
+  </node>
+</model>
+

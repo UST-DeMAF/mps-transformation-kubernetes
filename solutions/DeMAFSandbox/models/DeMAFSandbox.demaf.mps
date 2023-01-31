@@ -3,7 +3,6 @@
   <persistence version="9" />
   <languages>
     <use id="f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c" name="EDMM" version="0" />
-    <use id="ddc037a1-a551-4922-9271-aa3b6cf83a39" name="Kubernetes" version="-1" />
   </languages>
   <imports />
   <registry>
@@ -98,9 +97,7 @@
     <node concept="VmU7R" id="1s6BsNW6enZ" role="VmU7O" />
     <node concept="VmU7R" id="1s6BsNW6ens" role="VmU7O" />
     <node concept="VmU4O" id="4wLeArqvGn9" role="VmU7O">
-      <node concept="VmU4a" id="4wLeArqwC_V" role="VmU4F" />
-      <node concept="VmU4a" id="4wLeArqwC_X" role="VmU4F" />
-      <node concept="VmU4a" id="4wLeArqwCA0" role="VmU4F" />
+      <node concept="VmU4a" id="4f$GP7YrUwE" role="VmU4F" />
       <node concept="VmU4I" id="4wLeArqxd90" role="VmU4z">
         <property role="TrG5h" value="op1" />
         <node concept="VmU4w" id="4wLeArqxd9P" role="VmU4V" />

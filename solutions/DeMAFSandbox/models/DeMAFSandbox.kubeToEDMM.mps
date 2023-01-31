@@ -111,6 +111,7 @@
         </node>
         <node concept="2iieDK" id="4wLeArqywLv" role="2iieD0">
           <property role="2iieDV" value="8081" />
+          <property role="2iieDL" value="noname" />
         </node>
         <node concept="2iieDK" id="3p0Gq6VcsPp" role="2iieD0">
           <property role="2iieDL" value="AnotherEndpoint" />

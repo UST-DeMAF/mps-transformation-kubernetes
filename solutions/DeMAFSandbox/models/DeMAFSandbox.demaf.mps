@@ -16,7 +16,9 @@
         <property id="2620860285162130306" name="key" index="VmU49" />
         <property id="2620860285162130308" name="value" index="VmU4f" />
       </concept>
-      <concept id="2620860285162130347" name="EDMM.structure.Artifact" flags="ng" index="VmU4w" />
+      <concept id="2620860285162130347" name="EDMM.structure.Artifact" flags="ng" index="VmU4w">
+        <property id="2620860285162130350" name="fileURI" index="VmU4_" />
+      </concept>
       <concept id="2620860285162130341" name="EDMM.structure.Operation" flags="ng" index="VmU4I">
         <child id="2620860285162130352" name="artifacts" index="VmU4V" />
       </concept>
@@ -116,7 +118,12 @@
       <node concept="VmU4I" id="21VM_ct7mdD" role="VmU4z">
         <node concept="VmU4w" id="21VM_ct7TYz" role="VmU4V" />
       </node>
-      <node concept="VmU4I" id="21VM_ct7TYw" role="VmU4z" />
+      <node concept="VmU4I" id="21VM_ct7TYw" role="VmU4z">
+        <node concept="VmU4w" id="7Bdv9R5eAZS" role="VmU4V">
+          <property role="VmU4_" value="-" />
+        </node>
+      </node>
+      <node concept="VmU4I" id="7Bdv9R5eAZN" role="VmU4z" />
       <node concept="VmU4a" id="21VM_ct7mdw" role="VmU4F" />
       <node concept="VmU4a" id="21VM_ct7mdy" role="VmU4F" />
       <node concept="VmU4a" id="21VM_ct7md_" role="VmU4F" />

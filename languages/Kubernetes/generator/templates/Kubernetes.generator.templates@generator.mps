@@ -558,7 +558,7 @@
     <node concept="VmU4w" id="3p0Gq6VaJlr" role="13RCb5">
       <property role="2iHhcE" value="docker_image" />
       <property role="TrG5h" value="ArtifactName" />
-      <property role="VmU4_" value="-" />
+      <property role="VmU4_" value="&quot;-&quot;" />
       <node concept="raruj" id="3p0Gq6VaJlt" role="lGtFl" />
       <node concept="17Uvod" id="3p0Gq6VaK4t" role="lGtFl">
         <property role="2qtEX9" value="name" />

@@ -326,35 +326,6 @@
             </node>
           </node>
         </node>
-        <node concept="1yeLz9" id="HUoyRpFek6" role="1TViLv">
-          <property role="TrG5h" value="EDMM.generator" />
-          <property role="3LESm3" value="03d4e71e-90fe-455d-877c-226329bb22a9" />
-          <node concept="1BupzO" id="HUoyRpFekm" role="3bR31x">
-            <property role="3ZfqAx" value="generator/templates" />
-            <property role="1Hdu6h" value="true" />
-            <property role="1HemKv" value="true" />
-            <node concept="3LXTmp" id="HUoyRpFekn" role="1HemKq">
-              <node concept="398BVA" id="HUoyRpFek7" role="3LXTmr">
-                <ref role="398BVh" node="HUoyRpFeaY" resolve="project_home" />
-                <node concept="2Ry0Ak" id="HUoyRpFek8" role="iGT6I">
-                  <property role="2Ry0Am" value="languages" />
-                  <node concept="2Ry0Ak" id="HUoyRpFek9" role="2Ry0An">
-                    <property role="2Ry0Am" value="EDMM" />
-                    <node concept="2Ry0Ak" id="HUoyRpFeka" role="2Ry0An">
-                      <property role="2Ry0Am" value="generator" />
-                      <node concept="2Ry0Ak" id="HUoyRpFekb" role="2Ry0An">
-                        <property role="2Ry0Am" value="templates" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-              <node concept="3qWCbU" id="HUoyRpFeko" role="3LXTna">
-                <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
-              </node>
-            </node>
-          </node>
-        </node>
       </node>
       <node concept="1E1JtA" id="HUoyRpFe93" role="2G$12L">
         <property role="BnDLt" value="true" />

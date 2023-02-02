@@ -106,8 +106,8 @@
         <property role="2iieDR" value="yCont" />
         <property role="2iieDP" value="t2project/orchestrator:main" />
         <node concept="2iieD6" id="4wLeArqywLE" role="2iieDe">
-          <property role="2iieD7" value="y" />
-          <property role="2iieD5" value="y" />
+          <property role="2iieD7" value="server" />
+          <property role="2iieD5" value="8080" />
         </node>
         <node concept="2iieDK" id="4wLeArqywLv" role="2iieD0">
           <property role="2iieDV" value="8081" />

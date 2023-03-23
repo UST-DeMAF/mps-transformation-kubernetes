@@ -123,7 +123,7 @@
     <node concept="VmU4O" id="4wLeArqvGn9" role="VmU7O">
       <property role="TrG5h" value="xToy" />
       <ref role="VmU59" node="21VM_ct7mck" resolve="DependsOn" />
-      <ref role="VmU5c" node="21VM_ct6ZFD" />
+      <ref role="VmU5c" node="21VM_ct6ZFD" resolve="x" />
       <ref role="VmU51" node="21VM_ct6ZFD" resolve="x" />
       <node concept="VmU4I" id="6AP50I9rfV4" role="VmU4z">
         <property role="TrG5h" value="op2" />

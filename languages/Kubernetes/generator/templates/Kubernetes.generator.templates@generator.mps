@@ -221,7 +221,7 @@
     <node concept="3aamgX" id="5aHBNmvxEoG" role="3acgRq">
       <ref role="30HIoZ" to="4abx:4wLeArqu9I9" resolve="Deployment" />
       <node concept="j$656" id="5aHBNmvxEoO" role="1lVwrX">
-        <ref role="v9R2y" node="5aHBNmvxEoM" resolve="reduce_Deployment" />
+        <ref role="v9R2y" node="5aHBNmvxEoM" resolve="reduce_Deployment_Component" />
       </node>
     </node>
     <node concept="3aamgX" id="6VSF6pq1h4U" role="3acgRq">
@@ -484,7 +484,7 @@
                 <node concept="3clFbF" id="3p0Gq6VeVUa" role="3cqZAp">
                   <node concept="2YIFZM" id="3p0Gq6VeVY$" role="3clFbG">
                     <ref role="37wK5l" to="l3oo:3p0Gq6VeiSo" resolve="createMatchingServicesAndDeployments" />
-                    <ref role="1Pybhc" to="l3oo:3p0Gq6VeiQb" resolve="Matcher" />
+                    <ref role="1Pybhc" to="l3oo:3p0Gq6VeiQb" resolve="MatcherUtil" />
                     <node concept="1iwH7S" id="3p0Gq6VeW1a" role="37wK5m" />
                     <node concept="30H73N" id="3p0Gq6VeW6z" role="37wK5m" />
                   </node>

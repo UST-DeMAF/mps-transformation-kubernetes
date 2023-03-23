@@ -140,7 +140,7 @@
           <node concept="2Ry0Ak" id="HUoyRpFea5" role="2Ry0An">
             <property role="2Ry0Am" value="mps-bundle" />
             <node concept="2Ry0Ak" id="HUoyRpFebf" role="2Ry0An">
-              <property role="2Ry0Am" value="mps" />
+              <property role="2Ry0Am" value="Contents" />
             </node>
           </node>
         </node>
@@ -157,7 +157,7 @@
       </node>
     </node>
     <node concept="2sgV4H" id="HUoyRpFe8K" role="1l3spa">
-      <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" />
+      <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="HUoyRpFe8L" role="2JcizS">
         <ref role="398BVh" node="HUoyRpFe8J" resolve="mps_home" />
       </node>
@@ -191,7 +191,7 @@
         <ref role="m$f5T" node="HUoyRpFe94" resolve="DeMAF" />
       </node>
       <node concept="m$_yC" id="HUoyRpFe9b" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" />
+        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
       </node>
       <node concept="3_J27D" id="HUoyRpFe9c" role="m_cZH">
         <node concept="3Mxwew" id="HUoyRpFe9d" role="3MwsjC">
@@ -362,6 +362,16 @@
             <node concept="3qWCbU" id="HUoyRpFekA" role="3LXTna">
               <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
             </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="2zECUB0tDDJ" role="3bR37C">
+          <node concept="3bR9La" id="2zECUB0tDDK" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="2zECUB0tDDL" role="3bR37C">
+          <node concept="3bR9La" id="2zECUB0tDDM" role="1SiIV1">
+            <ref role="3bR37D" node="HUoyRpFe8R" resolve="Kubernetes" />
           </node>
         </node>
       </node>

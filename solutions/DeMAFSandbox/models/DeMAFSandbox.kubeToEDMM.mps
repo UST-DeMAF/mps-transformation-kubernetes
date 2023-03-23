@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model ref="r:04b559db-78a3-46ab-9514-30d04e274a45(DeMAFSandbox.kubeToEDMM)">
   <persistence version="9" />
+  <attribute name="doNotGenerate" value="false" />
   <languages>
-    <use id="f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c" name="EDMM" version="0" />
     <use id="ddc037a1-a551-4922-9271-aa3b6cf83a39" name="Kubernetes" version="0" />
   </languages>
   <imports />

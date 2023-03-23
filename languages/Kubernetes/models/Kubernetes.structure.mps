@@ -218,7 +218,7 @@
     <property role="TrG5h" value="KubernetesDeploymentModel" />
     <property role="19KtqR" value="true" />
     <property role="34LRSv" value="Kubernetes Deployment Model" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="4wLeArqywgh" role="1TKVEi">
       <property role="IQ2ns" value="5202003258017186833" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -239,7 +239,7 @@
     <property role="TrG5h" value="MatchingServiceAndDeployment" />
     <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="util" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="3p0Gq6VggFc" role="1TKVEi">
       <property role="IQ2ns" value="3909319784747043532" />
       <property role="20kJfa" value="service" />

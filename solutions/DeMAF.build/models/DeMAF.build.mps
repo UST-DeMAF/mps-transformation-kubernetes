@@ -7,6 +7,7 @@
   </languages>
   <imports>
     <import index="ffeo" ref="r:874d959d-e3b4-4d04-b931-ca849af130dd(jetbrains.mps.ide.build)" />
+    <import index="7ms3" ref="r:779eeecf-7d02-4fac-bede-7eb9458cfec9(DeMAF.genplan@genplan)" />
   </imports>
   <registry>
     <language id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml">
@@ -372,6 +373,49 @@
         <node concept="1SiIV0" id="2zECUB0tDDL" role="3bR37C">
           <node concept="3bR9La" id="2zECUB0tDDM" role="1SiIV1">
             <ref role="3bR37D" node="HUoyRpFe8R" resolve="Kubernetes" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="MfR$yblbWp" role="3bR37C">
+          <node concept="3bR9La" id="MfR$yblbWq" role="1SiIV1">
+            <ref role="3bR37D" node="MfR$yblbT6" resolve="DeMAF.genplan" />
+          </node>
+        </node>
+      </node>
+      <node concept="1E1JtA" id="MfR$yblbT6" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="DeMAF.genplan" />
+        <property role="3LESm3" value="abada739-b416-49fb-8dee-25cd9686e4cd" />
+        <node concept="55IIr" id="MfR$yblbT7" role="3LF7KH">
+          <node concept="2Ry0Ak" id="MfR$yblbT8" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="MfR$yblbUv" role="2Ry0An">
+              <property role="2Ry0Am" value="DeMAF.genplan" />
+              <node concept="2Ry0Ak" id="MfR$yblbU$" role="2Ry0An">
+                <property role="2Ry0Am" value="DeMAF.genplan.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1BupzO" id="MfR$yblbTb" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="MfR$yblbV_" role="1HemKq">
+            <node concept="398BVA" id="MfR$yblbVp" role="3LXTmr">
+              <ref role="398BVh" node="HUoyRpFeaY" resolve="project_home" />
+              <node concept="2Ry0Ak" id="MfR$yblbVq" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="MfR$yblbVr" role="2Ry0An">
+                  <property role="2Ry0Am" value="DeMAF.genplan" />
+                  <node concept="2Ry0Ak" id="MfR$yblbVs" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="MfR$yblbVA" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
           </node>
         </node>
       </node>

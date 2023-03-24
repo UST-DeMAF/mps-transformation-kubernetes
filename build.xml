@@ -283,6 +283,7 @@
     <echoxml file="${build.tmp}/default/DeMAFSandbox.jar/META-INF/module.xml">
       <module namespace="DeMAFSandbox" type="solution" uuid="2e78df07-0ac0-4aec-8fe4-49e5ef4ce562">
         <dependencies>
+          <module ref="abada739-b416-49fb-8dee-25cd9686e4cd(DeMAF.genplan)" kind="cl" />
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
           <module ref="ddc037a1-a551-4922-9271-aa3b6cf83a39(Kubernetes)" kind="cl" />
         </dependencies>
@@ -314,6 +315,38 @@
       <zipfileset file="${basedir}/solutions/DeMAFSandbox/DeMAFSandbox.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-DeMAFSandbox-models" prefix="module/models" />
     </jar>
+    <mkdir dir="${build.tmp}/default/DeMAF.genplan.jar" />
+    <mkdir dir="${build.tmp}/default/DeMAF.genplan.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/DeMAF.genplan.jar/META-INF/module.xml">
+      <module namespace="DeMAF.genplan" type="solution" uuid="abada739-b416-49fb-8dee-25cd9686e4cd">
+        <dependencies />
+        <uses>
+          <language id="l:7ab1a6fa-0a11-4b95-9e48-75f363d6cb00:jetbrains.mps.lang.generator.plan" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="DeMAF.genplan-src.jar" descriptor="DeMAF.genplan.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/EDMM.zip/DeMAF/languages/DeMAF/DeMAF.genplan.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/DeMAF.genplan" />
+      <fileset dir="${project_home}/solutions/DeMAF.genplan/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/DeMAF.genplan.jar" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-DeMAF.genplan-models">
+      <fileset dir="${project_home}/solutions/DeMAF.genplan/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.tmp}/default/EDMM.zip/DeMAF/languages/DeMAF/DeMAF.genplan-src.jar" duplicate="preserve">
+      <fileset dir="${project_home}/solutions/DeMAF.genplan/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${basedir}/solutions/DeMAF.genplan/DeMAF.genplan.msd" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-DeMAF.genplan-models" prefix="module/models" />
+    </jar>
     <zip destfile="${build.layout}/EDMM.zip">
       <fileset dir="${build.tmp}/default/EDMM.zip" />
     </zip>
@@ -331,7 +364,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.Kubernetes, java.compile.Kubernetes.generator, java.compile.EDMM, java.compile.DeMAFSandbox" />
+  <target name="compileJava" depends="java.compile.Kubernetes, java.compile.Kubernetes.generator, java.compile.EDMM, java.compile.DeMAFSandbox, java.compile.DeMAF.genplan" />
   
   <target name="processResources" />
   
@@ -399,6 +432,7 @@
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.generator.generationContext.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.generator.generationParameters.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.generator.jar" />
+      <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.generator.plan.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.intentions.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.messages.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.migration.jar" />
@@ -454,6 +488,7 @@
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.refactoring.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.runtime.jar" />
       <chunk>
+        <module file="${basedir}/solutions/DeMAF.genplan/DeMAF.genplan.msd" />
         <module file="${basedir}/languages/EDMM/EDMM.mpl" />
         <module file="${basedir}/languages/Kubernetes/Kubernetes.mpl" />
       </chunk>
@@ -624,7 +659,7 @@
     </javac>
   </target>
   
-  <target name="java.compile.DeMAFSandbox" depends="java.compile.Kubernetes, fetchDependencies">
+  <target name="java.compile.DeMAFSandbox" depends="java.compile.DeMAF.genplan, java.compile.Kubernetes, fetchDependencies">
     <mkdir dir="${project_home}/solutions/DeMAFSandbox/source_gen" />
     <mkdir dir="${build.tmp}/java/out/DeMAFSandbox" />
     <javac destdir="${build.tmp}/java/out/DeMAFSandbox" fork="true" encoding="utf8" includeantruntime="false" debug="true">
@@ -633,6 +668,7 @@
         <path location="${project_home}/solutions/DeMAFSandbox/source_gen" />
       </src>
       <classpath>
+        <pathelement path="${build.tmp}/java/out/DeMAF.genplan" />
         <fileset file="${artifacts.mps}/lib/mps-core.jar" />
         <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
         <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
@@ -671,7 +707,20 @@
     </javac>
   </target>
   
+  <target name="java.compile.DeMAF.genplan">
+    <mkdir dir="${project_home}/solutions/DeMAF.genplan/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/DeMAF.genplan" />
+    <javac destdir="${build.tmp}/java/out/DeMAF.genplan" fork="true" encoding="utf8" includeantruntime="false" debug="true">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${project_home}/solutions/DeMAF.genplan/source_gen" />
+      </src>
+      <classpath />
+    </javac>
+  </target>
+  
   <target name="cleanSources">
+    <delete dir="${project_home}/solutions/DeMAF.genplan/source_gen" />
     <delete dir="${project_home}/languages/EDMM/source_gen" />
     <delete dir="${project_home}/languages/Kubernetes/source_gen" />
     <delete dir="${project_home}/solutions/DeMAFSandbox/source_gen" />

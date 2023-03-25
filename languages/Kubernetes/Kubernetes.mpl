@@ -57,22 +57,7 @@
         <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
         <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
       </dependencyVersions>
-      <mapping-priorities>
-        <mapping-priority-rule kind="before_or_together">
-          <greater-priority-mapping>
-            <generator generatorUID="8a72f140-e092-4130-a870-cd3b05159b5f(Kubernetes.generator)" />
-            <external-mapping>
-              <mapping-node modelUID="r:4843e833-b6b8-4441-9f07-c3cf6d5dd864(Kubernetes.generator.templates@generator)" nodeID="5202003258016045960" />
-            </external-mapping>
-          </greater-priority-mapping>
-          <lesser-priority-mapping>
-            <generator generatorUID="8a72f140-e092-4130-a870-cd3b05159b5f(Kubernetes.generator)" />
-            <external-mapping>
-              <mapping-node modelUID="r:4843e833-b6b8-4441-9f07-c3cf6d5dd864(Kubernetes.generator.templates@generator)" nodeID="3361841065597160560" />
-            </external-mapping>
-          </lesser-priority-mapping>
-        </mapping-priority-rule>
-      </mapping-priorities>
+      <mapping-priorities />
     </generator>
   </generators>
   <sourcePath />

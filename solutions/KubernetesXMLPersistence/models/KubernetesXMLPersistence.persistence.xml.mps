@@ -295,9 +295,9 @@
                     <node concept="3Tqbb2" id="6vt1eWmes4t" role="1tU5fm">
                       <ref role="ehGHo" to="4abx:4wLeArqu9I9" resolve="Deployment" />
                     </node>
-                    <node concept="2ShNRf" id="6vt1eWmeF7s" role="33vP2m">
-                      <node concept="3zrR0B" id="6vt1eWmeF6m" role="2ShVmc">
-                        <node concept="3Tqbb2" id="6vt1eWmeF6n" role="3zrR0E">
+                    <node concept="2ShNRf" id="5t_3UwlHBeT" role="33vP2m">
+                      <node concept="3zrR0B" id="5t_3UwlHBeU" role="2ShVmc">
+                        <node concept="3Tqbb2" id="5t_3UwlHBeV" role="3zrR0E">
                           <ref role="ehGHo" to="4abx:4wLeArqu9I9" resolve="Deployment" />
                         </node>
                       </node>
@@ -406,6 +406,18 @@
                             </node>
                           </node>
                         </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbF" id="5t_3UwlHBeO" role="3cqZAp">
+                  <node concept="2OqwBi" id="5t_3UwlHBeQ" role="3clFbG">
+                    <node concept="37vLTw" id="5t_3UwlHBeR" role="2Oq$k0">
+                      <ref role="3cqZAo" node="6vt1eWmavlZ" resolve="kubeDeployments" />
+                    </node>
+                    <node concept="TSZUe" id="5t_3UwlHBeS" role="2OqNvi">
+                      <node concept="37vLTw" id="5t_3UwlHUb1" role="25WWJ7">
+                        <ref role="3cqZAo" node="6vt1eWmes4y" resolve="kubeDeployment" />
                       </node>
                     </node>
                   </node>

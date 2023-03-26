@@ -126,7 +126,7 @@
     </language>
   </registry>
   <node concept="312cEu" id="1mnvxr20E5e">
-    <property role="TrG5h" value="XmlConverter" />
+    <property role="TrG5h" value="KubernetesXmlConverter" />
     <node concept="2tJIrI" id="3F8ekXLyJ$J" role="jymVt" />
     <node concept="2YIFZL" id="3F8ekXLyPIw" role="jymVt">
       <property role="TrG5h" value="createNewKubernetesDeploymentModel" />

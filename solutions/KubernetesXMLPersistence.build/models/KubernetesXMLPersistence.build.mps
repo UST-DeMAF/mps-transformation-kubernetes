@@ -11,6 +11,9 @@
   <registry>
     <language id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build">
       <concept id="5481553824944787378" name="jetbrains.mps.build.structure.BuildSourceProjectRelativePath" flags="ng" index="55IIr" />
+      <concept id="9126048691955220717" name="jetbrains.mps.build.structure.BuildLayout_File" flags="ng" index="28jJK3">
+        <child id="9126048691955220762" name="path" index="28jJRO" />
+      </concept>
       <concept id="7321017245476976379" name="jetbrains.mps.build.structure.BuildRelativePath" flags="ng" index="iG8Mu">
         <child id="7321017245477039051" name="compositePart" index="iGT6I" />
       </concept>
@@ -585,6 +588,20 @@
             </node>
             <node concept="L2wRC" id="3F8ekXL$tDZ" role="39821P">
               <ref role="L2wRA" node="3F8ekXL$th0" resolve="KubernetesXMLPersistence" />
+            </node>
+            <node concept="28jJK3" id="1T99Ev56qV8" role="39821P">
+              <node concept="398BVA" id="1T99Ev56qVf" role="28jJRO">
+                <ref role="398BVh" node="3F8ekXL$tcP" resolve="mps_dist" />
+                <node concept="2Ry0Ak" id="1T99Ev56qVl" role="iGT6I">
+                  <property role="2Ry0Am" value="languages" />
+                  <node concept="2Ry0Ak" id="1T99Ev56qVq" role="2Ry0An">
+                    <property role="2Ry0Am" value="baseLanguage" />
+                    <node concept="2Ry0Ak" id="1T99Ev56qVv" role="2Ry0An">
+                      <property role="2Ry0Am" value="jetbrains.mps.baseLanguage.logging.runtime.jar" />
+                    </node>
+                  </node>
+                </node>
+              </node>
             </node>
           </node>
         </node>

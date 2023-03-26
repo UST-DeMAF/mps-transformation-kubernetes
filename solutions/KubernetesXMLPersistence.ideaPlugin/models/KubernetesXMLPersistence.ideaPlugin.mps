@@ -110,7 +110,7 @@
             <node concept="2pNUuL" id="3EZR1q044pb" role="2pNNFR">
               <property role="2pNUuO" value="implementationClass" />
               <node concept="2pMdtt" id="Y56RjR6ZQs" role="2pMdts">
-                <property role="2pMdty" value="KubernetesXMLPersistence.persistence.XmlModelPersistence" />
+                <property role="2pMdty" value="KubernetesXMLPersistence.persistence.KubernetesXmlModelPersistence" />
               </node>
             </node>
           </node>

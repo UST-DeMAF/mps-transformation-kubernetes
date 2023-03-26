@@ -6,6 +6,7 @@
     <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="19" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
     <use id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc" version="2" />
+    <use id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging" version="0" />
   </languages>
   <imports>
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
@@ -28,7 +29,8 @@
     <import index="kart" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:org.xml.sax(JDK/)" />
     <import index="ao3" ref="7124e466-fc92-4803-a656-d7a6b7eb3910/java:jetbrains.mps.text(MPS.TextGen/)" />
     <import index="v0ob" ref="r:2cb8d682-26f7-4c6f-9c63-6578045a91be(KubernetesXMLPersistence.persistence.xml)" />
-    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
+    <import index="pa15" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.persistence(MPS.Core/)" />
     <import index="4abx" ref="r:e2ebd7d9-b738-428a-924b-a486a84ebb98(Kubernetes.structure)" implicit="true" />
   </imports>
   <registry>
@@ -121,6 +123,7 @@
       </concept>
       <concept id="1068498886292" name="jetbrains.mps.baseLanguage.structure.ParameterDeclaration" flags="ir" index="37vLTG" />
       <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
+      <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
@@ -245,6 +248,13 @@
       </concept>
       <concept id="2068944020170241612" name="jetbrains.mps.baseLanguage.javadoc.structure.ClassifierDocComment" flags="ng" index="3UR2Jj" />
     </language>
+    <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
+      <concept id="6332851714983831325" name="jetbrains.mps.baseLanguage.logging.structure.MsgStatement" flags="ng" index="2xdQw9">
+        <property id="6332851714983843871" name="severity" index="2xdLsb" />
+        <child id="5721587534047265374" name="message" index="9lYJi" />
+        <child id="5721587534047265375" name="throwable" index="9lYJj" />
+      </concept>
+    </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
       <concept id="4497478346159780083" name="jetbrains.mps.lang.smodel.structure.LanguageRefExpression" flags="ng" index="pHN19">
         <child id="3542851458883491298" name="languageId" index="2V$M_3" />
@@ -275,7 +285,7 @@
     </language>
   </registry>
   <node concept="312cEu" id="6otXYHBgsV0">
-    <property role="TrG5h" value="XmlModelPersistence" />
+    <property role="TrG5h" value="KubernetesXmlModelPersistence" />
     <property role="1sVAO0" value="false" />
     <property role="1EXbeo" value="false" />
     <node concept="3Tm1VV" id="6otXYHBgsV2" role="1B3o_S" />
@@ -299,7 +309,7 @@
         <ref role="37wK5l" to="q7tw:~LogManager.getLogger(java.lang.Class)" resolve="getLogger" />
         <ref role="1Pybhc" to="q7tw:~LogManager" resolve="LogManager" />
         <node concept="3VsKOn" id="6otXYHBgsVe" role="37wK5m">
-          <ref role="3VsUkX" node="6otXYHBgsV0" resolve="XmlModelPersistence" />
+          <ref role="3VsUkX" node="6otXYHBgsV0" resolve="KubernetesXmlModelPersistence" />
         </node>
       </node>
       <node concept="3Tm6S6" id="3F8ekXLz5rt" role="1B3o_S" />
@@ -392,7 +402,7 @@
       <node concept="3clFbS" id="6WsVkwQAr3h" role="3clF47">
         <node concept="3cpWs6" id="6WsVkwQAEYH" role="3cqZAp">
           <node concept="Rm8GO" id="6WsVkwQAGCB" role="3cqZAk">
-            <ref role="1Px2BO" node="6WsVkwQAFBt" resolve="XmlModelPersistence.XmlModelPersistenceType" />
+            <ref role="1Px2BO" node="6WsVkwQAFBt" resolve="KubernetesXmlModelPersistence.XmlModelPersistenceType" />
             <ref role="Rm8GQ" node="6WsVkwQAFQR" resolve="INSTANCE" />
           </node>
         </node>
@@ -748,7 +758,7 @@
         <node concept="3cpWs6" id="1nLyZqZ54hN" role="3cqZAp">
           <node concept="2ShNRf" id="1nLyZqZ615B" role="3cqZAk">
             <node concept="1pGfFk" id="1nLyZqZ62OT" role="2ShVmc">
-              <ref role="37wK5l" node="1nLyZqZ5Ua7" resolve="XmlPersistenceModelDescriptor" />
+              <ref role="37wK5l" node="1nLyZqZ5Ua7" resolve="KubernetesXmlPersistenceModelDescriptor" />
               <node concept="37vLTw" id="1nLyZqZ615F" role="37wK5m">
                 <ref role="3cqZAo" node="1nLyZqZ54h3" resolve="ref" />
               </node>
@@ -987,11 +997,11 @@
           <node concept="3cpWsn" id="3ljVsu$B9Yi" role="3cpWs9">
             <property role="TrG5h" value="newModelDescriptor" />
             <node concept="3uibUv" id="3ljVsu$AXWV" role="1tU5fm">
-              <ref role="3uigEE" node="1nLyZqZ5Pn8" resolve="XmlPersistenceModelDescriptor" />
+              <ref role="3uigEE" node="1nLyZqZ5Pn8" resolve="KubernetesXmlPersistenceModelDescriptor" />
             </node>
             <node concept="2ShNRf" id="3ljVsu$B9Yj" role="33vP2m">
               <node concept="1pGfFk" id="3ljVsu$B9Yk" role="2ShVmc">
-                <ref role="37wK5l" node="1nLyZqZ5Ua7" resolve="XmlPersistenceModelDescriptor" />
+                <ref role="37wK5l" node="1nLyZqZ5Ua7" resolve="KubernetesXmlPersistenceModelDescriptor" />
                 <node concept="37vLTw" id="3ljVsu$B9Yl" role="37wK5m">
                   <ref role="3cqZAo" node="U7jhOYHMkA" resolve="ref" />
                 </node>
@@ -1010,7 +1020,7 @@
             </node>
             <node concept="2YIFZM" id="3F8ekXLz3mB" role="33vP2m">
               <ref role="37wK5l" to="v0ob:3F8ekXLyPIw" resolve="createNewKubernetesDeploymentModel" />
-              <ref role="1Pybhc" to="v0ob:1mnvxr20E5e" resolve="XmlConverter" />
+              <ref role="1Pybhc" to="v0ob:1mnvxr20E5e" resolve="KubernetesXmlConverter" />
             </node>
           </node>
         </node>
@@ -1172,7 +1182,7 @@
                   <ref role="3cqZAo" node="6otXYHBgt0p" resolve="model" />
                 </node>
                 <node concept="3uibUv" id="1nLyZqZ7Dw7" role="10QFUM">
-                  <ref role="3uigEE" node="1nLyZqZ5Pn8" resolve="XmlPersistenceModelDescriptor" />
+                  <ref role="3uigEE" node="1nLyZqZ5Pn8" resolve="KubernetesXmlPersistenceModelDescriptor" />
                 </node>
               </node>
             </node>
@@ -1194,7 +1204,7 @@
     </node>
   </node>
   <node concept="312cEu" id="1nLyZqZ5Pn8">
-    <property role="TrG5h" value="XmlPersistenceModelDescriptor" />
+    <property role="TrG5h" value="KubernetesXmlPersistenceModelDescriptor" />
     <node concept="Wx3nA" id="1nLyZqZ7QbP" role="jymVt">
       <property role="TrG5h" value="LOG" />
       <property role="3TUv4t" value="true" />
@@ -1205,12 +1215,12 @@
         <ref role="37wK5l" to="q7tw:~LogManager.getLogger(java.lang.Class)" resolve="getLogger" />
         <ref role="1Pybhc" to="q7tw:~LogManager" resolve="LogManager" />
         <node concept="3VsKOn" id="1nLyZqZ7QbS" role="37wK5m">
-          <ref role="3VsUkX" node="1nLyZqZ5Pn8" resolve="XmlPersistenceModelDescriptor" />
+          <ref role="3VsUkX" node="1nLyZqZ5Pn8" resolve="KubernetesXmlPersistenceModelDescriptor" />
         </node>
       </node>
       <node concept="3Tm6S6" id="1nLyZqZ7QbT" role="1B3o_S" />
     </node>
-    <node concept="2tJIrI" id="1nLyZqZ5Tq8" role="jymVt" />
+    <node concept="2tJIrI" id="3iMQBCkANNw" role="jymVt" />
     <node concept="3clFbW" id="1nLyZqZ5Ua7" role="jymVt">
       <node concept="3cqZAl" id="1nLyZqZ5Ua8" role="3clF45" />
       <node concept="3Tm1VV" id="1nLyZqZ5Ua9" role="1B3o_S" />
@@ -1612,7 +1622,7 @@
                     </node>
                     <node concept="2YIFZM" id="6vt1eWmaagU" role="33vP2m">
                       <ref role="37wK5l" to="v0ob:1mnvxr21cdt" resolve="convertDocumentToKubernetesDeploymentModel" />
-                      <ref role="1Pybhc" to="v0ob:1mnvxr20E5e" resolve="XmlConverter" />
+                      <ref role="1Pybhc" to="v0ob:1mnvxr20E5e" resolve="KubernetesXmlConverter" />
                       <node concept="37vLTw" id="6vt1eWmadsy" role="37wK5m">
                         <ref role="3cqZAo" node="1nLyZqZ5lv7" resolve="document" />
                       </node>
@@ -2369,6 +2379,323 @@
     <node concept="3Tm1VV" id="1nLyZqZ5Pn9" role="1B3o_S" />
     <node concept="3uibUv" id="1nLyZqZ6dr9" role="1zkMxy">
       <ref role="3uigEE" to="w1kc:~EditableModelDescriptor" resolve="EditableModelDescriptor" />
+    </node>
+    <node concept="3uibUv" id="10TIEzdDYij" role="EKbjA">
+      <ref role="3uigEE" to="g3l6:~GeneratableSModel" resolve="GeneratableSModel" />
+    </node>
+    <node concept="3clFb_" id="10TIEzdE164" role="jymVt">
+      <property role="TrG5h" value="isGeneratable" />
+      <node concept="3Tm1VV" id="10TIEzdE165" role="1B3o_S" />
+      <node concept="10P_77" id="10TIEzdE167" role="3clF45" />
+      <node concept="3clFbS" id="10TIEzdE16j" role="3clF47">
+        <node concept="3clFbF" id="10TIEzdE16m" role="3cqZAp">
+          <node concept="3fqX7Q" id="3iMQBCkAGEH" role="3clFbG">
+            <node concept="1rXfSq" id="3iMQBCkAJIJ" role="3fr31v">
+              <ref role="37wK5l" node="10TIEzdE174" resolve="isDoNotGenerate" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="10TIEzdE16k" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+    </node>
+    <node concept="3clFb_" id="10TIEzdE16n" role="jymVt">
+      <property role="TrG5h" value="isGenerateIntoModelFolder" />
+      <node concept="3Tm1VV" id="10TIEzdE16o" role="1B3o_S" />
+      <node concept="10P_77" id="10TIEzdE16q" role="3clF45" />
+      <node concept="3clFbS" id="10TIEzdE16t" role="3clF47">
+        <node concept="3clFbF" id="10TIEzdE16w" role="3cqZAp">
+          <node concept="3clFbT" id="10TIEzdE16v" role="3clFbG" />
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="10TIEzdE16u" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+    </node>
+    <node concept="3clFb_" id="10TIEzdE16x" role="jymVt">
+      <property role="TrG5h" value="setGenerateIntoModelFolder" />
+      <node concept="3Tm1VV" id="10TIEzdE16y" role="1B3o_S" />
+      <node concept="3cqZAl" id="10TIEzdE16$" role="3clF45" />
+      <node concept="37vLTG" id="10TIEzdE16_" role="3clF46">
+        <property role="TrG5h" value="b" />
+        <node concept="10P_77" id="10TIEzdE16A" role="1tU5fm" />
+      </node>
+      <node concept="3clFbS" id="10TIEzdE16I" role="3clF47">
+        <node concept="2xdQw9" id="3iMQBCkBxU_" role="3cqZAp">
+          <node concept="3cpWs3" id="3iMQBCkBxUA" role="9lYJi">
+            <node concept="37vLTw" id="3iMQBCkBxUB" role="3uHU7w">
+              <ref role="3cqZAo" node="10TIEzdE16_" resolve="b" />
+            </node>
+            <node concept="Xl_RD" id="3iMQBCkBxUC" role="3uHU7B">
+              <property role="Xl_RC" value="XmlPersistenceModelDescriptor: setGenerateIntoModelFolder=" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="10TIEzdE16J" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+    </node>
+    <node concept="3clFb_" id="10TIEzdE16K" role="jymVt">
+      <property role="TrG5h" value="getModelHash" />
+      <node concept="3Tm1VV" id="10TIEzdE16L" role="1B3o_S" />
+      <node concept="17QB3L" id="2mzoPmrYtzb" role="3clF45" />
+      <node concept="3clFbS" id="10TIEzdE16Q" role="3clF47">
+        <node concept="3J1_TO" id="10TIEzdGj2R" role="3cqZAp">
+          <node concept="3clFbS" id="10TIEzdGj2S" role="1zxBo7">
+            <node concept="3cpWs8" id="vZOvqXcSSD" role="3cqZAp">
+              <node concept="3cpWsn" id="vZOvqXcSSE" role="3cpWs9">
+                <property role="TrG5h" value="dataSource" />
+                <node concept="3uibUv" id="vZOvqXcRoK" role="1tU5fm">
+                  <ref role="3uigEE" to="dush:~StreamDataSource" resolve="StreamDataSource" />
+                </node>
+                <node concept="10QFUN" id="vZOvqXcSSF" role="33vP2m">
+                  <node concept="2OqwBi" id="vZOvqXcSSG" role="10QFUP">
+                    <node concept="Xjq3P" id="vZOvqXcSSH" role="2Oq$k0" />
+                    <node concept="liA8E" id="vZOvqXcSSI" role="2OqNvi">
+                      <ref role="37wK5l" to="g3l6:~SModelBase.getSource()" resolve="getSource" />
+                    </node>
+                  </node>
+                  <node concept="3uibUv" id="vZOvqXcSSJ" role="10QFUM">
+                    <ref role="3uigEE" to="dush:~StreamDataSource" resolve="StreamDataSource" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3cpWs8" id="3iMQBCkq1uu" role="3cqZAp">
+              <node concept="3cpWsn" id="3iMQBCkq1uv" role="3cpWs9">
+                <property role="TrG5h" value="modelHash" />
+                <node concept="17QB3L" id="3iMQBCkq42z" role="1tU5fm" />
+                <node concept="2OqwBi" id="3iMQBCkq1uw" role="33vP2m">
+                  <node concept="2YIFZM" id="3iMQBCkq1ux" role="2Oq$k0">
+                    <ref role="1Pybhc" to="pa15:~ModelDigestHelper" resolve="ModelDigestHelper" />
+                    <ref role="37wK5l" to="pa15:~ModelDigestHelper.getInstance()" resolve="getInstance" />
+                  </node>
+                  <node concept="liA8E" id="3iMQBCkq1uy" role="2OqNvi">
+                    <ref role="37wK5l" to="pa15:~ModelDigestHelper.getModelHash(org.jetbrains.mps.openapi.persistence.StreamDataSource)" resolve="getModelHash" />
+                    <node concept="37vLTw" id="vZOvqXddkw" role="37wK5m">
+                      <ref role="3cqZAo" node="vZOvqXcSSE" resolve="dataSource" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="2xdQw9" id="3iMQBCkq9mb" role="3cqZAp">
+              <node concept="3cpWs3" id="vZOvqXaW36" role="9lYJi">
+                <node concept="1rXfSq" id="vZOvqXcGlc" role="3uHU7w">
+                  <ref role="37wK5l" to="g3l6:~SModelBase.getSource()" resolve="getSource" />
+                </node>
+                <node concept="3cpWs3" id="vZOvqXaNSb" role="3uHU7B">
+                  <node concept="3cpWs3" id="3iMQBCkqi7w" role="3uHU7B">
+                    <node concept="Xl_RD" id="3iMQBCkq9md" role="3uHU7B">
+                      <property role="Xl_RC" value="##  hash=" />
+                    </node>
+                    <node concept="37vLTw" id="3iMQBCkql3N" role="3uHU7w">
+                      <ref role="3cqZAo" node="3iMQBCkq1uv" resolve="modelHash" />
+                    </node>
+                  </node>
+                  <node concept="Xl_RD" id="vZOvqXaNSE" role="3uHU7w">
+                    <property role="Xl_RC" value=", dataSource=" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbH" id="vZOvqXei7V" role="3cqZAp" />
+            <node concept="3clFbJ" id="vZOvqXdnc8" role="3cqZAp">
+              <node concept="3clFbS" id="vZOvqXdnca" role="3clFbx">
+                <node concept="3cpWs8" id="vZOvqXbnaU" role="3cqZAp">
+                  <node concept="3cpWsn" id="vZOvqXbnaV" role="3cpWs9">
+                    <property role="TrG5h" value="iterator" />
+                    <node concept="3uibUv" id="vZOvqXbnaW" role="1tU5fm">
+                      <ref role="3uigEE" to="33ny:~Iterator" resolve="Iterator" />
+                      <node concept="3uibUv" id="vZOvqXbnaX" role="11_B2D">
+                        <ref role="3uigEE" to="mhbf:~SNode" resolve="SNode" />
+                      </node>
+                    </node>
+                    <node concept="2OqwBi" id="vZOvqXbnaY" role="33vP2m">
+                      <node concept="2OqwBi" id="vZOvqXbnaZ" role="2Oq$k0">
+                        <node concept="liA8E" id="vZOvqXbnb1" role="2OqNvi">
+                          <ref role="37wK5l" to="g3l6:~SModelData.getRootNodes()" resolve="getRootNodes" />
+                        </node>
+                        <node concept="2OqwBi" id="vZOvqXbriD" role="2Oq$k0">
+                          <node concept="Xjq3P" id="vZOvqXbriE" role="2Oq$k0" />
+                          <node concept="liA8E" id="vZOvqXbriF" role="2OqNvi">
+                            <ref role="37wK5l" to="g3l6:~SModelBase.getModelData()" resolve="getModelData" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="liA8E" id="vZOvqXbnb2" role="2OqNvi">
+                        <ref role="37wK5l" to="wyt6:~Iterable.iterator()" resolve="iterator" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3cpWs8" id="vZOvqXbnb3" role="3cqZAp">
+                  <node concept="3cpWsn" id="vZOvqXbnb4" role="3cpWs9">
+                    <property role="TrG5h" value="root" />
+                    <node concept="3uibUv" id="vZOvqXbnb5" role="1tU5fm">
+                      <ref role="3uigEE" to="mhbf:~SNode" resolve="SNode" />
+                    </node>
+                    <node concept="1eOMI4" id="vZOvqXbnb6" role="33vP2m">
+                      <node concept="3K4zz7" id="vZOvqXbnb7" role="1eOMHV">
+                        <node concept="2OqwBi" id="vZOvqXbnb8" role="3K4Cdx">
+                          <node concept="37vLTw" id="vZOvqXbnb9" role="2Oq$k0">
+                            <ref role="3cqZAo" node="vZOvqXbnaV" resolve="iterator" />
+                          </node>
+                          <node concept="liA8E" id="vZOvqXbnba" role="2OqNvi">
+                            <ref role="37wK5l" to="33ny:~Iterator.hasNext()" resolve="hasNext" />
+                          </node>
+                        </node>
+                        <node concept="2OqwBi" id="vZOvqXbnbb" role="3K4E3e">
+                          <node concept="37vLTw" id="vZOvqXbnbc" role="2Oq$k0">
+                            <ref role="3cqZAo" node="vZOvqXbnaV" resolve="iterator" />
+                          </node>
+                          <node concept="liA8E" id="vZOvqXbnbd" role="2OqNvi">
+                            <ref role="37wK5l" to="33ny:~Iterator.next()" resolve="next" />
+                          </node>
+                        </node>
+                        <node concept="10Nm6u" id="vZOvqXbnbe" role="3K4GZi" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbJ" id="vZOvqXby1s" role="3cqZAp">
+                  <node concept="3clFbS" id="vZOvqXby1u" role="3clFbx">
+                    <node concept="3clFbF" id="vZOvqXd_aj" role="3cqZAp">
+                      <node concept="37vLTI" id="vZOvqXdE1I" role="3clFbG">
+                        <node concept="3cpWs3" id="vZOvqXdQkn" role="37vLTx">
+                          <node concept="Xl_RD" id="vZOvqXdRDK" role="3uHU7w">
+                            <property role="Xl_RC" value="" />
+                          </node>
+                          <node concept="2OqwBi" id="vZOvqXdJlH" role="3uHU7B">
+                            <node concept="37vLTw" id="vZOvqXdHg9" role="2Oq$k0">
+                              <ref role="3cqZAo" node="vZOvqXbnb4" resolve="root" />
+                            </node>
+                            <node concept="liA8E" id="vZOvqXdM_C" role="2OqNvi">
+                              <ref role="37wK5l" to="wyt6:~Object.hashCode()" resolve="hashCode" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="37vLTw" id="vZOvqXdBUq" role="37vLTJ">
+                          <ref role="3cqZAo" node="3iMQBCkq1uv" resolve="modelHash" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="2xdQw9" id="vZOvqXdV93" role="3cqZAp">
+                      <node concept="3cpWs3" id="vZOvqXdV97" role="9lYJi">
+                        <node concept="Xl_RD" id="vZOvqXdV98" role="3uHU7B">
+                          <property role="Xl_RC" value="##  hash by code=" />
+                        </node>
+                        <node concept="37vLTw" id="vZOvqXdV99" role="3uHU7w">
+                          <ref role="3cqZAo" node="3iMQBCkq1uv" resolve="modelHash" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3y3z36" id="vZOvqXb_rR" role="3clFbw">
+                    <node concept="10Nm6u" id="vZOvqXbDDS" role="3uHU7w" />
+                    <node concept="37vLTw" id="vZOvqXby3C" role="3uHU7B">
+                      <ref role="3cqZAo" node="vZOvqXbnb4" resolve="root" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbC" id="vZOvqXdtE1" role="3clFbw">
+                <node concept="10Nm6u" id="vZOvqXdtFk" role="3uHU7w" />
+                <node concept="37vLTw" id="vZOvqXdqjA" role="3uHU7B">
+                  <ref role="3cqZAo" node="3iMQBCkq1uv" resolve="modelHash" />
+                </node>
+              </node>
+            </node>
+            <node concept="3cpWs6" id="10TIEzdG5ui" role="3cqZAp">
+              <node concept="37vLTw" id="3iMQBCkq1u$" role="3cqZAk">
+                <ref role="3cqZAo" node="3iMQBCkq1uv" resolve="modelHash" />
+              </node>
+            </node>
+          </node>
+          <node concept="3uVAMA" id="10TIEzdGj2T" role="1zxBo5">
+            <node concept="XOnhg" id="10TIEzdGj2U" role="1zc67B">
+              <property role="TrG5h" value="e" />
+              <node concept="nSUau" id="10TIEzdGj2V" role="1tU5fm">
+                <node concept="3uibUv" id="10TIEzdGlmj" role="nSUat">
+                  <ref role="3uigEE" to="wyt6:~Exception" resolve="Exception" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbS" id="10TIEzdGj2W" role="1zc67A">
+              <node concept="2xdQw9" id="3iMQBCkqo0W" role="3cqZAp">
+                <property role="2xdLsb" value="gZ5fh_4/error" />
+                <node concept="Xl_RD" id="3iMQBCkqo0Z" role="9lYJi">
+                  <property role="Xl_RC" value="##  XmlPersistenceModelDescriptor: failed to generate hash" />
+                </node>
+                <node concept="37vLTw" id="3iMQBCkqAEj" role="9lYJj">
+                  <ref role="3cqZAo" node="10TIEzdGj2U" resolve="e" />
+                </node>
+              </node>
+              <node concept="3clFbF" id="10TIEzdGvhz" role="3cqZAp">
+                <node concept="2OqwBi" id="10TIEzdGxe9" role="3clFbG">
+                  <node concept="37vLTw" id="10TIEzdGvhx" role="2Oq$k0">
+                    <ref role="3cqZAo" node="1nLyZqZ7QbP" resolve="LOG" />
+                  </node>
+                  <node concept="liA8E" id="10TIEzdGzFv" role="2OqNvi">
+                    <ref role="37wK5l" to="q7tw:~Category.error(java.lang.Object,java.lang.Throwable)" resolve="error" />
+                    <node concept="Xl_RD" id="10TIEzdGABe" role="37wK5m">
+                      <property role="Xl_RC" value="XmlPersistenceModelDescriptor: failed to generate hash" />
+                    </node>
+                    <node concept="37vLTw" id="10TIEzdGSlI" role="37wK5m">
+                      <ref role="3cqZAo" node="10TIEzdGj2U" resolve="e" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3cpWs6" id="10TIEzdGps1" role="3cqZAp">
+                <node concept="10Nm6u" id="10TIEzdGptr" role="3cqZAk" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="10TIEzdE16R" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+    </node>
+    <node concept="3clFb_" id="10TIEzdE16U" role="jymVt">
+      <property role="TrG5h" value="setDoNotGenerate" />
+      <node concept="3Tm1VV" id="10TIEzdE16V" role="1B3o_S" />
+      <node concept="3cqZAl" id="10TIEzdE16X" role="3clF45" />
+      <node concept="37vLTG" id="10TIEzdE16Y" role="3clF46">
+        <property role="TrG5h" value="b" />
+        <node concept="10P_77" id="10TIEzdE16Z" role="1tU5fm" />
+      </node>
+      <node concept="3clFbS" id="10TIEzdE172" role="3clF47">
+        <node concept="2xdQw9" id="3iMQBCkBe4g" role="3cqZAp">
+          <node concept="3cpWs3" id="3iMQBCkBrC5" role="9lYJi">
+            <node concept="37vLTw" id="3iMQBCkBtW8" role="3uHU7w">
+              <ref role="3cqZAo" node="10TIEzdE16Y" resolve="b" />
+            </node>
+            <node concept="Xl_RD" id="3iMQBCkBe4i" role="3uHU7B">
+              <property role="Xl_RC" value="XmlPersistenceModelDescriptor: setDoNotGenerate=" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="10TIEzdE173" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+    </node>
+    <node concept="3clFb_" id="10TIEzdE174" role="jymVt">
+      <property role="TrG5h" value="isDoNotGenerate" />
+      <node concept="3Tm1VV" id="10TIEzdE175" role="1B3o_S" />
+      <node concept="10P_77" id="10TIEzdE177" role="3clF45" />
+      <node concept="3clFbS" id="10TIEzdE17a" role="3clF47">
+        <node concept="3clFbF" id="10TIEzdE17d" role="3cqZAp">
+          <node concept="3clFbT" id="10TIEzdE17c" role="3clFbG" />
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="10TIEzdE17b" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
     </node>
   </node>
 </model>

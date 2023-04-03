@@ -13,6 +13,7 @@
   <sourcePath />
   <dependencies>
     <dependency reexport="false">422c2909-59d6-41a9-b318-40e6256b250f(jetbrains.mps.ide.build)</dependency>
+    <dependency reexport="false">abada739-b416-49fb-8dee-25cd9686e4cd(DeMAF.genplan)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:798100da-4f0a-421a-b991-71f8c50ce5d2:jetbrains.mps.build" version="0" />
@@ -21,6 +22,7 @@
   </languageVersions>
   <dependencyVersions>
     <module reference="b2774a24-57fe-446e-8397-47bfeaa66739(DeMAF.build)" version="0" />
+    <module reference="abada739-b416-49fb-8dee-25cd9686e4cd(DeMAF.genplan)" version="0" />
     <module reference="422c2909-59d6-41a9-b318-40e6256b250f(jetbrains.mps.ide.build)" version="0" />
   </dependencyVersions>
 </solution>

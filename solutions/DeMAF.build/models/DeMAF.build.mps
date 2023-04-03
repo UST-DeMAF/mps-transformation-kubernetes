@@ -7,6 +7,7 @@
   </languages>
   <imports>
     <import index="ffeo" ref="r:874d959d-e3b4-4d04-b931-ca849af130dd(jetbrains.mps.ide.build)" />
+    <import index="7ms3" ref="r:779eeecf-7d02-4fac-bede-7eb9458cfec9(DeMAF.genplan@genplan)" />
   </imports>
   <registry>
     <language id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml">
@@ -104,6 +105,7 @@
         <child id="5253498789149547704" name="dependencies" index="3bR37C" />
       </concept>
       <concept id="5253498789149585690" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyOnModule" flags="ng" index="3bR9La">
+        <property id="5253498789149547713" name="reexport" index="3bR36h" />
         <reference id="5253498789149547705" name="module" index="3bR37D" />
       </concept>
       <concept id="5507251971038816436" name="jetbrains.mps.build.mps.structure.BuildMps_Generator" flags="ng" index="1yeLz9" />
@@ -140,7 +142,7 @@
           <node concept="2Ry0Ak" id="HUoyRpFea5" role="2Ry0An">
             <property role="2Ry0Am" value="mps-bundle" />
             <node concept="2Ry0Ak" id="HUoyRpFebf" role="2Ry0An">
-              <property role="2Ry0Am" value="Contents" />
+              <property role="2Ry0Am" value="mps" />
             </node>
           </node>
         </node>
@@ -327,6 +329,44 @@
           </node>
         </node>
       </node>
+      <node concept="1E1JtA" id="MfR$yblbT6" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="DeMAF.genplan" />
+        <property role="3LESm3" value="abada739-b416-49fb-8dee-25cd9686e4cd" />
+        <node concept="55IIr" id="MfR$yblbT7" role="3LF7KH">
+          <node concept="2Ry0Ak" id="MfR$yblbT8" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="MfR$yblbUv" role="2Ry0An">
+              <property role="2Ry0Am" value="DeMAF.genplan" />
+              <node concept="2Ry0Ak" id="MfR$yblbU$" role="2Ry0An">
+                <property role="2Ry0Am" value="DeMAF.genplan.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1BupzO" id="MfR$yblbTb" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="MfR$yblbV_" role="1HemKq">
+            <node concept="398BVA" id="MfR$yblbVp" role="3LXTmr">
+              <ref role="398BVh" node="HUoyRpFeaY" resolve="project_home" />
+              <node concept="2Ry0Ak" id="MfR$yblbVq" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="MfR$yblbVr" role="2Ry0An">
+                  <property role="2Ry0Am" value="DeMAF.genplan" />
+                  <node concept="2Ry0Ak" id="MfR$yblbVs" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="MfR$yblbVA" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
+      </node>
       <node concept="1E1JtA" id="HUoyRpFe93" role="2G$12L">
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="DeMAFSandbox" />
@@ -360,7 +400,7 @@
               </node>
             </node>
             <node concept="3qWCbU" id="HUoyRpFekA" role="3LXTna">
-              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model, **/*.xml" />
             </node>
           </node>
         </node>
@@ -372,6 +412,85 @@
         <node concept="1SiIV0" id="2zECUB0tDDL" role="3bR37C">
           <node concept="3bR9La" id="2zECUB0tDDM" role="1SiIV1">
             <ref role="3bR37D" node="HUoyRpFe8R" resolve="Kubernetes" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="MfR$yblbWp" role="3bR37C">
+          <node concept="3bR9La" id="MfR$yblbWq" role="1SiIV1">
+            <ref role="3bR37D" node="MfR$yblbT6" resolve="DeMAF.genplan" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="6Er3Gw0Hmfg" role="3bR37C">
+          <node concept="3bR9La" id="6Er3Gw0Hmfh" role="1SiIV1">
+            <ref role="3bR37D" node="AhABoc4Es" resolve="KubernetesXMLPersistence" />
+          </node>
+        </node>
+      </node>
+      <node concept="1E1JtA" id="AhABoc4Es" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="KubernetesXMLPersistence" />
+        <property role="3LESm3" value="e750a0cc-c905-4f3c-97b4-7b731f3e5742" />
+        <node concept="55IIr" id="AhABoc4Ev" role="3LF7KH">
+          <node concept="2Ry0Ak" id="AhABoc4FE" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="AhABoc4FJ" role="2Ry0An">
+              <property role="2Ry0Am" value="KubernetesXMLPersistence" />
+              <node concept="2Ry0Ak" id="AhABoc4FO" role="2Ry0An">
+                <property role="2Ry0Am" value="KubernetesXMLPersistence.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="AhABoc4GP" role="3bR37C">
+          <node concept="3bR9La" id="AhABoc4GQ" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="AhABoc4GR" role="3bR37C">
+          <node concept="3bR9La" id="AhABoc4GS" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="AhABoc4GT" role="3bR37C">
+          <node concept="3bR9La" id="AhABoc4GU" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:44LXwdzyvTi" resolve="Annotations" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="AhABoc4GV" role="3bR37C">
+          <node concept="3bR9La" id="AhABoc4GW" role="1SiIV1">
+            <ref role="3bR37D" node="HUoyRpFe8R" resolve="Kubernetes" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="AhABoc4GX" role="3bR37C">
+          <node concept="3bR9La" id="AhABoc4GY" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:rD7wKO5Iy" resolve="MPS.TextGen" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="AhABoc4GZ" role="3bR37C">
+          <node concept="3bR9La" id="AhABoc4H0" role="1SiIV1">
+            <property role="3bR36h" value="true" />
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
+          </node>
+        </node>
+        <node concept="1BupzO" id="AhABoc4Hd" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="AhABoc4He" role="1HemKq">
+            <node concept="398BVA" id="AhABoc4H1" role="3LXTmr">
+              <ref role="398BVh" node="HUoyRpFeaY" resolve="project_home" />
+              <node concept="2Ry0Ak" id="AhABoc4H2" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="AhABoc4H3" role="2Ry0An">
+                  <property role="2Ry0Am" value="KubernetesXMLPersistence" />
+                  <node concept="2Ry0Ak" id="AhABoc4H4" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="AhABoc4Hf" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
           </node>
         </node>
       </node>

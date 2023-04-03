@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/EDMM/EDMM.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/Kubernetes/Kubernetes.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/DeMAF.build/DeMAF.build.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/DeMAF.genplan/DeMAF.genplan.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/DeMAFSandbox/DeMAFSandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/KubernetesXMLPersistence.build/KubernetesXMLPersistence.build.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/KubernetesXMLPersistence.ideaPlugin/KubernetesXMLPersistence.ideaPlugin.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/KubernetesXMLPersistence/KubernetesXMLPersistence.msd" folder="" />
+    </projectModules>
+  </component>
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/demaf-mps-transformation.iml" filepath="$PROJECT_DIR$/.idea/demaf-mps-transformation.iml" />
+    </modules>
+  </component>
+</project>

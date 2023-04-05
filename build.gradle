@@ -22,6 +22,7 @@ ext.mpsPlugins = [ "de.itemis.mps.extensions.build": 17136,
 
 
 // add plugins from custom URLs (which are not available in JetBrains' plugin repository)
+// "KubernetesXMLPersistence": "https://github.com/UST-DeMAF/mps-transformation/releases/download/v0.1.0/KubernetesXMLPersistence.zip",
 ext.customMpsPlugins = [
         "de.itemis.mps.extensions": "https://projects.itemis.de/nexus/service/local/repositories/mbeddr/content/de/itemis/mps/extensions/2021.2.2445.e222ce9/extensions-2021.2.2445.e222ce9.zip",
         "TextGenGen(Fum)": "https://github.com/Fumapps/textGenGen/releases/download/2021.2.6-beta2/TextGenGen.zip"

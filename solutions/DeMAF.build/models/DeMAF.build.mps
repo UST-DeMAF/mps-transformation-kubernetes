@@ -141,8 +141,8 @@
           <property role="2Ry0Am" value="build" />
           <node concept="2Ry0Ak" id="HUoyRpFea5" role="2Ry0An">
             <property role="2Ry0Am" value="mps-bundle" />
-            <node concept="2Ry0Ak" id="HUoyRpFebf" role="2Ry0An">
-              <property role="2Ry0Am" value="mps" />
+            <node concept="2Ry0Ak" id="58Zh$RyYlB1" role="2Ry0An">
+              <property role="2Ry0Am" value="Contents" />
             </node>
           </node>
         </node>

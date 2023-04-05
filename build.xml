@@ -321,6 +321,7 @@
           <module ref="e750a0cc-c905-4f3c-97b4-7b731f3e5742(KubernetesXMLPersistence)" kind="cl" />
         </dependencies>
         <uses>
+          <language id="l:f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c:EDMM" />
           <language id="l:ddc037a1-a551-4922-9271-aa3b6cf83a39:Kubernetes" />
         </uses>
         <classpath>
@@ -829,5 +830,6 @@
     <delete dir="${project_home}/languages/Kubernetes/source_gen" />
     <delete dir="${project_home}/solutions/DeMAFSandbox/source_gen" />
     <delete dir="${project_home}/languages/Kubernetes/generator/source_gen" />
+    <delete dir="${project_home}/solutions/KubernetesXMLPersistence/source_gen" />
   </target>
 </project>

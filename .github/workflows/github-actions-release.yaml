@@ -8,7 +8,7 @@ on:
       - '*.*.*'
 
 env:
-  PROJECT_NAME: "DeMAF"
+  PROJECT_NAME: "mps-transformation"
   LANGUAGE_NAME: "EDMM"
 
 jobs:

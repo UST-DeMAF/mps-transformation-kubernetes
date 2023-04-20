@@ -7,6 +7,10 @@
   </languages>
   <imports>
     <import index="ffeo" ref="r:874d959d-e3b4-4d04-b931-ca849af130dd(jetbrains.mps.ide.build)" />
+    <import index="wq9u" ref="8a72f140-e092-4130-a870-cd3b05159b5f/i:f020202(Kubernetes.generator/Kubernetes.generator@descriptor)" />
+    <import index="syl7" ref="5454dbfd-2075-4de0-b85e-fa645eb6957e/java:org.jdom2.xpath.jaxen(com.mbeddr.mpsutil.serializer.xml/)" />
+    <import index="39al" ref="5454dbfd-2075-4de0-b85e-fa645eb6957e/r:5bc020f2-590a-4818-ae68-fa483b92486f(com.mbeddr.mpsutil.serializer.xml/com.mbeddr.mpsutil.serializer.xml.serializer)" />
+    <import index="gphs" ref="5454dbfd-2075-4de0-b85e-fa645eb6957e/java:org.jdom2(com.mbeddr.mpsutil.serializer.xml/)" />
   </imports>
   <registry>
     <language id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml">
@@ -140,7 +144,7 @@
           <node concept="2Ry0Ak" id="HUoyRpFea5" role="2Ry0An">
             <property role="2Ry0Am" value="mps-bundle" />
             <node concept="2Ry0Ak" id="HUoyRpFebf" role="2Ry0An">
-              <property role="2Ry0Am" value="mps" />
+              <property role="2Ry0Am" value="Contents" />
             </node>
           </node>
         </node>
@@ -157,7 +161,7 @@
       </node>
     </node>
     <node concept="2sgV4H" id="HUoyRpFe8K" role="1l3spa">
-      <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" />
+      <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="HUoyRpFe8L" role="2JcizS">
         <ref role="398BVh" node="HUoyRpFe8J" resolve="mps_home" />
       </node>
@@ -191,7 +195,7 @@
         <ref role="m$f5T" node="HUoyRpFe94" resolve="DeMAF" />
       </node>
       <node concept="m$_yC" id="HUoyRpFe9b" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" />
+        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
       </node>
       <node concept="3_J27D" id="HUoyRpFe9c" role="m_cZH">
         <node concept="3Mxwew" id="HUoyRpFe9d" role="3MwsjC">
@@ -207,85 +211,85 @@
     </node>
     <node concept="2G$12M" id="HUoyRpFe94" role="3989C9">
       <property role="TrG5h" value="DeMAF" />
-      <node concept="1E1JtD" id="HUoyRpFe8R" role="2G$12L">
-        <property role="BnDLt" value="true" />
+      <node concept="1E1JtD" id="4on$LORUpc9" role="2G$12L">
         <property role="TrG5h" value="Kubernetes" />
         <property role="3LESm3" value="ddc037a1-a551-4922-9271-aa3b6cf83a39" />
-        <node concept="55IIr" id="HUoyRpFe8M" role="3LF7KH">
-          <node concept="2Ry0Ak" id="HUoyRpFe8N" role="iGT6I">
+        <property role="BnDLt" value="true" />
+        <node concept="55IIr" id="4on$LORUpcc" role="3LF7KH">
+          <node concept="2Ry0Ak" id="4on$LORUpcC" role="iGT6I">
             <property role="2Ry0Am" value="languages" />
-            <node concept="2Ry0Ak" id="HUoyRpFe8O" role="2Ry0An">
+            <node concept="2Ry0Ak" id="4on$LORUpcF" role="2Ry0An">
               <property role="2Ry0Am" value="Kubernetes" />
-              <node concept="2Ry0Ak" id="HUoyRpFe8P" role="2Ry0An">
+              <node concept="2Ry0Ak" id="4on$LORUpcI" role="2Ry0An">
                 <property role="2Ry0Am" value="Kubernetes.mpl" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="1BupzO" id="HUoyRpFe9s" role="3bR31x">
+        <node concept="1SiIV0" id="4on$LORUpe6" role="3bR37C">
+          <node concept="3bR9La" id="4on$LORUpe7" role="1SiIV1">
+            <ref role="3bR37D" node="HUoyRpFee2" resolve="EDMM" />
+          </node>
+        </node>
+        <node concept="1BupzO" id="4on$LORUpek" role="3bR31x">
           <property role="3ZfqAx" value="models" />
           <property role="1Hdu6h" value="true" />
           <property role="1HemKv" value="true" />
-          <node concept="3LXTmp" id="HUoyRpFejy" role="1HemKq">
-            <node concept="398BVA" id="HUoyRpFejm" role="3LXTmr">
+          <node concept="3LXTmp" id="4on$LORUpel" role="1HemKq">
+            <node concept="398BVA" id="4on$LORUpe8" role="3LXTmr">
               <ref role="398BVh" node="HUoyRpFeaY" resolve="project_home" />
-              <node concept="2Ry0Ak" id="HUoyRpFejn" role="iGT6I">
+              <node concept="2Ry0Ak" id="4on$LORUpe9" role="iGT6I">
                 <property role="2Ry0Am" value="languages" />
-                <node concept="2Ry0Ak" id="HUoyRpFejo" role="2Ry0An">
+                <node concept="2Ry0Ak" id="4on$LORUpea" role="2Ry0An">
                   <property role="2Ry0Am" value="Kubernetes" />
-                  <node concept="2Ry0Ak" id="HUoyRpFejp" role="2Ry0An">
+                  <node concept="2Ry0Ak" id="4on$LORUpeb" role="2Ry0An">
                     <property role="2Ry0Am" value="models" />
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="3qWCbU" id="HUoyRpFejz" role="3LXTna">
+            <node concept="3qWCbU" id="4on$LORUpem" role="3LXTna">
               <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
             </node>
           </node>
         </node>
-        <node concept="1yeLz9" id="HUoyRpFe9v" role="1TViLv">
+        <node concept="1yeLz9" id="4on$LORUpen" role="1TViLv">
           <property role="TrG5h" value="Kubernetes.generator" />
           <property role="3LESm3" value="8a72f140-e092-4130-a870-cd3b05159b5f" />
-          <node concept="1BupzO" id="HUoyRpFe9_" role="3bR31x">
+          <node concept="1SiIV0" id="4on$LORUpeo" role="3bR37C">
+            <node concept="3bR9La" id="4on$LORUpep" role="1SiIV1">
+              <ref role="3bR37D" node="HUoyRpFee2" resolve="EDMM" />
+            </node>
+          </node>
+          <node concept="1BupzO" id="4on$LORUpeD" role="3bR31x">
             <property role="3ZfqAx" value="generator/templates" />
             <property role="1Hdu6h" value="true" />
             <property role="1HemKv" value="true" />
-            <node concept="3LXTmp" id="HUoyRpFejP" role="1HemKq">
-              <node concept="398BVA" id="HUoyRpFejA" role="3LXTmr">
+            <node concept="3LXTmp" id="4on$LORUpeE" role="1HemKq">
+              <node concept="398BVA" id="4on$LORUpeq" role="3LXTmr">
                 <ref role="398BVh" node="HUoyRpFeaY" resolve="project_home" />
-                <node concept="2Ry0Ak" id="HUoyRpFejB" role="iGT6I">
+                <node concept="2Ry0Ak" id="4on$LORUper" role="iGT6I">
                   <property role="2Ry0Am" value="languages" />
-                  <node concept="2Ry0Ak" id="HUoyRpFejC" role="2Ry0An">
+                  <node concept="2Ry0Ak" id="4on$LORUpes" role="2Ry0An">
                     <property role="2Ry0Am" value="Kubernetes" />
-                    <node concept="2Ry0Ak" id="HUoyRpFejD" role="2Ry0An">
+                    <node concept="2Ry0Ak" id="4on$LORUpet" role="2Ry0An">
                       <property role="2Ry0Am" value="generator" />
-                      <node concept="2Ry0Ak" id="HUoyRpFejE" role="2Ry0An">
+                      <node concept="2Ry0Ak" id="4on$LORUpeu" role="2Ry0An">
                         <property role="2Ry0Am" value="templates" />
                       </node>
                     </node>
                   </node>
                 </node>
               </node>
-              <node concept="3qWCbU" id="HUoyRpFejQ" role="3LXTna">
+              <node concept="3qWCbU" id="4on$LORUpeF" role="3LXTna">
                 <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
               </node>
             </node>
           </node>
-          <node concept="1SiIV0" id="HUoyRpFej$" role="3bR37C">
-            <node concept="3bR9La" id="HUoyRpFej_" role="1SiIV1">
-              <ref role="3bR37D" node="HUoyRpFe8R" resolve="Kubernetes" />
+          <node concept="1SiIV0" id="4on$LORUpg6" role="3bR37C">
+            <node concept="3bR9La" id="4on$LORUpg7" role="1SiIV1">
+              <ref role="3bR37D" node="4on$LORUpc9" resolve="Kubernetes" />
             </node>
-          </node>
-          <node concept="1SiIV0" id="HUoyRpFema" role="3bR37C">
-            <node concept="3bR9La" id="HUoyRpFemb" role="1SiIV1">
-              <ref role="3bR37D" node="HUoyRpFee2" resolve="EDMM" />
-            </node>
-          </node>
-        </node>
-        <node concept="1SiIV0" id="HUoyRpFelW" role="3bR37C">
-          <node concept="3bR9La" id="HUoyRpFelX" role="1SiIV1">
-            <ref role="3bR37D" node="HUoyRpFee2" resolve="EDMM" />
           </node>
         </node>
       </node>

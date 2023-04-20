@@ -3,7 +3,6 @@
   <persistence version="9" />
   <languages>
     <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="9" />
-    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
@@ -218,7 +217,7 @@
     <property role="TrG5h" value="KubernetesDeploymentModel" />
     <property role="19KtqR" value="true" />
     <property role="34LRSv" value="Kubernetes Deployment Model" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="4wLeArqywgh" role="1TKVEi">
       <property role="IQ2ns" value="5202003258017186833" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -239,7 +238,7 @@
     <property role="TrG5h" value="MatchingServiceAndDeployment" />
     <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="util" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="3p0Gq6VggFc" role="1TKVEi">
       <property role="IQ2ns" value="3909319784747043532" />
       <property role="20kJfa" value="service" />

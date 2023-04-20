@@ -22,6 +22,7 @@ task mpsAntGenerate(type: Exec) {
 task mpsAntBuild(type: Exec) {
     group 'mps-ant-wrapper'
     commandLine "$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "-Dproject_home=$projectDir", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath, "build"
+    mustRunAfter mpsAntGenerate
 }
 
 task mpsAntCheck(type: Exec) {
@@ -74,6 +75,11 @@ task parseTestReportAfterAntCheck {
     }
 }
 
+task mpsAntClean(type: Exec) {
+    group 'mps-ant-wrapper'
+    commandLine "$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath, "clean"
+}
+
 task mpsAntCleanSources(type: Exec) {
     group 'mps-ant-wrapper'
     commandLine "$javaHome/bin/java", "-classpath", antLauncherJarPath, "-Dmps_home=$mpsHome", "org.apache.tools.ant.launch.Launcher", "-cp", mpsUtilJarPath, "cleanSources"
@@ -86,6 +92,9 @@ task mpsAntCleanSources(type: Exec) {
 
 private List<File> collectGeneratedDirs(File baseDir) {
     def dirs = []
+    if (!file(baseDir).exists()) {
+        return dirs
+    }
     file(baseDir).eachDirRecurse {
         if (it.name.endsWith("_gen.caches") || it.name == "classes_gen" || it.name == "source_gen") {
             dirs += it
@@ -120,7 +129,7 @@ private static String concatJavaClasspath(String... paths) {
     }
 }
 
-task openProjectInMpsForCurrentOs(type: Exec) {
+task mpsOpenProjectInMpsForCurrentOs(type: Exec) {
     group 'mps-ant-wrapper'
     dependsOn buildOsSpecificBundle
 

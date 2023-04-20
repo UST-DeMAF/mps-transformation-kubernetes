@@ -48,6 +48,7 @@
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
+      <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="1225271408483" name="jetbrains.mps.baseLanguage.structure.IsNotEmptyOperation" flags="nn" index="17RvpY" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
@@ -184,6 +185,10 @@
       </concept>
     </language>
     <language id="d7706f63-9be2-479c-a3da-ae92af1e64d5" name="jetbrains.mps.lang.generator.generationContext">
+      <concept id="1217960179967" name="jetbrains.mps.lang.generator.generationContext.structure.GenerationContextOp_ShowErrorMessage" flags="nn" index="2k5nB$" />
+      <concept id="1217960314443" name="jetbrains.mps.lang.generator.generationContext.structure.GenerationContextOp_ShowMessageBase" flags="nn" index="2k5Stg">
+        <child id="1217960314448" name="messageText" index="2k5Stb" />
+      </concept>
       <concept id="1216860049627" name="jetbrains.mps.lang.generator.generationContext.structure.GenerationContextOp_GetOutputByLabelAndInput" flags="nn" index="1iwH70">
         <reference id="1216860049628" name="label" index="1iwH77" />
         <child id="1216860049632" name="inputNode" index="1iwH7V" />
@@ -953,6 +958,42 @@
       <node concept="3clFbS" id="564tLqH2Z1A" role="2VODD2">
         <node concept="3clFbJ" id="1k24xVyZ8d4" role="3cqZAp">
           <node concept="3clFbS" id="1k24xVyZ8d6" role="3clFbx">
+            <node concept="3SKdUt" id="5ZTtTxlUI8_" role="3cqZAp">
+              <node concept="1PaTwC" id="5ZTtTxlUI8A" role="1aUNEU">
+                <node concept="3oM_SD" id="5ZTtTxlUIfA" role="1PaTwD">
+                  <property role="3oM_SC" value="for" />
+                </node>
+                <node concept="3oM_SD" id="5ZTtTxlUIgJ" role="1PaTwD">
+                  <property role="3oM_SC" value="testing," />
+                </node>
+                <node concept="3oM_SD" id="5ZTtTxlUIgO" role="1PaTwD">
+                  <property role="3oM_SC" value="replace" />
+                </node>
+                <node concept="3oM_SD" id="5ZTtTxlUIij" role="1PaTwD">
+                  <property role="3oM_SC" value="input.xml" />
+                </node>
+                <node concept="3oM_SD" id="5ZTtTxlUIiq" role="1PaTwD">
+                  <property role="3oM_SC" value="with" />
+                </node>
+                <node concept="3oM_SD" id="5ZTtTxlUIiw" role="1PaTwD">
+                  <property role="3oM_SC" value="dummyKubeDM.xml" />
+                </node>
+              </node>
+            </node>
+            <node concept="3cpWs8" id="5ZTtTxlUH4b" role="3cqZAp">
+              <node concept="3cpWsn" id="5ZTtTxlUH4e" role="3cpWs9">
+                <property role="TrG5h" value="inputFilePath" />
+                <node concept="17QB3L" id="5ZTtTxlUH49" role="1tU5fm" />
+                <node concept="3cpWs3" id="5ZTtTxlUK7H" role="33vP2m">
+                  <node concept="Xl_RD" id="5ZTtTxlUKbE" role="3uHU7w">
+                    <property role="Xl_RC" value="input.xml" />
+                  </node>
+                  <node concept="Xl_RD" id="5ZTtTxlUHd9" role="3uHU7B">
+                    <property role="Xl_RC" value="transformationInput/" />
+                  </node>
+                </node>
+              </node>
+            </node>
             <node concept="3J1_TO" id="1k24xVyWGtQ" role="3cqZAp">
               <node concept="3uVAMA" id="1k24xVyWGuG" role="1zxBo5">
                 <node concept="XOnhg" id="1k24xVyWGuH" role="1zc67B">
@@ -964,10 +1005,18 @@
                   </node>
                 </node>
                 <node concept="3clFbS" id="1k24xVyWGuJ" role="1zc67A">
-                  <node concept="3SKdUt" id="1k24xVz50Zq" role="3cqZAp">
-                    <node concept="1PaTwC" id="1k24xVz50Zr" role="1aUNEU">
-                      <node concept="3oM_SD" id="1k24xVzjRVS" role="1PaTwD">
-                        <property role="3oM_SC" value="todo" />
+                  <node concept="3clFbF" id="5ZTtTxlUHw7" role="3cqZAp">
+                    <node concept="2OqwBi" id="5ZTtTxlUHUl" role="3clFbG">
+                      <node concept="1iwH7S" id="5ZTtTxlUHw6" role="2Oq$k0" />
+                      <node concept="2k5nB$" id="5ZTtTxlUHZP" role="2OqNvi">
+                        <node concept="3cpWs3" id="5ZTtTxlUJ0n" role="2k5Stb">
+                          <node concept="37vLTw" id="5ZTtTxlUJ1i" role="3uHU7w">
+                            <ref role="3cqZAo" node="1k24xVyWGuH" resolve="e" />
+                          </node>
+                          <node concept="Xl_RD" id="5ZTtTxlUI0E" role="3uHU7B">
+                            <property role="Xl_RC" value="The transformation failed; The model in the input file could not be imported: " />
+                          </node>
+                        </node>
                       </node>
                     </node>
                   </node>
@@ -1013,8 +1062,8 @@
                         <node concept="2YIFZM" id="1k24xVz8kyZ" role="37wK5m">
                           <ref role="37wK5l" to="l3oo:1k24xVz7W_U" resolve="parseXMLFile" />
                           <ref role="1Pybhc" to="l3oo:1k24xVyEtDi" resolve="ImportUtil" />
-                          <node concept="Xl_RD" id="1k24xVz8k$g" role="37wK5m">
-                            <property role="Xl_RC" value="dummyKubeDM.xml" />
+                          <node concept="37vLTw" id="5ZTtTxlUHp8" role="37wK5m">
+                            <ref role="3cqZAo" node="5ZTtTxlUH4e" resolve="inputFilePath" />
                           </node>
                         </node>
                       </node>

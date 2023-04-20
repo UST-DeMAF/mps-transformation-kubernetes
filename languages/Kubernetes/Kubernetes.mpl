@@ -27,7 +27,6 @@
       <dependencies>
         <dependency reexport="false">f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c(EDMM)</dependency>
         <dependency reexport="false">ddc037a1-a551-4922-9271-aa3b6cf83a39(Kubernetes)</dependency>
-        <dependency reexport="false">5454dbfd-2075-4de0-b85e-fa645eb6957e(com.mbeddr.mpsutil.serializer.xml)</dependency>
       </dependencies>
       <languageVersions>
         <language slang="l:f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c:EDMM" version="0" />
@@ -56,7 +55,6 @@
         <module reference="8a72f140-e092-4130-a870-cd3b05159b5f(Kubernetes.generator)" version="0" />
         <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
         <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
-        <module reference="5454dbfd-2075-4de0-b85e-fa645eb6957e(com.mbeddr.mpsutil.serializer.xml)" version="0" />
         <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
       </dependencyVersions>
       <mapping-priorities>

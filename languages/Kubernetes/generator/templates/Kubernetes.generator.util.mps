@@ -9,8 +9,8 @@
     <import index="4abx" ref="r:e2ebd7d9-b738-428a-924b-a486a84ebb98(Kubernetes.structure)" />
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
-    <import index="gphs" ref="5454dbfd-2075-4de0-b85e-fa645eb6957e/java:org.jdom2(com.mbeddr.mpsutil.serializer.xml/)" />
-    <import index="qq98" ref="5454dbfd-2075-4de0-b85e-fa645eb6957e/java:org.jdom2.input(com.mbeddr.mpsutil.serializer.xml/)" />
+    <import index="r9z2" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:org.jdom.input(MPS.Core/)" />
+    <import index="mmaq" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:org.jdom(MPS.Core/)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -422,11 +422,11 @@
               <node concept="3cpWsn" id="1k24xVz8eL1" role="3cpWs9">
                 <property role="TrG5h" value="saxBuilder" />
                 <node concept="3uibUv" id="1k24xVz8eL2" role="1tU5fm">
-                  <ref role="3uigEE" to="qq98:~SAXBuilder" resolve="SAXBuilder" />
+                  <ref role="3uigEE" to="r9z2:~SAXBuilder" resolve="SAXBuilder" />
                 </node>
                 <node concept="2ShNRf" id="1k24xVz8fg6" role="33vP2m">
                   <node concept="1pGfFk" id="1k24xVz8ffU" role="2ShVmc">
-                    <ref role="37wK5l" to="qq98:~SAXBuilder.&lt;init&gt;()" resolve="SAXBuilder" />
+                    <ref role="37wK5l" to="r9z2:~SAXBuilder.&lt;init&gt;()" resolve="SAXBuilder" />
                   </node>
                 </node>
               </node>
@@ -435,14 +435,14 @@
               <node concept="3cpWsn" id="1k24xVz8fkq" role="3cpWs9">
                 <property role="TrG5h" value="document" />
                 <node concept="3uibUv" id="1k24xVz8fkr" role="1tU5fm">
-                  <ref role="3uigEE" to="gphs:~Document" resolve="Document" />
+                  <ref role="3uigEE" to="mmaq:~Document" resolve="Document" />
                 </node>
                 <node concept="2OqwBi" id="1k24xVz8fz4" role="33vP2m">
                   <node concept="37vLTw" id="1k24xVz8fps" role="2Oq$k0">
                     <ref role="3cqZAo" node="1k24xVz8eL1" resolve="saxBuilder" />
                   </node>
                   <node concept="liA8E" id="1k24xVz8fPu" role="2OqNvi">
-                    <ref role="37wK5l" to="qq98:~SAXBuilder.build(java.lang.String)" resolve="build" />
+                    <ref role="37wK5l" to="r9z2:~SAXBuilder.build(java.lang.String)" resolve="build" />
                     <node concept="37vLTw" id="1k24xVz8fRH" role="37wK5m">
                       <ref role="3cqZAo" node="1k24xVz7WKr" resolve="inputFilePath" />
                     </node>
@@ -487,7 +487,7 @@
                   <ref role="3uigEE" to="guwi:~IOException" resolve="IOException" />
                 </node>
                 <node concept="3uibUv" id="1k24xVz8iif" role="nSUat">
-                  <ref role="3uigEE" to="gphs:~JDOMException" resolve="JDOMException" />
+                  <ref role="3uigEE" to="mmaq:~JDOMException" resolve="JDOMException" />
                 </node>
               </node>
             </node>
@@ -496,7 +496,7 @@
       </node>
       <node concept="3Tm1VV" id="1k24xVz7WqH" role="1B3o_S" />
       <node concept="3uibUv" id="1k24xVz7W_p" role="3clF45">
-        <ref role="3uigEE" to="gphs:~Document" resolve="Document" />
+        <ref role="3uigEE" to="mmaq:~Document" resolve="Document" />
       </node>
       <node concept="37vLTG" id="1k24xVz7WKr" role="3clF46">
         <property role="TrG5h" value="inputFilePath" />
@@ -531,14 +531,14 @@
           <node concept="3cpWsn" id="1k24xVyWDz8" role="3cpWs9">
             <property role="TrG5h" value="rootNode" />
             <node concept="3uibUv" id="1k24xVyWDz9" role="1tU5fm">
-              <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+              <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
             </node>
             <node concept="2OqwBi" id="1k24xVyWEmo" role="33vP2m">
               <node concept="37vLTw" id="1k24xVyWDA1" role="2Oq$k0">
                 <ref role="3cqZAo" node="1k24xVyWDq4" resolve="document" />
               </node>
               <node concept="liA8E" id="1k24xVyWEEj" role="2OqNvi">
-                <ref role="37wK5l" to="gphs:~Document.getRootElement()" resolve="getRootElement" />
+                <ref role="37wK5l" to="mmaq:~Document.getRootElement()" resolve="getRootElement" />
               </node>
             </node>
           </node>
@@ -561,7 +561,7 @@
                     <ref role="3cqZAo" node="1k24xVyWDz8" resolve="rootNode" />
                   </node>
                   <node concept="liA8E" id="1k24xVzhBPw" role="2OqNvi">
-                    <ref role="37wK5l" to="gphs:~Element.getChildren(java.lang.String)" resolve="getChildren" />
+                    <ref role="37wK5l" to="mmaq:~Element.getChildren(java.lang.String)" resolve="getChildren" />
                     <node concept="Xl_RD" id="1k24xVzhBPx" role="37wK5m">
                       <property role="Xl_RC" value="deployments" />
                     </node>
@@ -589,7 +589,7 @@
                     <ref role="3cqZAo" node="1k24xVyWDz8" resolve="rootNode" />
                   </node>
                   <node concept="liA8E" id="1k24xVzbwyU" role="2OqNvi">
-                    <ref role="37wK5l" to="gphs:~Element.getChildren(java.lang.String)" resolve="getChildren" />
+                    <ref role="37wK5l" to="mmaq:~Element.getChildren(java.lang.String)" resolve="getChildren" />
                     <node concept="Xl_RD" id="1k24xVzbzal" role="37wK5m">
                       <property role="Xl_RC" value="services" />
                     </node>
@@ -612,7 +612,7 @@
       <node concept="37vLTG" id="1k24xVyWDq4" role="3clF46">
         <property role="TrG5h" value="document" />
         <node concept="3uibUv" id="1k24xVyWDq3" role="1tU5fm">
-          <ref role="3uigEE" to="gphs:~Document" resolve="Document" />
+          <ref role="3uigEE" to="mmaq:~Document" resolve="Document" />
         </node>
       </node>
     </node>
@@ -661,7 +661,7 @@
                         <ref role="3cqZAo" node="1k24xVzfUaF" resolve="deployment" />
                       </node>
                       <node concept="liA8E" id="1k24xVzfUao" role="2OqNvi">
-                        <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                        <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                         <node concept="Xl_RD" id="1k24xVzfUap" role="37wK5m">
                           <property role="Xl_RC" value="name" />
                         </node>
@@ -695,7 +695,7 @@
                           <ref role="3cqZAo" node="1k24xVzfUaF" resolve="deployment" />
                         </node>
                         <node concept="liA8E" id="1k24xVzgAN8" role="2OqNvi">
-                          <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                          <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                           <node concept="Xl_RD" id="1k24xVzgClu" role="37wK5m">
                             <property role="Xl_RC" value="replicas" />
                           </node>
@@ -722,7 +722,7 @@
                             <ref role="3cqZAo" node="1k24xVzfUaF" resolve="deployment" />
                           </node>
                           <node concept="liA8E" id="1k24xVzgLk$" role="2OqNvi">
-                            <ref role="37wK5l" to="gphs:~Element.getChildren(java.lang.String)" resolve="getChildren" />
+                            <ref role="37wK5l" to="mmaq:~Element.getChildren(java.lang.String)" resolve="getChildren" />
                             <node concept="Xl_RD" id="1k24xVzgLk_" role="37wK5m">
                               <property role="Xl_RC" value="labels" />
                             </node>
@@ -750,7 +750,7 @@
                             <ref role="3cqZAo" node="1k24xVzfUaF" resolve="deployment" />
                           </node>
                           <node concept="liA8E" id="1k24xVzgLkJ" role="2OqNvi">
-                            <ref role="37wK5l" to="gphs:~Element.getChildren(java.lang.String)" resolve="getChildren" />
+                            <ref role="37wK5l" to="mmaq:~Element.getChildren(java.lang.String)" resolve="getChildren" />
                             <node concept="Xl_RD" id="1k24xVzgLkK" role="37wK5m">
                               <property role="Xl_RC" value="container" />
                             </node>
@@ -776,7 +776,7 @@
               <node concept="3cpWsn" id="1k24xVzfUaF" role="1Duv9x">
                 <property role="TrG5h" value="deployment" />
                 <node concept="3uibUv" id="1k24xVzfUaG" role="1tU5fm">
-                  <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+                  <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
                 </node>
               </node>
               <node concept="2OqwBi" id="1k24xVzfUaH" role="1DdaDG">
@@ -784,7 +784,7 @@
                   <ref role="3cqZAo" node="1k24xVzfUaK" resolve="deployments" />
                 </node>
                 <node concept="liA8E" id="1k24xVzfUaJ" role="2OqNvi">
-                  <ref role="37wK5l" to="gphs:~Element.getChildren()" resolve="getChildren" />
+                  <ref role="37wK5l" to="mmaq:~Element.getChildren()" resolve="getChildren" />
                 </node>
               </node>
             </node>
@@ -792,7 +792,7 @@
           <node concept="3cpWsn" id="1k24xVzfUaK" role="1Duv9x">
             <property role="TrG5h" value="deployments" />
             <node concept="3uibUv" id="1k24xVzfUaL" role="1tU5fm">
-              <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+              <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
             </node>
           </node>
           <node concept="37vLTw" id="1k24xVzfUaM" role="1DdaDG">
@@ -813,7 +813,7 @@
         <property role="TrG5h" value="listOfDeployments" />
         <node concept="_YKpA" id="1k24xVzfUaS" role="1tU5fm">
           <node concept="3uibUv" id="1k24xVzfUaT" role="_ZDj9">
-            <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+            <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
           </node>
         </node>
       </node>
@@ -863,7 +863,7 @@
                         <ref role="3cqZAo" node="1k24xVzfsz1" resolve="label" />
                       </node>
                       <node concept="liA8E" id="1k24xVzfsyI" role="2OqNvi">
-                        <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                        <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                         <node concept="Xl_RD" id="1k24xVzfsyJ" role="37wK5m">
                           <property role="Xl_RC" value="key" />
                         </node>
@@ -886,7 +886,7 @@
                         <ref role="3cqZAo" node="1k24xVzfsz1" resolve="label" />
                       </node>
                       <node concept="liA8E" id="1k24xVzfsyR" role="2OqNvi">
-                        <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                        <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                         <node concept="Xl_RD" id="1k24xVzfsyS" role="37wK5m">
                           <property role="Xl_RC" value="value" />
                         </node>
@@ -918,7 +918,7 @@
               <node concept="3cpWsn" id="1k24xVzfsz1" role="1Duv9x">
                 <property role="TrG5h" value="label" />
                 <node concept="3uibUv" id="1k24xVzfsz2" role="1tU5fm">
-                  <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+                  <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
                 </node>
               </node>
               <node concept="2OqwBi" id="1k24xVzfsz3" role="1DdaDG">
@@ -926,7 +926,7 @@
                   <ref role="3cqZAo" node="1k24xVzfsz6" resolve="labels" />
                 </node>
                 <node concept="liA8E" id="1k24xVzfsz5" role="2OqNvi">
-                  <ref role="37wK5l" to="gphs:~Element.getChildren()" resolve="getChildren" />
+                  <ref role="37wK5l" to="mmaq:~Element.getChildren()" resolve="getChildren" />
                 </node>
               </node>
             </node>
@@ -934,7 +934,7 @@
           <node concept="3cpWsn" id="1k24xVzfsz6" role="1Duv9x">
             <property role="TrG5h" value="labels" />
             <node concept="3uibUv" id="1k24xVzfsz7" role="1tU5fm">
-              <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+              <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
             </node>
           </node>
           <node concept="37vLTw" id="1k24xVzfsz8" role="1DdaDG">
@@ -955,7 +955,7 @@
         <property role="TrG5h" value="listOfLabels" />
         <node concept="_YKpA" id="1k24xVzfsze" role="1tU5fm">
           <node concept="3uibUv" id="1k24xVzfszf" role="_ZDj9">
-            <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+            <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
           </node>
         </node>
       </node>
@@ -1005,7 +1005,7 @@
                         <ref role="3cqZAo" node="1k24xVzdrsJ" resolve="container" />
                       </node>
                       <node concept="liA8E" id="1k24xVzdrsr" role="2OqNvi">
-                        <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                        <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                         <node concept="Xl_RD" id="1k24xVzdrss" role="37wK5m">
                           <property role="Xl_RC" value="name" />
                         </node>
@@ -1028,7 +1028,7 @@
                         <ref role="3cqZAo" node="1k24xVzdrsJ" resolve="container" />
                       </node>
                       <node concept="liA8E" id="1k24xVzdP9g" role="2OqNvi">
-                        <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                        <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                         <node concept="Xl_RD" id="1k24xVzdP9h" role="37wK5m">
                           <property role="Xl_RC" value="image" />
                         </node>
@@ -1062,7 +1062,7 @@
                             <ref role="3cqZAo" node="1k24xVzdrsJ" resolve="container" />
                           </node>
                           <node concept="liA8E" id="1k24xVzemPs" role="2OqNvi">
-                            <ref role="37wK5l" to="gphs:~Element.getChildren(java.lang.String)" resolve="getChildren" />
+                            <ref role="37wK5l" to="mmaq:~Element.getChildren(java.lang.String)" resolve="getChildren" />
                             <node concept="Xl_RD" id="1k24xVzer8D" role="37wK5m">
                               <property role="Xl_RC" value="containerPorts" />
                             </node>
@@ -1090,7 +1090,7 @@
                             <ref role="3cqZAo" node="1k24xVzdrsJ" resolve="container" />
                           </node>
                           <node concept="liA8E" id="1k24xVzf9BI" role="2OqNvi">
-                            <ref role="37wK5l" to="gphs:~Element.getChildren(java.lang.String)" resolve="getChildren" />
+                            <ref role="37wK5l" to="mmaq:~Element.getChildren(java.lang.String)" resolve="getChildren" />
                             <node concept="Xl_RD" id="1k24xVzfcKR" role="37wK5m">
                               <property role="Xl_RC" value="environmentVariables" />
                             </node>
@@ -1116,7 +1116,7 @@
               <node concept="3cpWsn" id="1k24xVzdrsJ" role="1Duv9x">
                 <property role="TrG5h" value="container" />
                 <node concept="3uibUv" id="1k24xVzdrsK" role="1tU5fm">
-                  <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+                  <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
                 </node>
               </node>
               <node concept="2OqwBi" id="1k24xVzdrsL" role="1DdaDG">
@@ -1124,7 +1124,7 @@
                   <ref role="3cqZAo" node="1k24xVzdrsO" resolve="containers" />
                 </node>
                 <node concept="liA8E" id="1k24xVzdrsN" role="2OqNvi">
-                  <ref role="37wK5l" to="gphs:~Element.getChildren()" resolve="getChildren" />
+                  <ref role="37wK5l" to="mmaq:~Element.getChildren()" resolve="getChildren" />
                 </node>
               </node>
             </node>
@@ -1132,7 +1132,7 @@
           <node concept="3cpWsn" id="1k24xVzdrsO" role="1Duv9x">
             <property role="TrG5h" value="containers" />
             <node concept="3uibUv" id="1k24xVzdrsP" role="1tU5fm">
-              <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+              <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
             </node>
           </node>
           <node concept="37vLTw" id="1k24xVzdrsQ" role="1DdaDG">
@@ -1153,7 +1153,7 @@
         <property role="TrG5h" value="listOfContainers" />
         <node concept="_YKpA" id="1k24xVzdrsW" role="1tU5fm">
           <node concept="3uibUv" id="1k24xVzdrsX" role="_ZDj9">
-            <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+            <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
           </node>
         </node>
       </node>
@@ -1203,7 +1203,7 @@
                         <ref role="3cqZAo" node="1k24xVzcZMr" resolve="containerPort" />
                       </node>
                       <node concept="liA8E" id="1k24xVzcZLY" role="2OqNvi">
-                        <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                        <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                         <node concept="Xl_RD" id="1k24xVzcZLZ" role="37wK5m">
                           <property role="Xl_RC" value="name" />
                         </node>
@@ -1229,7 +1229,7 @@
                           <ref role="3cqZAo" node="1k24xVzcZMr" resolve="containerPort" />
                         </node>
                         <node concept="liA8E" id="1k24xVzcZM8" role="2OqNvi">
-                          <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                          <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                           <node concept="Xl_RD" id="1k24xVzcZM9" role="37wK5m">
                             <property role="Xl_RC" value="port" />
                           </node>
@@ -1262,7 +1262,7 @@
               <node concept="3cpWsn" id="1k24xVzcZMr" role="1Duv9x">
                 <property role="TrG5h" value="containerPort" />
                 <node concept="3uibUv" id="1k24xVzcZMs" role="1tU5fm">
-                  <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+                  <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
                 </node>
               </node>
               <node concept="2OqwBi" id="1k24xVzcZMt" role="1DdaDG">
@@ -1270,7 +1270,7 @@
                   <ref role="3cqZAo" node="1k24xVzcZMw" resolve="containerPorts" />
                 </node>
                 <node concept="liA8E" id="1k24xVzcZMv" role="2OqNvi">
-                  <ref role="37wK5l" to="gphs:~Element.getChildren()" resolve="getChildren" />
+                  <ref role="37wK5l" to="mmaq:~Element.getChildren()" resolve="getChildren" />
                 </node>
               </node>
             </node>
@@ -1278,7 +1278,7 @@
           <node concept="3cpWsn" id="1k24xVzcZMw" role="1Duv9x">
             <property role="TrG5h" value="containerPorts" />
             <node concept="3uibUv" id="1k24xVzcZMx" role="1tU5fm">
-              <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+              <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
             </node>
           </node>
           <node concept="37vLTw" id="1k24xVzcZMy" role="1DdaDG">
@@ -1299,7 +1299,7 @@
         <property role="TrG5h" value="listOfContainerPorts" />
         <node concept="_YKpA" id="1k24xVzcZMC" role="1tU5fm">
           <node concept="3uibUv" id="1k24xVzcZMD" role="_ZDj9">
-            <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+            <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
           </node>
         </node>
       </node>
@@ -1349,7 +1349,7 @@
                         <ref role="3cqZAo" node="1k24xVzcBf9" resolve="environmentVariable" />
                       </node>
                       <node concept="liA8E" id="1k24xVzcBeQ" role="2OqNvi">
-                        <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                        <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                         <node concept="Xl_RD" id="1k24xVzcBeR" role="37wK5m">
                           <property role="Xl_RC" value="key" />
                         </node>
@@ -1372,7 +1372,7 @@
                         <ref role="3cqZAo" node="1k24xVzcBf9" resolve="environmentVariable" />
                       </node>
                       <node concept="liA8E" id="1k24xVzcBeZ" role="2OqNvi">
-                        <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                        <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                         <node concept="Xl_RD" id="1k24xVzcBf0" role="37wK5m">
                           <property role="Xl_RC" value="value" />
                         </node>
@@ -1404,7 +1404,7 @@
               <node concept="3cpWsn" id="1k24xVzcBf9" role="1Duv9x">
                 <property role="TrG5h" value="environmentVariable" />
                 <node concept="3uibUv" id="1k24xVzcBfa" role="1tU5fm">
-                  <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+                  <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
                 </node>
               </node>
               <node concept="2OqwBi" id="1k24xVzcBfb" role="1DdaDG">
@@ -1412,7 +1412,7 @@
                   <ref role="3cqZAo" node="1k24xVzcBfe" resolve="environmentVariables" />
                 </node>
                 <node concept="liA8E" id="1k24xVzcBfd" role="2OqNvi">
-                  <ref role="37wK5l" to="gphs:~Element.getChildren()" resolve="getChildren" />
+                  <ref role="37wK5l" to="mmaq:~Element.getChildren()" resolve="getChildren" />
                 </node>
               </node>
             </node>
@@ -1420,7 +1420,7 @@
           <node concept="3cpWsn" id="1k24xVzcBfe" role="1Duv9x">
             <property role="TrG5h" value="environmentVariables" />
             <node concept="3uibUv" id="1k24xVzcBff" role="1tU5fm">
-              <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+              <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
             </node>
           </node>
           <node concept="37vLTw" id="1k24xVzcBfg" role="1DdaDG">
@@ -1441,7 +1441,7 @@
         <property role="TrG5h" value="listOfEnvironmentVariables" />
         <node concept="_YKpA" id="1k24xVzcBfm" role="1tU5fm">
           <node concept="3uibUv" id="1k24xVzcBfn" role="_ZDj9">
-            <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+            <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
           </node>
         </node>
       </node>
@@ -1491,7 +1491,7 @@
                         <ref role="3cqZAo" node="1k24xVz9XrO" resolve="service" />
                       </node>
                       <node concept="liA8E" id="1k24xVzad3M" role="2OqNvi">
-                        <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                        <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                         <node concept="Xl_RD" id="1k24xVzadEi" role="37wK5m">
                           <property role="Xl_RC" value="name" />
                         </node>
@@ -1525,7 +1525,7 @@
                             <ref role="3cqZAo" node="1k24xVz9XrO" resolve="service" />
                           </node>
                           <node concept="liA8E" id="1k24xVzawTD" role="2OqNvi">
-                            <ref role="37wK5l" to="gphs:~Element.getChildren(java.lang.String)" resolve="getChildren" />
+                            <ref role="37wK5l" to="mmaq:~Element.getChildren(java.lang.String)" resolve="getChildren" />
                             <node concept="Xl_RD" id="1k24xVzaAdW" role="37wK5m">
                               <property role="Xl_RC" value="servicePorts" />
                             </node>
@@ -1553,7 +1553,7 @@
                             <ref role="3cqZAo" node="1k24xVz9XrO" resolve="service" />
                           </node>
                           <node concept="liA8E" id="1k24xVzaJDo" role="2OqNvi">
-                            <ref role="37wK5l" to="gphs:~Element.getChildren(java.lang.String)" resolve="getChildren" />
+                            <ref role="37wK5l" to="mmaq:~Element.getChildren(java.lang.String)" resolve="getChildren" />
                             <node concept="Xl_RD" id="1k24xVzaJDp" role="37wK5m">
                               <property role="Xl_RC" value="selectors" />
                             </node>
@@ -1579,7 +1579,7 @@
               <node concept="3cpWsn" id="1k24xVz9XrO" role="1Duv9x">
                 <property role="TrG5h" value="service" />
                 <node concept="3uibUv" id="1k24xVz9XHw" role="1tU5fm">
-                  <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+                  <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
                 </node>
               </node>
               <node concept="2OqwBi" id="1k24xVz9ZCl" role="1DdaDG">
@@ -1587,7 +1587,7 @@
                   <ref role="3cqZAo" node="1k24xVz9VMz" resolve="services" />
                 </node>
                 <node concept="liA8E" id="1k24xVza0Ge" role="2OqNvi">
-                  <ref role="37wK5l" to="gphs:~Element.getChildren()" resolve="getChildren" />
+                  <ref role="37wK5l" to="mmaq:~Element.getChildren()" resolve="getChildren" />
                 </node>
               </node>
             </node>
@@ -1595,7 +1595,7 @@
           <node concept="3cpWsn" id="1k24xVz9VMz" role="1Duv9x">
             <property role="TrG5h" value="services" />
             <node concept="3uibUv" id="1k24xVz9W3O" role="1tU5fm">
-              <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+              <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
             </node>
           </node>
           <node concept="37vLTw" id="1k24xVz9WEN" role="1DdaDG">
@@ -1616,7 +1616,7 @@
         <property role="TrG5h" value="listOfServices" />
         <node concept="_YKpA" id="1k24xVz9TOR" role="1tU5fm">
           <node concept="3uibUv" id="1k24xVz9Uip" role="_ZDj9">
-            <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+            <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
           </node>
         </node>
       </node>
@@ -1666,7 +1666,7 @@
                         <ref role="3cqZAo" node="1k24xVz9jiq" resolve="servicePort" />
                       </node>
                       <node concept="liA8E" id="1k24xVz9ji7" role="2OqNvi">
-                        <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                        <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                         <node concept="Xl_RD" id="1k24xVz9ji8" role="37wK5m">
                           <property role="Xl_RC" value="name" />
                         </node>
@@ -1692,7 +1692,7 @@
                           <ref role="3cqZAo" node="1k24xVz9jiq" resolve="servicePort" />
                         </node>
                         <node concept="liA8E" id="1k24xVz9QEp" role="2OqNvi">
-                          <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                          <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                           <node concept="Xl_RD" id="1k24xVz9RlK" role="37wK5m">
                             <property role="Xl_RC" value="port" />
                           </node>
@@ -1716,7 +1716,7 @@
                         <ref role="3cqZAo" node="1k24xVz9jiq" resolve="servicePort" />
                       </node>
                       <node concept="liA8E" id="1k24xVz9jig" role="2OqNvi">
-                        <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                        <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                         <node concept="Xl_RD" id="1k24xVz9jih" role="37wK5m">
                           <property role="Xl_RC" value="targetPort" />
                         </node>
@@ -1748,7 +1748,7 @@
               <node concept="3cpWsn" id="1k24xVz9jiq" role="1Duv9x">
                 <property role="TrG5h" value="servicePort" />
                 <node concept="3uibUv" id="1k24xVz9jir" role="1tU5fm">
-                  <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+                  <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
                 </node>
               </node>
               <node concept="2OqwBi" id="1k24xVz9jis" role="1DdaDG">
@@ -1756,7 +1756,7 @@
                   <ref role="3cqZAo" node="1k24xVz9jiv" resolve="servicePorts" />
                 </node>
                 <node concept="liA8E" id="1k24xVz9jiu" role="2OqNvi">
-                  <ref role="37wK5l" to="gphs:~Element.getChildren()" resolve="getChildren" />
+                  <ref role="37wK5l" to="mmaq:~Element.getChildren()" resolve="getChildren" />
                 </node>
               </node>
             </node>
@@ -1764,7 +1764,7 @@
           <node concept="3cpWsn" id="1k24xVz9jiv" role="1Duv9x">
             <property role="TrG5h" value="servicePorts" />
             <node concept="3uibUv" id="1k24xVz9jiw" role="1tU5fm">
-              <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+              <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
             </node>
           </node>
           <node concept="37vLTw" id="1k24xVz9jix" role="1DdaDG">
@@ -1785,7 +1785,7 @@
         <property role="TrG5h" value="listOfServicePorts" />
         <node concept="_YKpA" id="1k24xVz9jiB" role="1tU5fm">
           <node concept="3uibUv" id="1k24xVz9jiC" role="_ZDj9">
-            <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+            <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
           </node>
         </node>
       </node>
@@ -1835,7 +1835,7 @@
                         <ref role="3cqZAo" node="1k24xVz8OdK" resolve="selector" />
                       </node>
                       <node concept="liA8E" id="1k24xVz902v" role="2OqNvi">
-                        <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                        <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                         <node concept="Xl_RD" id="1k24xVz90wk" role="37wK5m">
                           <property role="Xl_RC" value="key" />
                         </node>
@@ -1858,7 +1858,7 @@
                         <ref role="3cqZAo" node="1k24xVz8OdK" resolve="selector" />
                       </node>
                       <node concept="liA8E" id="1k24xVz97z2" role="2OqNvi">
-                        <ref role="37wK5l" to="gphs:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                        <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
                         <node concept="Xl_RD" id="1k24xVz980E" role="37wK5m">
                           <property role="Xl_RC" value="value" />
                         </node>
@@ -1890,7 +1890,7 @@
               <node concept="3cpWsn" id="1k24xVz8OdK" role="1Duv9x">
                 <property role="TrG5h" value="selector" />
                 <node concept="3uibUv" id="1k24xVz8OoI" role="1tU5fm">
-                  <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+                  <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
                 </node>
               </node>
               <node concept="2OqwBi" id="1k24xVz8Pnq" role="1DdaDG">
@@ -1898,7 +1898,7 @@
                   <ref role="3cqZAo" node="1k24xVz8N0J" resolve="selectors" />
                 </node>
                 <node concept="liA8E" id="1k24xVz8QlM" role="2OqNvi">
-                  <ref role="37wK5l" to="gphs:~Element.getChildren()" resolve="getChildren" />
+                  <ref role="37wK5l" to="mmaq:~Element.getChildren()" resolve="getChildren" />
                 </node>
               </node>
             </node>
@@ -1906,7 +1906,7 @@
           <node concept="3cpWsn" id="1k24xVz8N0J" role="1Duv9x">
             <property role="TrG5h" value="selectors" />
             <node concept="3uibUv" id="1k24xVz8NbE" role="1tU5fm">
-              <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+              <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
             </node>
           </node>
           <node concept="37vLTw" id="1k24xVz8NJi" role="1DdaDG">
@@ -1927,7 +1927,7 @@
         <property role="TrG5h" value="listOfSelectors" />
         <node concept="_YKpA" id="1k24xVz8LS8" role="1tU5fm">
           <node concept="3uibUv" id="1k24xVz8LTN" role="_ZDj9">
-            <ref role="3uigEE" to="gphs:~Element" resolve="Element" />
+            <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
           </node>
         </node>
       </node>

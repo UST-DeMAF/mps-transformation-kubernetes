@@ -65,10 +65,9 @@
         <property role="2iiNFu" value="5555" />
         <property role="2iiNFt" value="8080" />
       </node>
-      <node concept="2iiNFj" id="3p0Gq6Viw$M" role="2iiNEz">
-        <property role="2iiNFg" value="thirdPort" />
-        <property role="2iiNFu" value="666" />
-        <property role="2iiNFt" value="8083" />
+      <node concept="2iiNFj" id="7TLcsKvHO$3" role="2iiNEz">
+        <property role="2iiNFu" value="555" />
+        <property role="2iiNFt" value="8080" />
       </node>
       <node concept="2iiNFp" id="3p0Gq6Vefix" role="2iiNEx">
         <property role="2iiNEA" value="svc" />

@@ -19,6 +19,7 @@
         <child id="1068498886297" name="rValue" index="37vLTx" />
         <child id="1068498886295" name="lValue" index="37vLTJ" />
       </concept>
+      <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1154032098014" name="jetbrains.mps.baseLanguage.structure.AbstractLoopStatement" flags="nn" index="2LF5Ji">
         <child id="1154032183016" name="body" index="2LFqv$" />
       </concept>
@@ -73,6 +74,9 @@
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
+      <concept id="1081516740877" name="jetbrains.mps.baseLanguage.structure.NotExpression" flags="nn" index="3fqX7Q">
+        <child id="1081516765348" name="expression" index="3fr31v" />
+      </concept>
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
@@ -85,6 +89,7 @@
       <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
         <child id="8356039341262087992" name="line" index="1aUNEU" />
       </concept>
+      <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
     </language>
     <language id="b83431fe-5c8f-40bc-8a36-65e25f4dd253" name="jetbrains.mps.lang.textGen">
       <concept id="45307784116571022" name="jetbrains.mps.lang.textGen.structure.FilenameFunction" flags="ig" index="29tfMY" />
@@ -4768,8 +4773,26 @@
               </node>
             </node>
           </node>
-          <node concept="37vLTw" id="6hyHiy$CiJS" role="3clFbw">
-            <ref role="3cqZAo" node="6hyHiy$CgAs" resolve="typeIsString" />
+          <node concept="1Wc70l" id="1Jc11aAfi2l" role="3clFbw">
+            <node concept="37vLTw" id="6hyHiy$CiJS" role="3uHU7B">
+              <ref role="3cqZAo" node="6hyHiy$CgAs" resolve="typeIsString" />
+            </node>
+            <node concept="3fqX7Q" id="1Jc11aAfreC" role="3uHU7w">
+              <node concept="2OqwBi" id="1Jc11aAfs$p" role="3fr31v">
+                <node concept="2OqwBi" id="1Jc11aAfrGl" role="2Oq$k0">
+                  <node concept="117lpO" id="1Jc11aAfrrl" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="1Jc11aAfs3j" role="2OqNvi">
+                    <ref role="3TsBF5" to="9rr7:2hvaCGv18I4" resolve="value" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="1Jc11aAfthF" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~String.startsWith(java.lang.String)" resolve="startsWith" />
+                  <node concept="Xl_RD" id="1Jc11aAftlh" role="37wK5m">
+                    <property role="Xl_RC" value="\&quot;" />
+                  </node>
+                </node>
+              </node>
+            </node>
           </node>
         </node>
         <node concept="lc7rE" id="6hyHiy$CgjB" role="3cqZAp">
@@ -4790,8 +4813,26 @@
               </node>
             </node>
           </node>
-          <node concept="37vLTw" id="6hyHiy$Cj5B" role="3clFbw">
-            <ref role="3cqZAo" node="6hyHiy$CgAs" resolve="typeIsString" />
+          <node concept="1Wc70l" id="1Jc11aAfmXu" role="3clFbw">
+            <node concept="3fqX7Q" id="1Jc11aAfn1R" role="3uHU7w">
+              <node concept="2OqwBi" id="1Jc11aAfogf" role="3fr31v">
+                <node concept="2OqwBi" id="1Jc11aAfnor" role="2Oq$k0">
+                  <node concept="117lpO" id="1Jc11aAfn7x" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="1Jc11aAfnJh" role="2OqNvi">
+                    <ref role="3TsBF5" to="9rr7:2hvaCGv18I4" resolve="value" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="1Jc11aAfp1v" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~String.endsWith(java.lang.String)" resolve="endsWith" />
+                  <node concept="Xl_RD" id="1Jc11aAfpcI" role="37wK5m">
+                    <property role="Xl_RC" value="\&quot;" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="37vLTw" id="6hyHiy$Cj5B" role="3uHU7B">
+              <ref role="3cqZAo" node="6hyHiy$CgAs" resolve="typeIsString" />
+            </node>
           </node>
         </node>
         <node concept="11p84A" id="6EqhN9zImbP" role="3cqZAp" />

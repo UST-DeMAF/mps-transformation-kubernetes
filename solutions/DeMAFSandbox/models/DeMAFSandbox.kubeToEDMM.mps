@@ -84,7 +84,7 @@
       </node>
       <node concept="2iieDQ" id="4wLeArqywLm" role="2iieDF">
         <property role="2iieDR" value="xCont" />
-        <property role="2iieDP" value="docker.io/bitnami/zookeeper:3.8.0-debian-11-r11" />
+        <property role="2iieDP" value="&quot;docker.io/bitnami/zookeeper:3.8.0-debian-11-r11&quot;" />
         <node concept="2iieD6" id="4wLeArqywLC" role="2iieDe">
           <property role="2iieD7" value="x" />
           <property role="2iieD5" value="x" />

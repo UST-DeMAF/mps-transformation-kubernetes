@@ -272,15 +272,11 @@
         <property id="2620860285162130350" name="fileURI" index="VmU4_" />
       </concept>
       <concept id="2620860285162130361" name="EDMM.structure.ComponentType" flags="ng" index="VmU4M" />
-      <concept id="2620860285162130364" name="EDMM.structure.RelationType" flags="ng" index="VmU4R">
-        <reference id="2877443765335994024" name="parentType" index="3hVhlN" />
-      </concept>
       <concept id="2620860285162130372" name="EDMM.structure.Component" flags="ng" index="VmU5f">
         <reference id="2620860285162130373" name="type" index="VmU5e" />
         <child id="2877443765335994034" name="artifacts" index="3hVhlD" />
       </concept>
       <concept id="2620860285162130297" name="EDMM.structure.DeploymentModel" flags="ng" index="VmU7M">
-        <child id="2620860285162130338" name="properties" index="VmU4D" />
         <child id="2620860285162130303" name="modelEntities" index="VmU7O" />
       </concept>
       <concept id="2620860285162130300" name="EDMM.structure.ModelEntity" flags="ng" index="VmU7R">
@@ -351,21 +347,6 @@
   <node concept="VmU7M" id="21VM_ctaqsi">
     <node concept="n94m4" id="21VM_ctaqsj" role="lGtFl">
       <ref role="n9lRv" to="4abx:4wLeArqywgg" resolve="KubernetesDeploymentModel" />
-    </node>
-    <node concept="VmU4R" id="21VM_ctaqsl" role="VmU7O">
-      <property role="TrG5h" value="DependsOn" />
-    </node>
-    <node concept="VmU4a" id="21VM_ctaqsn" role="VmU4D">
-      <property role="VmU49" value="version" />
-      <property role="VmU4f" value="1.0" />
-    </node>
-    <node concept="VmU4R" id="21VM_ctaqsp" role="VmU7O">
-      <property role="TrG5h" value="HostedOn" />
-      <ref role="3hVhlN" node="21VM_ctaqsl" resolve="DependsOn" />
-    </node>
-    <node concept="VmU4R" id="21VM_ctaqss" role="VmU7O">
-      <property role="TrG5h" value="ConnectsTo" />
-      <ref role="3hVhlN" node="21VM_ctaqsl" resolve="DependsOn" />
     </node>
     <node concept="VmU4M" id="6VSF6pq1gJE" role="VmU7O">
       <property role="TrG5h" value="NewComponentType" />

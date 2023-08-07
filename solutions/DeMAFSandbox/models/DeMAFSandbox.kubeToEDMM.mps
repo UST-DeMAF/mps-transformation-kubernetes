@@ -73,12 +73,20 @@
         <property role="2iiNEA" value="svc" />
         <property role="2iiNE$" value="xService" />
       </node>
+      <node concept="2iiNFp" id="2sq$s2MwxTu" role="2iiNEx">
+        <property role="2iiNEA" value="svc-again" />
+        <property role="2iiNE$" value="xService" />
+      </node>
     </node>
     <node concept="2iiq7J" id="4wLeArqywLk" role="2iINTR">
       <property role="2iieDA" value="x" />
       <property role="2iieD$" value="1" />
       <node concept="2iieDz" id="4wLeArqywLl" role="2iieDH">
         <property role="2iieDw" value="svc" />
+        <property role="2iieDI" value="xService" />
+      </node>
+      <node concept="2iieDz" id="2sq$s2MwxTx" role="2iieDH">
+        <property role="2iieDw" value="svc-again" />
         <property role="2iieDI" value="xService" />
       </node>
       <node concept="2iieDQ" id="4wLeArqywLm" role="2iieDF">

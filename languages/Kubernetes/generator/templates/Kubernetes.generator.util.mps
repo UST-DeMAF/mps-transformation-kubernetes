@@ -109,6 +109,7 @@
         <child id="8276990574895933173" name="catchBody" index="1zc67A" />
         <child id="8276990574895933172" name="throwable" index="1zc67B" />
       </concept>
+      <concept id="1081855346303" name="jetbrains.mps.baseLanguage.structure.BreakStatement" flags="nn" index="3zACq4" />
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
@@ -361,6 +362,7 @@
                         </node>
                       </node>
                     </node>
+                    <node concept="3zACq4" id="2sq$s2MHMwk" role="3cqZAp" />
                   </node>
                 </node>
               </node>

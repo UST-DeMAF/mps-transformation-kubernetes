@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Building...'
                 // Add build steps here
+                // Change Jenkinsfile to test
             }
         }
         stage('Test') {

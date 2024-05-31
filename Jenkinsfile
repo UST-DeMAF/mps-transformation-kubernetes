@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building...'
                 // Add build steps here
-                // Change Jenkinsfile to test
+                // Change Jenkinsfile to test if branch is shown in github
             }
         }
         stage('Test') {

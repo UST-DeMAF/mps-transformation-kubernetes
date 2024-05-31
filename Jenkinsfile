@@ -2,11 +2,17 @@ pipeline {
     agent any
 
     stages {
+        stage('Checkout') {
+            steps {
+                echo 'Check out from Version Control'
+                checkout scm
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building...'
                 // Add build steps here
-                // Change Jenkinsfile to test
+                // Change Jenkinsfile to test if branch is shown in github
             }
         }
         stage('Test') {
@@ -23,11 +29,20 @@ pipeline {
         }
     }
     post {
-            success {
-                githubNotify context: 'continuous-integration/jenkins', status: 'SUCCESS', description: 'Build succeeded'
-            }
-            failure {
-                githubNotify context: 'continuous-integration/jenkins', status: 'FAILURE', description: 'Build failed'
-            }
+        success {
+            setBuildStatus("Build succeeded", "SUCCESS");
         }
+        failure {
+            setBuildStatus("Build failed", "FAILURE");
+            }
+    }
+}
+void setBuildStatus(String message, String state) {
+  step([
+      $class: "GitHubCommitStatusSetter",
+      reposSource: [$class: "ManuallyEnteredRepositorySource", url: "https://github.com/my-org/my-repo"],
+      contextSource: [$class: "ManuallyEnteredCommitContextSource", context: "ci/jenkins/build-status"],
+      errorHandlers: [[$class: "ChangingBuildStatusErrorHandler", result: "UNSTABLE"]],
+      statusResultSource: [ $class: "ConditionalStatusResultSource", results: [[$class: "AnyBuildResult", message: message, state: state]] ]
+  ]);
 }

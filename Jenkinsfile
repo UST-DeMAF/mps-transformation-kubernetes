@@ -28,4 +28,13 @@ pipeline {
             }
         }
     }
+    post {
+    success {
+    setBuildStatus("Build succeeded", "SUCCESS")
+        echo 'This will run only if the pipeline is successful'
+    }
+    failure {
+    setBuildStatus("Build failed", "FAILURE")
+        echo 'This will run only if the pipeline is broken'
+    }
 }

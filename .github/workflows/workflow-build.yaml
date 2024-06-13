@@ -6,7 +6,7 @@ on:
   workflow_call:
 
 env:
-  PROJECT_NAME: "mps-transformation"
+  PROJECT_NAME: "mps-transformation-kubernetes"
   LANGUAGE_NAME: "EDMM"
 
 jobs:

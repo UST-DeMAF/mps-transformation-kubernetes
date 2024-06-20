@@ -11,6 +11,7 @@
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
     <import index="r9z2" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:org.jdom.input(MPS.Core/)" />
     <import index="mmaq" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:org.jdom(MPS.Core/)" />
+    <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -167,8 +168,18 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
+        <property id="709746936026609031" name="linkId" index="3V$3ak" />
+        <property id="709746936026609029" name="role_DebugInfo" index="3V$3am" />
+      </concept>
+      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
+        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
       </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
@@ -706,6 +717,37 @@
                     </node>
                   </node>
                 </node>
+                <node concept="1X3_iC" id="4l9bphwXa2u" role="lGtFl">
+                  <property role="3V$3am" value="statement" />
+                  <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
+                  <node concept="3clFbF" id="62AVSjwdeET" role="8Wnug">
+                    <node concept="37vLTI" id="62AVSjwduFb" role="3clFbG">
+                      <node concept="2YIFZM" id="62AVSjwdFVR" role="37vLTx">
+                        <ref role="37wK5l" to="wyt6:~Integer.parseInt(java.lang.String)" resolve="parseInt" />
+                        <ref role="1Pybhc" to="wyt6:~Integer" resolve="Integer" />
+                        <node concept="2OqwBi" id="62AVSjwdQk8" role="37wK5m">
+                          <node concept="37vLTw" id="62AVSjwdMJu" role="2Oq$k0">
+                            <ref role="3cqZAo" node="1k24xVzfUaF" resolve="deployment" />
+                          </node>
+                          <node concept="liA8E" id="62AVSjwdTFH" role="2OqNvi">
+                            <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                            <node concept="Xl_RD" id="62AVSjwe0_9" role="37wK5m">
+                              <property role="Xl_RC" value="minReadySeconds" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="2OqwBi" id="62AVSjwdjIJ" role="37vLTJ">
+                        <node concept="37vLTw" id="62AVSjwdeER" role="2Oq$k0">
+                          <ref role="3cqZAo" node="1k24xVzfUaf" resolve="kubeDeployment" />
+                        </node>
+                        <node concept="3TrcHB" id="62AVSjwdoXc" role="2OqNvi">
+                          <ref role="3TsBF5" to="4abx:5GuXokVPakU" resolve="minReadySeconds" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
                 <node concept="3clFbF" id="1k24xVzgLkr" role="3cqZAp">
                   <node concept="2OqwBi" id="1k24xVzgLks" role="3clFbG">
                     <node concept="2OqwBi" id="1k24xVzgLkt" role="2Oq$k0">
@@ -741,12 +783,12 @@
                         <ref role="3cqZAo" node="1k24xVzfUaf" resolve="kubeDeployment" />
                       </node>
                       <node concept="3Tsc0h" id="1k24xVzh8kt" role="2OqNvi">
-                        <ref role="3TtcxE" to="4abx:4wLeArqut0d" resolve="container" />
+                        <ref role="3TtcxE" to="4abx:3DZQwZqzigT" resolve="pods" />
                       </node>
                     </node>
                     <node concept="X8dFx" id="1k24xVzgLkF" role="2OqNvi">
                       <node concept="1rXfSq" id="1k24xVzgLkG" role="25WWJ7">
-                        <ref role="37wK5l" node="1k24xVzdrs5" resolve="convertContainers" />
+                        <ref role="37wK5l" node="62AVSjweUOl" resolve="convertPods" />
                         <node concept="2OqwBi" id="1k24xVzgLkH" role="37wK5m">
                           <node concept="37vLTw" id="1k24xVzgLkI" role="2Oq$k0">
                             <ref role="3cqZAo" node="1k24xVzfUaF" resolve="deployment" />
@@ -754,7 +796,7 @@
                           <node concept="liA8E" id="1k24xVzgLkJ" role="2OqNvi">
                             <ref role="37wK5l" to="mmaq:~Element.getChildren(java.lang.String)" resolve="getChildren" />
                             <node concept="Xl_RD" id="1k24xVzgLkK" role="37wK5m">
-                              <property role="Xl_RC" value="container" />
+                              <property role="Xl_RC" value="pods" />
                             </node>
                           </node>
                         </node>
@@ -957,6 +999,201 @@
         <property role="TrG5h" value="listOfLabels" />
         <node concept="_YKpA" id="1k24xVzfsze" role="1tU5fm">
           <node concept="3uibUv" id="1k24xVzfszf" role="_ZDj9">
+            <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="62AVSjweOJ4" role="jymVt" />
+    <node concept="2YIFZL" id="62AVSjweUOl" role="jymVt">
+      <property role="TrG5h" value="convertPods" />
+      <node concept="3clFbS" id="62AVSjweUOo" role="3clF47">
+        <node concept="3cpWs8" id="62AVSjwff8q" role="3cqZAp">
+          <node concept="3cpWsn" id="62AVSjwff8t" role="3cpWs9">
+            <property role="TrG5h" value="kubePods" />
+            <node concept="2I9FWS" id="62AVSjwff8p" role="1tU5fm">
+              <ref role="2I9WkF" to="4abx:18v7dxm$IxN" resolve="PodSpec" />
+            </node>
+            <node concept="2ShNRf" id="62AVSjwfEUN" role="33vP2m">
+              <node concept="2T8Vx0" id="62AVSjwfYem" role="2ShVmc">
+                <node concept="2I9FWS" id="62AVSjwfYeo" role="2T96Bj">
+                  <ref role="2I9WkF" to="4abx:18v7dxm$IxN" resolve="PodSpec" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1DcWWT" id="62AVSjwie4q" role="3cqZAp">
+          <node concept="3clFbS" id="62AVSjwie4s" role="2LFqv$">
+            <node concept="1DcWWT" id="62AVSjwjoAI" role="3cqZAp">
+              <node concept="3cpWsn" id="62AVSjwjoAJ" role="1Duv9x">
+                <property role="TrG5h" value="pod" />
+                <node concept="3uibUv" id="62AVSjwjxDL" role="1tU5fm">
+                  <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
+                </node>
+              </node>
+              <node concept="2OqwBi" id="62AVSjwjRC9" role="1DdaDG">
+                <node concept="37vLTw" id="62AVSjwjKFl" role="2Oq$k0">
+                  <ref role="3cqZAo" node="62AVSjwie4t" resolve="pods" />
+                </node>
+                <node concept="liA8E" id="62AVSjwk24h" role="2OqNvi">
+                  <ref role="37wK5l" to="mmaq:~Element.getChildren()" resolve="getChildren" />
+                </node>
+              </node>
+              <node concept="3clFbS" id="62AVSjwjoAL" role="2LFqv$">
+                <node concept="3cpWs8" id="62AVSjwk94Q" role="3cqZAp">
+                  <node concept="3cpWsn" id="62AVSjwk94T" role="3cpWs9">
+                    <property role="TrG5h" value="kubePod" />
+                    <node concept="3Tqbb2" id="62AVSjwk94P" role="1tU5fm">
+                      <ref role="ehGHo" to="4abx:18v7dxm$IxN" resolve="PodSpec" />
+                    </node>
+                    <node concept="2ShNRf" id="62AVSjwkC_G" role="33vP2m">
+                      <node concept="3zrR0B" id="62AVSjwkJt6" role="2ShVmc">
+                        <node concept="3Tqbb2" id="62AVSjwkJt8" role="3zrR0E">
+                          <ref role="ehGHo" to="4abx:18v7dxm$IxN" resolve="PodSpec" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbF" id="62AVSjwl4la" role="3cqZAp">
+                  <node concept="37vLTI" id="62AVSjwlp$v" role="3clFbG">
+                    <node concept="2OqwBi" id="62AVSjwl$Bh" role="37vLTx">
+                      <node concept="37vLTw" id="62AVSjwlw$j" role="2Oq$k0">
+                        <ref role="3cqZAo" node="62AVSjwjoAJ" resolve="pod" />
+                      </node>
+                      <node concept="liA8E" id="62AVSjwlHGC" role="2OqNvi">
+                        <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                        <node concept="Xl_RD" id="62AVSjwlPVx" role="37wK5m">
+                          <property role="Xl_RC" value="hostname" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="2OqwBi" id="62AVSjwlbg5" role="37vLTJ">
+                      <node concept="37vLTw" id="62AVSjwl4l8" role="2Oq$k0">
+                        <ref role="3cqZAo" node="62AVSjwk94T" resolve="kubePod" />
+                      </node>
+                      <node concept="3TrcHB" id="62AVSjwlh6u" role="2OqNvi">
+                        <ref role="3TsBF5" to="4abx:18v7dxm$J9h" resolve="hostname" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="1X3_iC" id="4l9bphwXnxu" role="lGtFl">
+                  <property role="3V$3am" value="statement" />
+                  <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
+                  <node concept="3clFbF" id="62AVSjwm9Vf" role="8Wnug">
+                    <node concept="37vLTI" id="62AVSjwmwpX" role="3clFbG">
+                      <node concept="2OqwBi" id="62AVSjwmGE1" role="37vLTx">
+                        <node concept="37vLTw" id="62AVSjwmCfw" role="2Oq$k0">
+                          <ref role="3cqZAo" node="62AVSjwjoAJ" resolve="pod" />
+                        </node>
+                        <node concept="liA8E" id="62AVSjwmNeI" role="2OqNvi">
+                          <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                          <node concept="Xl_RD" id="62AVSjwmU4u" role="37wK5m">
+                            <property role="Xl_RC" value="restartPolicy" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="2OqwBi" id="62AVSjwmhoP" role="37vLTJ">
+                        <node concept="37vLTw" id="62AVSjwm9Vd" role="2Oq$k0">
+                          <ref role="3cqZAo" node="62AVSjwk94T" resolve="kubePod" />
+                        </node>
+                        <node concept="3TrcHB" id="62AVSjwmr1l" role="2OqNvi">
+                          <ref role="3TsBF5" to="4abx:18v7dxm$Jw5" resolve="restartPolicy" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbF" id="62AVSjwnzLU" role="3cqZAp">
+                  <node concept="2OqwBi" id="62AVSjwnXZj" role="3clFbG">
+                    <node concept="2OqwBi" id="62AVSjwnE6P" role="2Oq$k0">
+                      <node concept="37vLTw" id="62AVSjwnzLS" role="2Oq$k0">
+                        <ref role="3cqZAo" node="62AVSjwk94T" resolve="kubePod" />
+                      </node>
+                      <node concept="3Tsc0h" id="62AVSjwnOqM" role="2OqNvi">
+                        <ref role="3TtcxE" to="4abx:18v7dxm$K4I" resolve="containers" />
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="62AVSjwo88O" role="2OqNvi">
+                      <ref role="37wK5l" to="33ny:~List.addAll(java.util.Collection)" resolve="addAll" />
+                      <node concept="1rXfSq" id="62AVSjwofLT" role="37wK5m">
+                        <ref role="37wK5l" node="1k24xVzdrs5" resolve="convertContainers" />
+                        <node concept="2OqwBi" id="62AVSjwoswf" role="37wK5m">
+                          <node concept="37vLTw" id="62AVSjwoonl" role="2Oq$k0">
+                            <ref role="3cqZAo" node="62AVSjwjoAJ" resolve="pod" />
+                          </node>
+                          <node concept="liA8E" id="62AVSjwoyL$" role="2OqNvi">
+                            <ref role="37wK5l" to="mmaq:~Element.getChildren(java.lang.String)" resolve="getChildren" />
+                            <node concept="Xl_RD" id="62AVSjwoEEN" role="37wK5m">
+                              <property role="Xl_RC" value="containers" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="1X3_iC" id="4l9bphwXgMC" role="lGtFl">
+                  <property role="3V$3am" value="statement" />
+                  <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
+                  <node concept="3clFbF" id="62AVSjwp8q6" role="8Wnug">
+                    <node concept="2OqwBi" id="62AVSjwptR1" role="3clFbG">
+                      <node concept="2OqwBi" id="62AVSjwph4f" role="2Oq$k0">
+                        <node concept="37vLTw" id="62AVSjwp8q4" role="2Oq$k0">
+                          <ref role="3cqZAo" node="62AVSjwk94T" resolve="kubePod" />
+                        </node>
+                        <node concept="3Tsc0h" id="62AVSjwplfm" role="2OqNvi">
+                          <ref role="3TtcxE" to="4abx:18v7dxm$KuL" resolve="initContainers" />
+                        </node>
+                      </node>
+                      <node concept="X8dFx" id="62AVSjwpFo3" role="2OqNvi">
+                        <node concept="1rXfSq" id="62AVSjwpORK" role="25WWJ7">
+                          <ref role="37wK5l" node="1k24xVzdrs5" resolve="convertContainers" />
+                          <node concept="2OqwBi" id="62AVSjwq0nF" role="37wK5m">
+                            <node concept="37vLTw" id="62AVSjwpUYC" role="2Oq$k0">
+                              <ref role="3cqZAo" node="62AVSjwjoAJ" resolve="pod" />
+                            </node>
+                            <node concept="liA8E" id="62AVSjwq76H" role="2OqNvi">
+                              <ref role="37wK5l" to="mmaq:~Element.getChildren(java.lang.String)" resolve="getChildren" />
+                              <node concept="Xl_RD" id="62AVSjwqg6f" role="37wK5m">
+                                <property role="Xl_RC" value="initContainers" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3cpWsn" id="62AVSjwie4t" role="1Duv9x">
+            <property role="TrG5h" value="pods" />
+            <node concept="3uibUv" id="62AVSjwimX5" role="1tU5fm">
+              <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
+            </node>
+          </node>
+          <node concept="37vLTw" id="62AVSjwiImo" role="1DdaDG">
+            <ref role="3cqZAo" node="62AVSjweWuZ" resolve="listOfPods" />
+          </node>
+        </node>
+        <node concept="3clFbF" id="62AVSjwhiJ_" role="3cqZAp">
+          <node concept="37vLTw" id="62AVSjwhiJz" role="3clFbG">
+            <ref role="3cqZAo" node="62AVSjwff8t" resolve="kubePods" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm6S6" id="62AVSjwePYT" role="1B3o_S" />
+      <node concept="2I9FWS" id="62AVSjweSRB" role="3clF45">
+        <ref role="2I9WkF" to="4abx:18v7dxm$IxN" resolve="PodSpec" />
+      </node>
+      <node concept="37vLTG" id="62AVSjweWuZ" role="3clF46">
+        <property role="TrG5h" value="listOfPods" />
+        <node concept="_YKpA" id="62AVSjweWuX" role="1tU5fm">
+          <node concept="3uibUv" id="62AVSjweX_8" role="_ZDj9">
             <ref role="3uigEE" to="mmaq:~Element" resolve="Element" />
           </node>
         </node>

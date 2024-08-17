@@ -260,21 +260,6 @@
       <ref role="20lvS9" node="2hvaCGv18IF" resolve="Artifact" />
     </node>
   </node>
-  <node concept="1TIwiD" id="62AVSjw3dyg">
-    <property role="EcuMT" value="6964517227748710544" />
-    <property role="TrG5h" value="Properties" />
-    <property role="34LRSv" value="Properties" />
-    <property role="R4oN_" value="Helper to create list of properties" />
-    <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
-    <node concept="1TJgyj" id="62AVSjw3dQ_" role="1TKVEi">
-      <property role="IQ2ns" value="6964517227748711845" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="properties" />
-      <property role="20lbJX" value="fLJekj6/_1__n" />
-      <ref role="20lvS9" node="2hvaCGv18I1" resolve="Property" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="62AVSjw56GO">
     <property role="EcuMT" value="6964517227749206836" />
     <property role="TrG5h" value="Artifacts" />

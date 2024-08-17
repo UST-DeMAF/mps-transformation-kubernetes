@@ -12,25 +12,27 @@
         <property id="5202003258016124963" name="value" index="2iieD5" />
         <property id="5202003258016124961" name="key" index="2iieD7" />
       </concept>
-      <concept id="5202003258016124933" name="Kubernetes.structure.Label" flags="ng" index="2iieDz">
+      <concept id="5202003258016124933" name="Kubernetes.structure.StringStringMap" flags="ng" index="2iieDz">
         <property id="5202003258016124934" name="key" index="2iieDw" />
         <property id="5202003258016124936" name="value" index="2iieDI" />
       </concept>
-      <concept id="5202003258016124950" name="Kubernetes.structure.ContainerPort" flags="ng" index="2iieDK">
-        <property id="5202003258016124951" name="name" index="2iieDL" />
-        <property id="5202003258016124957" name="port" index="2iieDV" />
-      </concept>
+      <concept id="5202003258016124950" name="Kubernetes.structure.ContainerPort" flags="ng" index="2iieDK" />
       <concept id="5202003258016124944" name="Kubernetes.structure.Container" flags="ng" index="2iieDQ">
         <property id="5202003258016124947" name="image" index="2iieDP" />
         <property id="5202003258016124945" name="name" index="2iieDR" />
+        <property id="6565955259335978798" name="imagePullPolicy" index="1wMHEF" />
+        <property id="6565955259335978802" name="workingDir" index="1wMHER" />
         <child id="5202003258016124966" name="containerPorts" index="2iieD0" />
         <child id="5202003258016124968" name="environmentVariables" index="2iieDe" />
       </concept>
       <concept id="5202003258016045961" name="Kubernetes.structure.Deployment" flags="ng" index="2iiq7J">
         <property id="5202003258016124930" name="replicas" index="2iieD$" />
         <property id="5202003258016124928" name="name" index="2iieDA" />
-        <child id="5202003258016124941" name="container" index="2iieDF" />
+        <property id="6565955259336009018" name="minReadySeconds" index="1wM_2Z" />
+        <property id="6565955259336009061" name="progressDeadlineSeconds" index="1wM_3w" />
+        <property id="6565955259336009056" name="revisionHistoryLimit" index="1wM_3_" />
         <child id="5202003258016124939" name="labels" index="2iieDH" />
+        <child id="4215327537868121145" name="pods" index="3wWJSQ" />
       </concept>
       <concept id="5202003258016137397" name="Kubernetes.structure.ServicePort" flags="ng" index="2iiNFj">
         <property id="5202003258016137398" name="name" index="2iiNFg" />
@@ -49,10 +51,36 @@
       <concept id="5202003258017186832" name="Kubernetes.structure.KubernetesDeploymentModel" flags="ng" index="2iINTQ">
         <child id="5202003258017186835" name="services" index="2iINTP" />
         <child id="5202003258017186833" name="deployments" index="2iINTR" />
+        <child id="8491683264093045380" name="persistentVolumeClaims" index="1wJspO" />
+      </concept>
+      <concept id="1305794132451715187" name="Kubernetes.structure.PodSpec" flags="ng" index="14zviF">
+        <property id="1305794132451719173" name="restartPolicy" index="14zujt" />
+        <property id="1305794132451717713" name="hostname" index="14zuU9" />
+        <child id="4992571777221411311" name="labels" index="_DmLV" />
+        <child id="4329757261297724321" name="volumes" index="ZhWzF" />
+        <child id="1305794132451721518" name="containers" index="14z1RQ" />
+      </concept>
+      <concept id="6565955259336012046" name="Kubernetes.structure.Volume" flags="ng" index="1wM$ib">
+        <property id="4329757261297715652" name="name" index="ZhYEe" />
+        <property id="2499290614452652503" name="subPath" index="1ih4D5" />
+        <property id="2499290614452632946" name="mountPath" index="1ihvVw" />
+        <property id="6171454360990656326" name="persistentVolumeClaimName" index="1NLOTd" />
+      </concept>
+      <concept id="6171454360990652432" name="Kubernetes.structure.PersistentVolumeClaim" flags="ng" index="1NLR4r">
+        <property id="6171454360990655045" name="volumeName" index="1NLOHe" />
+        <property id="6171454360990653344" name="requests" index="1NLRaF" />
       </concept>
     </language>
   </registry>
   <node concept="2iINTQ" id="4wLeArqywKw">
+    <node concept="1NLR4r" id="7noxf0lrdQ6" role="1wJspO">
+      <property role="1NLOHe" value="pvc1" />
+      <property role="1NLRaF" value="10Gi" />
+    </node>
+    <node concept="1NLR4r" id="7noxf0lrdWC" role="1wJspO">
+      <property role="1NLOHe" value="pvc2" />
+      <property role="1NLRaF" value="25Gi" />
+    </node>
     <node concept="2iiNFk" id="3p0Gq6Vefiv" role="2iINTP">
       <property role="2iiNFl" value="serviceForX" />
       <node concept="2iiNFj" id="3p0Gq6Vefiw" role="2iiNEz">
@@ -81,6 +109,39 @@
     <node concept="2iiq7J" id="4wLeArqywLk" role="2iINTR">
       <property role="2iieDA" value="x" />
       <property role="2iieD$" value="1" />
+      <property role="1wM_2Z" value="1" />
+      <property role="1wM_3_" value="2" />
+      <property role="1wM_3w" value="3" />
+      <node concept="14zviF" id="3c0mEf98lJA" role="3wWJSQ">
+        <property role="14zuU9" value="xHostname" />
+        <property role="14zujt" value="Always" />
+        <node concept="2iieDQ" id="3KmoOC3oS0G" role="14z1RQ">
+          <property role="2iieDR" value="xCont1" />
+          <property role="2iieDP" value="anotherImage" />
+          <property role="1wMHEF" value="Always" />
+          <property role="1wMHER" value="/srv" />
+          <node concept="2iieD6" id="3KmoOC3oSaz" role="2iieDe">
+            <property role="2iieD7" value="fancyKey" />
+            <property role="2iieD5" value="fancyValue" />
+          </node>
+          <node concept="2iieDK" id="3KmoOC3oS0H" role="2iieD0" />
+        </node>
+        <node concept="1wM$ib" id="3KmoOC3mh8T" role="ZhWzF">
+          <property role="ZhYEe" value="volume1" />
+          <property role="1NLOTd" value="pvc1" />
+          <property role="1ihvVw" value="/test/path" />
+        </node>
+        <node concept="1wM$ib" id="5m_qgGAoxms" role="ZhWzF">
+          <property role="ZhYEe" value="volume2" />
+          <property role="1NLOTd" value="pvc2" />
+          <property role="1ihvVw" value="/another/path" />
+          <property role="1ih4D5" value="/with/sub/path" />
+        </node>
+        <node concept="2iieDz" id="3c0mEf98lJD" role="_DmLV">
+          <property role="2iieDw" value="xLabelKey" />
+          <property role="2iieDI" value="xLabelValue" />
+        </node>
+      </node>
       <node concept="2iieDz" id="4wLeArqywLl" role="2iieDH">
         <property role="2iieDw" value="svc" />
         <property role="2iieDI" value="xService" />
@@ -88,42 +149,6 @@
       <node concept="2iieDz" id="2sq$s2MwxTx" role="2iieDH">
         <property role="2iieDw" value="svc-again" />
         <property role="2iieDI" value="xService" />
-      </node>
-      <node concept="2iieDQ" id="4wLeArqywLm" role="2iieDF">
-        <property role="2iieDR" value="xCont" />
-        <property role="2iieDP" value="&quot;docker.io/bitnami/zookeeper:3.8.0-debian-11-r11&quot;" />
-        <node concept="2iieD6" id="4wLeArqywLC" role="2iieDe">
-          <property role="2iieD7" value="x" />
-          <property role="2iieD5" value="x" />
-        </node>
-        <node concept="2iieDK" id="4wLeArqywLn" role="2iieD0">
-          <property role="2iieDL" value="8080" />
-          <property role="2iieDV" value="8080" />
-        </node>
-      </node>
-    </node>
-    <node concept="2iiq7J" id="4wLeArqywLs" role="2iINTR">
-      <property role="2iieDA" value="y" />
-      <property role="2iieD$" value="1" />
-      <node concept="2iieDz" id="4wLeArqywLt" role="2iieDH">
-        <property role="2iieDw" value="svc" />
-        <property role="2iieDI" value="yService" />
-      </node>
-      <node concept="2iieDQ" id="4wLeArqywLu" role="2iieDF">
-        <property role="2iieDR" value="yCont" />
-        <property role="2iieDP" value="t2project/orchestrator:main" />
-        <node concept="2iieD6" id="4wLeArqywLE" role="2iieDe">
-          <property role="2iieD7" value="server" />
-          <property role="2iieD5" value="8080" />
-        </node>
-        <node concept="2iieDK" id="4wLeArqywLv" role="2iieD0">
-          <property role="2iieDV" value="8081" />
-          <property role="2iieDL" value="noname" />
-        </node>
-        <node concept="2iieDK" id="3p0Gq6VcsPp" role="2iieD0">
-          <property role="2iieDL" value="AnotherEndpoint" />
-          <property role="2iieDV" value="8082" />
-        </node>
       </node>
     </node>
   </node>

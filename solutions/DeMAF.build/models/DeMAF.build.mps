@@ -154,12 +154,6 @@
       <property role="TrG5h" value="project_home" />
       <node concept="55IIr" id="HUoyRpFeb7" role="398pKh" />
     </node>
-    <node concept="398rNT" id="HUoyRpFeaP" role="1l3spd">
-      <property role="TrG5h" value="mps.macro.project_home" />
-      <node concept="398BVA" id="HUoyRpFeb9" role="398pKh">
-        <ref role="398BVh" node="HUoyRpFeaY" resolve="project_home" />
-      </node>
-    </node>
     <node concept="2sgV4H" id="HUoyRpFe8K" role="1l3spa">
       <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="HUoyRpFe8L" role="2JcizS">

@@ -5,7 +5,6 @@
   <property name="build.layout" location="${build.dir}/artifacts/DeMAF" />
   <property name="mps_home" location="${basedir}/build/mps-bundle/Contents" />
   <property name="project_home" location="${basedir}" />
-  <property name="mps.macro.project_home" location="${project_home}" />
   <property name="artifacts.mps" location="${mps_home}" />
   <property file="${artifacts.mps}/build.properties" prefix="import.mps" />
   <property name="mps.build.number" value="${import.mps.mps.build.number}" />
@@ -455,7 +454,6 @@
       </jvmargs>
       <macro name="mps_home" path="${mps_home}" />
       <macro name="project_home" path="${project_home}" />
-      <macro name="mps.macro.project_home" path="${mps.macro.project_home}" />
     </generate>
   </target>
   

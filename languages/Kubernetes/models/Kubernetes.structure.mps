@@ -114,7 +114,7 @@
   <node concept="1TIwiD" id="4wLeArqut0g">
     <property role="EcuMT" value="5202003258016124944" />
     <property role="TrG5h" value="Container" />
-    <property role="3GE5qa" value="common.container" />
+    <property role="3GE5qa" value="workload.pod.container" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="4wLeArqut0h" role="1TKVEl">
       <property role="IQ2nx" value="5202003258016124945" />
@@ -171,18 +171,11 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="5GuXokVP2WS" resolve="VolumeMount" />
     </node>
-    <node concept="1TJgyj" id="5GuXokVPap9" role="1TKVEi">
-      <property role="IQ2ns" value="6565955259336009289" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="volumeDevices" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="5GuXokVP2Xk" resolve="VolumeDevice" />
-    </node>
   </node>
   <node concept="1TIwiD" id="4wLeArqut0m">
     <property role="EcuMT" value="5202003258016124950" />
     <property role="TrG5h" value="ContainerPort" />
-    <property role="3GE5qa" value="common.container" />
+    <property role="3GE5qa" value="workload.pod.container" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="4wLeArqut0n" role="1TKVEl">
       <property role="IQ2nx" value="5202003258016124951" />
@@ -213,7 +206,7 @@
   <node concept="1TIwiD" id="4wLeArqut0w">
     <property role="EcuMT" value="5202003258016124960" />
     <property role="TrG5h" value="EnvironmentVariable" />
-    <property role="3GE5qa" value="common.container" />
+    <property role="3GE5qa" value="workload.pod.container" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="4wLeArqut0x" role="1TKVEl">
       <property role="IQ2nx" value="5202003258016124961" />
@@ -419,6 +412,13 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="18v7dxm$IxN" resolve="PodSpec" />
     </node>
+    <node concept="1TJgyj" id="7noxf0lpka4" role="1TKVEi">
+      <property role="IQ2ns" value="8491683264093045380" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="persistentVolumeClaims" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="5m_qgGAoxwg" resolve="PersistentVolumeClaim" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3p0Gq6VdP_s">
     <property role="EcuMT" value="3909319784746408284" />
@@ -441,7 +441,7 @@
   </node>
   <node concept="1TIwiD" id="5GuXokVP2WS">
     <property role="EcuMT" value="6565955259335978808" />
-    <property role="3GE5qa" value="common.container" />
+    <property role="3GE5qa" value="workload.pod.container" />
     <property role="TrG5h" value="VolumeMount" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="1TJgyi" id="5GuXokVP2WT" role="1TKVEl">
@@ -472,29 +472,6 @@
     <node concept="1TJgyi" id="5GuXokVP2Xd" role="1TKVEl">
       <property role="IQ2nx" value="6565955259335978829" />
       <property role="TrG5h" value="subPathExpr" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
-    <node concept="1TJgyj" id="5GuXokVP2Xq" role="1TKVEi">
-      <property role="IQ2ns" value="6565955259335978842" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="volumeDevices" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="5GuXokVP2Xk" resolve="VolumeDevice" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="5GuXokVP2Xk">
-    <property role="EcuMT" value="6565955259335978836" />
-    <property role="3GE5qa" value="common.container" />
-    <property role="TrG5h" value="VolumeDevice" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
-    <node concept="1TJgyi" id="5GuXokVP2Xl" role="1TKVEl">
-      <property role="IQ2nx" value="6565955259335978837" />
-      <property role="TrG5h" value="devicePath" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
-    <node concept="1TJgyi" id="5GuXokVP2Xn" role="1TKVEl">
-      <property role="IQ2nx" value="6565955259335978839" />
-      <property role="TrG5h" value="name" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
@@ -660,7 +637,7 @@
   </node>
   <node concept="1TIwiD" id="5GuXokVPaoX">
     <property role="EcuMT" value="6565955259336009277" />
-    <property role="3GE5qa" value="common.container" />
+    <property role="3GE5qa" value="workload.pod.container" />
     <property role="TrG5h" value="EphemeralContainer" />
     <ref role="1TJDcQ" node="4wLeArqut0g" resolve="Container" />
     <node concept="1TJgyi" id="5GuXokVPap0" role="1TKVEl">
@@ -671,7 +648,7 @@
   </node>
   <node concept="1TIwiD" id="5GuXokVPapg">
     <property role="EcuMT" value="6565955259336009296" />
-    <property role="3GE5qa" value="common.container" />
+    <property role="3GE5qa" value="workload.pod.container" />
     <property role="TrG5h" value="ContainerResizePolicy" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="1TJgyi" id="5GuXokVPaph" role="1TKVEl">
@@ -869,10 +846,35 @@
     <property role="3GE5qa" value="configStorageResources.volume" />
     <property role="TrG5h" value="Volume" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="3KmoOC3koB4" role="1TKVEl">
+      <property role="IQ2nx" value="4329757261297715652" />
+      <property role="TrG5h" value="name" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="5m_qgGAoyt6" role="1TKVEl">
+      <property role="IQ2nx" value="6171454360990656326" />
+      <property role="TrG5h" value="persistentVolumeClaimName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="5m_qgGAoyMj" role="1TKVEl">
+      <property role="IQ2nx" value="6171454360990657683" />
+      <property role="TrG5h" value="persistentVolumeClaimReadOnly" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="2aJgT9KUFPM" role="1TKVEl">
+      <property role="IQ2nx" value="2499290614452632946" />
+      <property role="TrG5h" value="mountPath" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="2aJgT9KUKBn" role="1TKVEl">
+      <property role="IQ2nx" value="2499290614452652503" />
+      <property role="TrG5h" value="subPath" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
   </node>
   <node concept="1TIwiD" id="18v7dxm$IxN">
     <property role="EcuMT" value="1305794132451715187" />
-    <property role="3GE5qa" value="workload.deployment.pod" />
+    <property role="3GE5qa" value="workload.pod" />
     <property role="TrG5h" value="PodSpec" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
@@ -906,6 +908,13 @@
       <property role="20kJfa" value="labels" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="4wLeArqut05" resolve="StringStringMap" />
+    </node>
+    <node concept="1TJgyj" id="3KmoOC3kqIx" role="1TKVEi">
+      <property role="IQ2ns" value="4329757261297724321" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="volumes" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="5GuXokVPb4e" resolve="Volume" />
     </node>
   </node>
   <node concept="1TIwiD" id="62AVSjwwNBa">
@@ -962,6 +971,58 @@
       <property role="20kJfa" value="job" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="62AVSjwwNBa" resolve="Job" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="17G463UlVSH">
+    <property role="EcuMT" value="1291425201851448877" />
+    <property role="3GE5qa" value="workload" />
+    <property role="TrG5h" value="StatefulSet" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="4wLeArqu9I9" resolve="Deployment" />
+    <node concept="1TJgyi" id="17G463UlW8B" role="1TKVEl">
+      <property role="IQ2nx" value="1291425201851449895" />
+      <property role="TrG5h" value="serviceName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5m_qgGAoxwg">
+    <property role="EcuMT" value="6171454360990652432" />
+    <property role="3GE5qa" value="configStorageResources" />
+    <property role="TrG5h" value="PersistentVolumeClaim" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="5m_qgGAoy95" role="1TKVEl">
+      <property role="IQ2nx" value="6171454360990655045" />
+      <property role="TrG5h" value="volumeName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="5m_qgGAoxIw" role="1TKVEl">
+      <property role="IQ2nx" value="6171454360990653344" />
+      <property role="TrG5h" value="requests" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="5m_qgGAoxTU" role="1TKVEl">
+      <property role="IQ2nx" value="6171454360990654074" />
+      <property role="TrG5h" value="limit" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5m_qgGAoABb">
+    <property role="EcuMT" value="6171454360990673355" />
+    <property role="3GE5qa" value="util" />
+    <property role="TrG5h" value="MatchingVolumeAndPersistentVolumeClaim" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="5m_qgGAoB20" role="1TKVEi">
+      <property role="IQ2ns" value="6171454360990675072" />
+      <property role="20kJfa" value="volume" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5GuXokVPb4e" resolve="Volume" />
+    </node>
+    <node concept="1TJgyj" id="5m_qgGAoBBQ" role="1TKVEi">
+      <property role="IQ2ns" value="6171454360990677494" />
+      <property role="20kJfa" value="persistentVolumeClaim" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5m_qgGAoxwg" resolve="PersistentVolumeClaim" />
     </node>
   </node>
 </model>

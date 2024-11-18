@@ -10,7 +10,7 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/mps-transformation.iml" filepath="$PROJECT_DIR$/.idea/mps-transformation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mps-transformation-kubernetes.iml" filepath="$PROJECT_DIR$/.idea/mps-transformation-kubernetes.iml" />
     </modules>
   </component>
 </project>

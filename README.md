@@ -1,4 +1,4 @@
-# mps-transformation
+# mps-transformation-kubernetes
 
 This JetBrains MPS project contains languages for Kubernetes and EDMM and a generator that can transform Kubernetes models into EDMM models.
 

@@ -1,65 +1,138 @@
 <KubernetesDeploymentModel>
     <deployments>
         <deployments>
-            <name>dummyDeploymentTwo</name>
-            <replicas>1</replicas>
-            <labels>
-                <labels>
-                    <key>app</key>
-                    <value>dummyApp</value>
-                </labels>
-            </labels>
-            <container>
-                <container>
-                    <name>dummyContainer</name>
-                    <image>dummyRepo/dummy:main</image>
-                    <containerPorts>
-                        <containerPorts>
-                            <name>containerPort</name>
-                            <port>8080</port>
-                        </containerPorts>
-                    </containerPorts>
-                    <environmentVariables>
-                        <environmentVariables>
-                            <key>dummyEnv</key>
-                            <value>dummyEnvVal</value>
-                        </environmentVariables>
-                    </environmentVariables>
-                </container>
-            </container>
-        </deployments>
-        <deployments>
             <name>dummyDeployment</name>
             <replicas>3</replicas>
+            <minReadySeconds>0</minReadySeconds>
+            <revisionHistorySeconds>0</revisionHistorySeconds>
+            <paused>false</paused>
             <labels>
                 <labels>
                     <key>app</key>
                     <value>dummyApp</value>
                 </labels>
             </labels>
-            <container>
-                <container>
-                    <name>dummyContainer</name>
-                    <image>dummyRepo/dummy:main</image>
-                    <containerPorts>
-                        <containerPorts>
-                            <name>containerPort</name>
-                            <port>8080</port>
-                        </containerPorts>
-                    </containerPorts>
-                    <environmentVariables>
-                        <environmentVariables>
-                            <key>dummyEnv</key>
-                            <value>dummyEnvVal</value>
-                        </environmentVariables>
-                    </environmentVariables>
-                </container>
-            </container>
+            <podSpecs>
+                <podSpecs>
+                    <hostname>testPod</hostname>
+                    <restartPolicy>never</restartPolicy>
+                    <containers>
+                        <containers>
+                            <name>dummyContainer</name>
+                            <image>dummyRepo/dummy:main</image>
+                            <imagePullPolicy>never</imagePullPolicy>
+                            <command/>
+                            <args/>
+                            <workingDir>/</workingDir>
+                            <containerPorts>
+                                <containerPorts>
+                                    <name>containerPort</name>
+                                    <port>8080</port>
+                                </containerPorts>
+                            </containerPorts>
+                            <environmentVariables>
+                                <environmentVariables>
+                                    <key>dummyEnv</key>
+                                    <value>dummyEnvVal</value>
+                                </environmentVariables>
+                            </environmentVariables>
+                            <volumeMounts>
+                                <volumeMounts>
+                                    <mountPath>/dir</mountPath>
+                                    <name>storageVolume</name>
+                                    <mountPropagation>MountPropagationNone</mountPropagation>
+                                    <subPath></subPath>
+                                    <subPathExpr></subPathExpr>
+                                    <readyOnly>false</readyOnly>
+                                </volumeMounts>
+                            </volumeMounts>
+                        </containers>
+                    </containers>
+                    <initContainers/>
+                    <labels/>
+                    <volumes>
+                        <volumes>
+                            <name>storageVolume</name>
+                            <persistentVolumeClaimName>pvcName</persistentVolumeClaimName>
+                            <persistentVolumeClaimReadOnly>true</persistentVolumeClaimReadOnly>
+                        </volumes>
+                    </volumes>
+                </podSpecs>
+            </podSpecs>
+        </deployments>
+        <deployments>
+            <name>dummyDeploymentTwo</name>
+            <replicas>1</replicas>
+            <minReadySeconds>0</minReadySeconds>
+            <revisionHistorySeconds>0</revisionHistorySeconds>
+            <paused>false</paused>
+            <labels>
+                <labels>
+                    <key>app</key>
+                    <value>dummyApp</value>
+                </labels>
+            </labels>
+            <podSpecs>
+                <podSpecs>
+                    <hostname>testPod</hostname>
+                    <restartPolicy>never</restartPolicy>
+                    <containers>
+                        <containers>
+                            <name>dummyContainer</name>
+                            <image>dummyRepo/dummy:main</image>
+                            <imagePullPolicy>never</imagePullPolicy>
+                            <command/>
+                            <args/>
+                            <workingDir>/</workingDir>
+                            <containerPorts>
+                                <containerPorts>
+                                    <name>containerPort</name>
+                                    <port>8080</port>
+                                </containerPorts>
+                            </containerPorts>
+                            <environmentVariables>
+                                <environmentVariables>
+                                    <key>dummyEnv</key>
+                                    <value>dummyEnvVal</value>
+                                </environmentVariables>
+                            </environmentVariables>
+                            <volumeMounts>
+                                <volumeMounts>
+                                    <mountPath>/dir</mountPath>
+                                    <name>storageVolume</name>
+                                    <mountPropagation>MountPropagationNone</mountPropagation>
+                                    <subPath></subPath>
+                                    <subPathExpr></subPathExpr>
+                                    <readyOnly>false</readyOnly>
+                                </volumeMounts>
+                            </volumeMounts>
+                        </containers>
+                    </containers>
+                    <initContainers/>
+                    <labels/>
+                    <volumes>
+                        <volumes>
+                            <name>storageVolume</name>
+                            <persistentVolumeClaimName>pvcName</persistentVolumeClaimName>
+                            <persistentVolumeClaimReadOnly>true</persistentVolumeClaimReadOnly>
+                        </volumes>
+                    </volumes>
+                </podSpecs>
+            </podSpecs>
         </deployments>
     </deployments>
     <services>
         <services>
             <name>dummyService</name>
+            <type>ClusterIP</type>
+            <ipFamilyPolicy>test</ipFamilyPolicy>
+            <clusterIP>test</clusterIP>
+            <sessionAffinity>test</sessionAffinity>
+            <loadBalancerIP>test</loadBalancerIP>
+            <externalName>test</externalName>
+            <externalTrafficPolicy>test</externalTrafficPolicy>
+            <internalTrafficPolicy>test</internalTrafficPolicy>
+            <healthCheckNodePort>1</healthCheckNodePort>
             <servicePorts>
                 <servicePorts>
                     <name>defaultPort</name>
@@ -73,6 +146,20 @@
                     <value>dummyApp</value>
                 </selectors>
             </selectors>
+            <ipFamilies/>
+            <clusterIPs/>
+            <externalIPs/>
+            <loadBalancerSourceRanges/>
         </services>
     </services>
+    <pods/>
+    <ingresses/>
+    <persistentVolumeClaims>
+        <persistentVolumeClaims>
+            <volumeName>pvcName</volumeName>
+            <requests>1GI</requests>
+            <limit>3</limit>
+        </persistentVolumeClaims>
+    </persistentVolumeClaims>
+    <configMaps/>
 </KubernetesDeploymentModel>

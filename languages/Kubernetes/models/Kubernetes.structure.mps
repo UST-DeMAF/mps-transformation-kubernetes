@@ -757,11 +757,6 @@
       <property role="TrG5h" value="persistentVolumeClaimReadOnly" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
-    <node concept="1TJgyi" id="2aJgT9KUKBn" role="1TKVEl">
-      <property role="IQ2nx" value="2499290614452652503" />
-      <property role="TrG5h" value="subPath" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
   </node>
   <node concept="1TIwiD" id="18v7dxm$IxN">
     <property role="EcuMT" value="1305794132451715187" />
@@ -797,7 +792,7 @@
       <property role="IQ2ns" value="4992571777221411311" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="labels" />
-      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="4wLeArqut05" resolve="StringStringMap" />
     </node>
     <node concept="1TJgyj" id="3KmoOC3kqIx" role="1TKVEi">

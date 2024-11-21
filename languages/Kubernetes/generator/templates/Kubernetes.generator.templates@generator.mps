@@ -511,6 +511,7 @@
       <node concept="VmU4a" id="621JQu7WkHH" role="VmU4F">
         <property role="VmU49" value="storage_size" />
         <property role="VmU4i" value="true" />
+        <property role="VmU4f" value="&quot;&quot;" />
       </node>
       <node concept="1W57fq" id="621JQu7WlCZ" role="lGtFl">
         <ref role="2rW$FS" node="621JQu7WmXt" resolve="DeploymentModelComponentType" />
@@ -717,6 +718,7 @@
       <node concept="VmU4a" id="621JQu7fjji" role="VmU4F">
         <property role="VmU49" value="mount_path" />
         <property role="VmU4i" value="true" />
+        <property role="VmU4f" value="&quot;&quot;" />
       </node>
       <node concept="1W57fq" id="2aJgT9L1SIG" role="lGtFl">
         <ref role="2rW$FS" node="621JQu7RSY8" resolve="DeploymentModelRelationType" />
@@ -1852,6 +1854,7 @@
         <node concept="VmU4a" id="621JQu7606q" role="VmU4F">
           <property role="VmU49" value="mount_path" />
           <property role="VmU4f" value="mount_path" />
+          <property role="VmU4i" value="true" />
           <node concept="17Uvod" id="621JQu7606r" role="lGtFl">
             <property role="2qtEX9" value="value" />
             <property role="P4ACc" value="f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c/2620860285162130305/2620860285162130308" />

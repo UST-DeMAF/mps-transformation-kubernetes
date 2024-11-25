@@ -156,7 +156,8 @@
     <ingresses/>
     <persistentVolumeClaims>
         <persistentVolumeClaims>
-            <volumeName>pvcName</volumeName>
+            <name>pvcName</name>
+            <volumeName></volumeName>
             <requests>1GI</requests>
             <limit>3</limit>
         </persistentVolumeClaims>

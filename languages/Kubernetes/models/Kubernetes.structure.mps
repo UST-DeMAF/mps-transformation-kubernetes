@@ -890,6 +890,11 @@
     <property role="TrG5h" value="PersistentVolumeClaim" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyi" id="3eQsLR10UHb" role="1TKVEl">
+      <property role="IQ2nx" value="3726292313325153099" />
+      <property role="TrG5h" value="name" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
     <node concept="1TJgyi" id="5m_qgGAoy95" role="1TKVEl">
       <property role="IQ2nx" value="6171454360990655045" />
       <property role="TrG5h" value="volumeName" />

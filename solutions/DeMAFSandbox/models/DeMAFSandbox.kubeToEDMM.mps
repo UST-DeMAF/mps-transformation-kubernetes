@@ -80,7 +80,6 @@
       </concept>
       <concept id="6565955259336012046" name="Kubernetes.structure.Volume" flags="ng" index="1wM$ib">
         <property id="4329757261297715652" name="name" index="ZhYEe" />
-        <property id="2499290614452652503" name="subPath" index="1ih4D5" />
         <property id="6171454360990656326" name="persistentVolumeClaimName" index="1NLOTd" />
       </concept>
       <concept id="6565955259336009103" name="Kubernetes.structure.String" flags="ng" index="1wM_0a">
@@ -91,6 +90,7 @@
         <property id="6565955259335978811" name="name" index="1wMHEY" />
       </concept>
       <concept id="6171454360990652432" name="Kubernetes.structure.PersistentVolumeClaim" flags="ng" index="1NLR4r">
+        <property id="3726292313325153099" name="name" index="3MHtxm" />
         <property id="6171454360990655045" name="volumeName" index="1NLOHe" />
         <property id="6171454360990653344" name="requests" index="1NLRaF" />
       </concept>
@@ -100,10 +100,12 @@
     <node concept="1NLR4r" id="7noxf0lrdQ6" role="1wJspO">
       <property role="1NLOHe" value="pvc1" />
       <property role="1NLRaF" value="10Gi" />
+      <property role="3MHtxm" value="pvc1" />
     </node>
     <node concept="1NLR4r" id="7noxf0lrdWC" role="1wJspO">
-      <property role="1NLOHe" value="pvc2" />
+      <property role="1NLOHe" value="volume2" />
       <property role="1NLRaF" value="25Gi" />
+      <property role="3MHtxm" value="pvc2" />
     </node>
     <node concept="2iiNFk" id="3p0Gq6Vefiv" role="2iINTP">
       <property role="2iiNFl" value="serviceForX" />
@@ -154,10 +156,9 @@
           <property role="1NLOTd" value="pvc1" />
           <property role="ZhYEe" value="volume1" />
         </node>
-        <node concept="1wM$ib" id="6Z73XLlzy61" role="ZhWzF">
+        <node concept="1wM$ib" id="3eQsLR13L4_" role="ZhWzF">
           <property role="ZhYEe" value="volume2" />
           <property role="1NLOTd" value="pvc2" />
-          <property role="1ih4D5" value="/with/sub/path" />
         </node>
         <node concept="2iieDz" id="3c0mEf98lJD" role="_DmLV">
           <property role="2iieDw" value="xLabelKey" />
@@ -251,14 +252,17 @@
     <node concept="1NLR4r" id="7gj7uFs9lQB" role="1wJspO">
       <property role="1NLOHe" value="firefly-iii-upload-volume" />
       <property role="1NLRaF" value="1Gi" />
+      <property role="3MHtxm" value="firefly-iii-upload-volume" />
     </node>
     <node concept="1NLR4r" id="7gj7uFs9lR_" role="1wJspO">
       <property role="1NLOHe" value="firefly-db-volume" />
       <property role="1NLRaF" value="3Gi" />
+      <property role="3MHtxm" value="firefly-db-volume" />
     </node>
     <node concept="1NLR4r" id="7gj7uFscbTN" role="1wJspO">
       <property role="1NLOHe" value="firefly-db-backup-volume" />
       <property role="1NLRaF" value="15Gi" />
+      <property role="3MHtxm" value="firefly-db-backup-volume" />
     </node>
     <node concept="2iiNFk" id="7gj7uFs9lQu" role="2iINTP">
       <property role="2iiNFl" value="firefly-iii" />
@@ -440,14 +444,17 @@
     <node concept="1NLR4r" id="61T1DqJSdnw" role="1wJspO">
       <property role="1NLOHe" value="firefly-iii-upload-volume" />
       <property role="1NLRaF" value="1Gi" />
+      <property role="3MHtxm" value="firefly-iii-upload-volume" />
     </node>
     <node concept="1NLR4r" id="61T1DqJSdnx" role="1wJspO">
       <property role="1NLOHe" value="firefly-db-volume" />
       <property role="1NLRaF" value="3Gi" />
+      <property role="3MHtxm" value="firefly-db-volume" />
     </node>
     <node concept="1NLR4r" id="61T1DqJSdny" role="1wJspO">
       <property role="1NLOHe" value="firefly-db-backup-volume" />
       <property role="1NLRaF" value="15Gi" />
+      <property role="3MHtxm" value="firefly-db-backup-volume" />
     </node>
     <node concept="2iiNFk" id="61T1DqJSdnz" role="2iINTP">
       <property role="2iiNFl" value="firefly-iii" />

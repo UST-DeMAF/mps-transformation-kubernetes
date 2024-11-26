@@ -532,6 +532,10 @@
             <property role="2iieD5" value="**" />
           </node>
           <node concept="1wMHEX" id="61T1DqJSdnQ" role="1wM_f6">
+            <property role="1wMHEY" value="scripts" />
+            <property role="1wMHEW" value="/scripts" />
+          </node>
+          <node concept="1wMHEX" id="2Tnm7HFdnB2" role="1wM_f6">
             <property role="1wMHEY" value="upload" />
             <property role="1wMHEW" value="/var/www/html/storage/upload" />
           </node>

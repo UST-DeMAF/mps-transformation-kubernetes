@@ -309,7 +309,9 @@
         <reference id="2620860285162130370" name="type" index="VmU59" />
         <reference id="2620860285162130375" name="source" index="VmU5c" />
       </concept>
-      <concept id="2620860285162130364" name="EDMM.structure.RelationType" flags="ng" index="VmU4R" />
+      <concept id="2620860285162130364" name="EDMM.structure.RelationType" flags="ng" index="VmU4R">
+        <reference id="2877443765335994024" name="parentType" index="3hVhlN" />
+      </concept>
       <concept id="2620860285162130372" name="EDMM.structure.Component" flags="ng" index="VmU5f">
         <reference id="2620860285162130373" name="type" index="VmU5e" />
         <child id="2877443765335994034" name="artifacts" index="3hVhlD" />
@@ -495,6 +497,9 @@
     </node>
   </node>
   <node concept="VmU7M" id="21VM_ctaqsi">
+    <node concept="VmU4R" id="2aJgT9L1Sn8" role="VmU7O">
+      <property role="TrG5h" value="DependsOn" />
+    </node>
     <node concept="VmU4M" id="621JQu7WkHG" role="VmU7O">
       <property role="TrG5h" value="storage" />
       <node concept="VmU4a" id="621JQu7WkHH" role="VmU4F">
@@ -702,26 +707,27 @@
     <node concept="VmU7R" id="2aJgT9KOE$n" role="VmU7O" />
     <node concept="VmU7R" id="2aJgT9KOEJ2" role="VmU7O" />
     <node concept="VmU7R" id="2aJgT9KZ63r" role="VmU7O" />
-    <node concept="VmU4R" id="2aJgT9L1Sn8" role="VmU7O">
-      <property role="TrG5h" value="storage-mount" />
-      <node concept="VmU4a" id="621JQu7fjji" role="VmU4F">
+    <node concept="VmU4R" id="3lHICqC4OPJ" role="VmU7O">
+      <property role="TrG5h" value="StorageMount" />
+      <ref role="3hVhlN" node="2aJgT9L1Sn8" resolve="DependsOn" />
+      <node concept="VmU4a" id="3lHICqC4OPK" role="VmU4F">
         <property role="VmU49" value="mount_path" />
         <property role="VmU4i" value="true" />
         <property role="VmU4f" value="&quot;&quot;" />
       </node>
-      <node concept="1W57fq" id="2aJgT9L1SIG" role="lGtFl">
+      <node concept="1W57fq" id="3lHICqC4OPL" role="lGtFl">
         <ref role="2rW$FS" node="621JQu7RSY8" resolve="DeploymentModelRelationType" />
-        <node concept="3IZrLx" id="2aJgT9L1SIH" role="3IZSJc">
-          <node concept="3clFbS" id="2aJgT9L1SII" role="2VODD2">
-            <node concept="3clFbF" id="2aJgT9L1X0w" role="3cqZAp">
-              <node concept="2OqwBi" id="2aJgT9L1ZsF" role="3clFbG">
-                <node concept="2OqwBi" id="2aJgT9L1X8X" role="2Oq$k0">
-                  <node concept="30H73N" id="2aJgT9L1X0v" role="2Oq$k0" />
-                  <node concept="3Tsc0h" id="2aJgT9L1Xfe" role="2OqNvi">
+        <node concept="3IZrLx" id="3lHICqC4OPM" role="3IZSJc">
+          <node concept="3clFbS" id="3lHICqC4OPN" role="2VODD2">
+            <node concept="3clFbF" id="3lHICqC4OPO" role="3cqZAp">
+              <node concept="2OqwBi" id="3lHICqC4OPP" role="3clFbG">
+                <node concept="2OqwBi" id="3lHICqC4OPQ" role="2Oq$k0">
+                  <node concept="30H73N" id="3lHICqC4OPR" role="2Oq$k0" />
+                  <node concept="3Tsc0h" id="3lHICqC4OPS" role="2OqNvi">
                     <ref role="3TtcxE" to="4abx:7noxf0lpka4" resolve="persistentVolumeClaims" />
                   </node>
                 </node>
-                <node concept="3GX2aA" id="2aJgT9L22_V" role="2OqNvi" />
+                <node concept="3GX2aA" id="3lHICqC4OPT" role="2OqNvi" />
               </node>
             </node>
           </node>

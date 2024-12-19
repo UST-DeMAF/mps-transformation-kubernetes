@@ -303,7 +303,9 @@
         <property id="5202003258016803148" name="type" index="2iHhcE" />
         <property id="2620860285162130350" name="fileURI" index="VmU4_" />
       </concept>
-      <concept id="2620860285162130361" name="EDMM.structure.ComponentType" flags="ng" index="VmU4M" />
+      <concept id="2620860285162130361" name="EDMM.structure.ComponentType" flags="ng" index="VmU4M">
+        <reference id="2877443765335980231" name="parentType" index="3hVscs" />
+      </concept>
       <concept id="2620860285162130367" name="EDMM.structure.Relation" flags="ng" index="VmU4O">
         <reference id="2620860285162130378" name="target" index="VmU51" />
         <reference id="2620860285162130370" name="type" index="VmU59" />
@@ -497,11 +499,15 @@
     </node>
   </node>
   <node concept="VmU7M" id="21VM_ctaqsi">
+    <node concept="VmU4M" id="32yJ0_bl9ed" role="VmU7O">
+      <property role="TrG5h" value="BaseType" />
+    </node>
     <node concept="VmU4R" id="2aJgT9L1Sn8" role="VmU7O">
       <property role="TrG5h" value="DependsOn" />
     </node>
     <node concept="VmU4M" id="621JQu7WkHG" role="VmU7O">
       <property role="TrG5h" value="storage" />
+      <ref role="3hVscs" node="32yJ0_bl9ed" resolve="BaseType" />
       <node concept="VmU4a" id="621JQu7WkHH" role="VmU4F">
         <property role="VmU49" value="storage_size" />
         <property role="VmU4i" value="true" />
@@ -581,6 +587,7 @@
     <node concept="VmU7R" id="3DZQwZqxwt7" role="VmU7O" />
     <node concept="VmU4M" id="6VSF6pq1gJE" role="VmU7O">
       <property role="TrG5h" value="NewComponentType" />
+      <ref role="3hVscs" node="32yJ0_bl9ed" resolve="BaseType" />
       <node concept="1WS0z7" id="2UBEacEeTYS" role="lGtFl">
         <node concept="3JmXsc" id="2UBEacEeTYV" role="3Jn$fo">
           <node concept="3clFbS" id="2UBEacEeTYW" role="2VODD2">
@@ -601,6 +608,7 @@
     </node>
     <node concept="VmU4M" id="7gj7uFsgLb_" role="VmU7O">
       <property role="TrG5h" value="NewComponentType" />
+      <ref role="3hVscs" node="32yJ0_bl9ed" resolve="BaseType" />
       <node concept="1WS0z7" id="7gj7uFsgLbA" role="lGtFl">
         <node concept="3JmXsc" id="7gj7uFsgLbB" role="3Jn$fo">
           <node concept="3clFbS" id="7gj7uFsgLbC" role="2VODD2">
@@ -742,6 +750,7 @@
     <ref role="3gUMe" to="4abx:4wLeArqu9I9" resolve="Deployment" />
     <node concept="VmU4M" id="5aHBNmvxmxt" role="13RCb5">
       <property role="TrG5h" value="DummyComponentType" />
+      <ref role="3hVscs" node="32yJ0_bl9ed" resolve="BaseType" />
       <node concept="VmU4a" id="62AVSjwaJZo" role="VmU4F">
         <property role="VmU49" value="key" />
         <node concept="1WS0z7" id="62AVSjwaK6B" role="lGtFl">
@@ -2414,6 +2423,7 @@
     <ref role="3gUMe" to="4abx:62AVSjwwOHf" resolve="CronJob" />
     <node concept="VmU4M" id="7gj7uFscff9" role="13RCb5">
       <property role="TrG5h" value="DummyComponentType" />
+      <ref role="3hVscs" node="32yJ0_bl9ed" resolve="BaseType" />
       <node concept="VmU4a" id="7gj7uFscffa" role="VmU4F">
         <property role="VmU49" value="key" />
         <node concept="1WS0z7" id="7gj7uFsejGX" role="lGtFl">

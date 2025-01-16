@@ -3600,5 +3600,41 @@
       <ref role="3uigEE" to="wyt6:~Exception" resolve="Exception" />
     </node>
   </node>
+  <node concept="312cEu" id="oJUgaBU$tZ">
+    <property role="TrG5h" value="StringUtil" />
+    <node concept="2tJIrI" id="oJUgaBU$uH" role="jymVt" />
+    <node concept="2YIFZL" id="oJUgaBUIp6" role="jymVt">
+      <property role="TrG5h" value="trimDoubleQuotes" />
+      <node concept="3clFbS" id="oJUgaBUIp8" role="3clF47">
+        <node concept="3clFbF" id="oJUgaBUIp9" role="3cqZAp">
+          <node concept="2OqwBi" id="oJUgaBUIpa" role="3clFbG">
+            <node concept="37vLTw" id="oJUgaBUIpb" role="2Oq$k0">
+              <ref role="3cqZAo" node="oJUgaBUIph" resolve="stringToTrim" />
+            </node>
+            <node concept="liA8E" id="oJUgaBUIpc" role="2OqNvi">
+              <ref role="37wK5l" to="wyt6:~String.replaceAll(java.lang.String,java.lang.String)" resolve="replaceAll" />
+              <node concept="Xl_RD" id="oJUgaBUIpd" role="37wK5m">
+                <property role="Xl_RC" value="^\&quot;|\&quot;$" />
+              </node>
+              <node concept="Xl_RD" id="oJUgaBUIpe" role="37wK5m">
+                <property role="Xl_RC" value="" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3uibUv" id="oJUgaBUIpg" role="3clF45">
+        <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+      </node>
+      <node concept="37vLTG" id="oJUgaBUIph" role="3clF46">
+        <property role="TrG5h" value="stringToTrim" />
+        <node concept="3uibUv" id="oJUgaBUIpi" role="1tU5fm">
+          <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="oJUgaBUIpf" role="1B3o_S" />
+    </node>
+    <node concept="3Tm1VV" id="oJUgaBU$u0" role="1B3o_S" />
+  </node>
 </model>
 

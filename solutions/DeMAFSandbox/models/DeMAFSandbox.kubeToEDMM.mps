@@ -84,6 +84,7 @@
       <concept id="6565955259335978808" name="Kubernetes.structure.VolumeMount" flags="ng" index="1wMHEX">
         <property id="6565955259335978809" name="mountPath" index="1wMHEW" />
         <property id="6565955259335978811" name="name" index="1wMHEY" />
+        <property id="6565955259335978823" name="subPath" index="1wMHF2" />
       </concept>
       <concept id="6171454360990652432" name="Kubernetes.structure.PersistentVolumeClaim" flags="ng" index="1NLR4r">
         <property id="3726292313325153099" name="name" index="3MHtxm" />
@@ -93,6 +94,26 @@
     </language>
   </registry>
   <node concept="2iINTQ" id="4wLeArqywKw">
+    <node concept="2iiq7J" id="57VPsWd_2_Z" role="2iINTR">
+      <property role="2iieDA" value="storageTest" />
+      <node concept="2iieDz" id="57VPsWd_2A0" role="2iieDH" />
+      <node concept="14zviF" id="57VPsWd_2A1" role="3wWJSQ">
+        <property role="14zuU9" value="storageTestPod" />
+        <node concept="1wM$ib" id="57VPsWdCqV1" role="ZhWzF">
+          <property role="ZhYEe" value="storageTest-storage" />
+          <property role="1NLOTd" value="storageTest-storage" />
+        </node>
+        <node concept="2iieDQ" id="57VPsWd_2A2" role="14z1RQ">
+          <property role="2iieDR" value="storageTestContainer" />
+          <property role="2iieDP" value="storage:1.22" />
+          <node concept="1wMHEX" id="57VPsWd_2Aj" role="1wM_f6">
+            <property role="1wMHEY" value="storageTest-storage" />
+            <property role="1wMHF2" value="storageTest" />
+          </node>
+          <node concept="2iieDK" id="57VPsWd_2A3" role="2iieD0" />
+        </node>
+      </node>
+    </node>
     <node concept="1NLR4r" id="7noxf0lrdQ6" role="1wJspO">
       <property role="1NLOHe" value="pvc1" />
       <property role="1NLRaF" value="10Gi" />
@@ -102,6 +123,11 @@
       <property role="1NLOHe" value="volume2" />
       <property role="1NLRaF" value="25Gi" />
       <property role="3MHtxm" value="pvc2" />
+    </node>
+    <node concept="1NLR4r" id="57VPsWd_2Al" role="1wJspO">
+      <property role="3MHtxm" value="storageTest-storage-storageTest" />
+      <property role="1NLRaF" value="1Gi" />
+      <property role="1NLOHe" value="storageTest-storage" />
     </node>
     <node concept="2iiNFk" id="3p0Gq6Vefiv" role="2iINTP">
       <property role="2iiNFl" value="serviceForX" />

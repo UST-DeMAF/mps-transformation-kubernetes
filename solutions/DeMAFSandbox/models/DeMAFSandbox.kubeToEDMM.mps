@@ -125,7 +125,7 @@
       <property role="3MHtxm" value="pvc2" />
     </node>
     <node concept="1NLR4r" id="57VPsWd_2Al" role="1wJspO">
-      <property role="3MHtxm" value="storageTest-storage-storageTest" />
+      <property role="3MHtxm" value="storageTest-storageTest-storage" />
       <property role="1NLRaF" value="1Gi" />
       <property role="1NLOHe" value="storageTest-storage" />
     </node>

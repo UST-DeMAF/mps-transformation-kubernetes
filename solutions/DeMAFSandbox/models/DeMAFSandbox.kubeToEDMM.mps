@@ -58,6 +58,7 @@
       <concept id="5202003258016137394" name="Kubernetes.structure.Service" flags="ng" index="2iiNFk">
         <property id="5202003258016137395" name="name" index="2iiNFl" />
         <property id="6565955259336011794" name="type" index="1wM$mn" />
+        <property id="6565955259336011805" name="clusterIP" index="1wM$mo" />
         <child id="5202003258016137415" name="selectors" index="2iiNEx" />
         <child id="5202003258016137413" name="servicePorts" index="2iiNEz" />
       </concept>
@@ -95,10 +96,26 @@
     </language>
   </registry>
   <node concept="2iINTQ" id="4wLeArqywKw">
-    <node concept="2iiNFk" id="2a6zCQL$u3F" role="2iINTP">
+    <node concept="2iiNFk" id="2pxMcWnZrrg" role="2iINTP">
       <property role="2iiNFl" value="serviceForXHeadless" />
-      <node concept="2iiNFj" id="2a6zCQL$u3G" role="2iiNEz">
+      <property role="1wM$mo" value="None" />
+      <node concept="2iiNFj" id="2pxMcWnZrrh" role="2iiNEz">
         <property role="2iiNFg" value="headlessPort" />
+        <property role="2iiNFu" value="8080" />
+      </node>
+      <node concept="2iiNFp" id="2pxMcWnZrri" role="2iiNEx">
+        <property role="2iiNEA" value="svc" />
+        <property role="2iiNE$" value="xService" />
+      </node>
+      <node concept="2iiNFp" id="2pxMcWnZrry" role="2iiNEx">
+        <property role="2iiNEA" value="svc-again" />
+        <property role="2iiNE$" value="xService" />
+      </node>
+    </node>
+    <node concept="2iiNFk" id="2a6zCQL$u3F" role="2iINTP">
+      <property role="2iiNFl" value="serviceForX2" />
+      <node concept="2iiNFj" id="2a6zCQL$u3G" role="2iiNEz">
+        <property role="2iiNFg" value="serviceForX2Port" />
         <property role="2iiNFu" value="1235" />
         <property role="2iiNFt" value="8080" />
       </node>

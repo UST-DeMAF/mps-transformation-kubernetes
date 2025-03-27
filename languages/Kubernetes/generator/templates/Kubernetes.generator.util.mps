@@ -3181,6 +3181,29 @@
                     </node>
                   </node>
                 </node>
+                <node concept="3clFbF" id="1zcFxWiQCkr" role="3cqZAp">
+                  <node concept="37vLTI" id="1zcFxWiR3mx" role="3clFbG">
+                    <node concept="2OqwBi" id="1zcFxWiRnnO" role="37vLTx">
+                      <node concept="37vLTw" id="1zcFxWiRbJE" role="2Oq$k0">
+                        <ref role="3cqZAo" node="1k24xVz9XrO" resolve="service" />
+                      </node>
+                      <node concept="liA8E" id="1zcFxWiRuMK" role="2OqNvi">
+                        <ref role="37wK5l" to="mmaq:~Element.getChildText(java.lang.String)" resolve="getChildText" />
+                        <node concept="Xl_RD" id="1zcFxWiRBLn" role="37wK5m">
+                          <property role="Xl_RC" value="clusterIP" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="2OqwBi" id="1zcFxWiQJAc" role="37vLTJ">
+                      <node concept="37vLTw" id="1zcFxWiQCkp" role="2Oq$k0">
+                        <ref role="3cqZAo" node="1k24xVza2ug" resolve="kubeService" />
+                      </node>
+                      <node concept="3TrcHB" id="1zcFxWiQSak" role="2OqNvi">
+                        <ref role="3TsBF5" to="4abx:5GuXokVPb0t" resolve="clusterIP" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
                 <node concept="3clFbF" id="1k24xVzafrg" role="3cqZAp">
                   <node concept="2OqwBi" id="1k24xVzajnx" role="3clFbG">
                     <node concept="2OqwBi" id="1k24xVzaga1" role="2Oq$k0">

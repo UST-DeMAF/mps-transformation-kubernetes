@@ -97,6 +97,13 @@
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="4wLeArqut05" resolve="StringStringMap" />
     </node>
+    <node concept="1TJgyj" id="HvHQGN_YjL" role="1TKVEi">
+      <property role="IQ2ns" value="819575328259695857" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="selectorMatchLabels" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="4wLeArqut05" resolve="StringStringMap" />
+    </node>
     <node concept="1TJgyj" id="3DZQwZqzigT" role="1TKVEi">
       <property role="IQ2ns" value="4215327537868121145" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />

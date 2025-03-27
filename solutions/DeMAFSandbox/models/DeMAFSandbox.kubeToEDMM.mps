@@ -46,6 +46,7 @@
         <property id="6565955259336009061" name="progressDeadlineSeconds" index="1wM_3w" />
         <property id="6565955259336009056" name="revisionHistoryLimit" index="1wM_3_" />
         <child id="5202003258016124939" name="labels" index="2iieDH" />
+        <child id="819575328259695857" name="selectorMatchLabels" index="SM5eq" />
         <child id="4215327537868121145" name="pods" index="3wWJSQ" />
       </concept>
       <concept id="5202003258016137397" name="Kubernetes.structure.ServicePort" flags="ng" index="2iiNFj">
@@ -223,6 +224,14 @@
       <property role="1wM_2Z" value="1" />
       <property role="1wM_3_" value="2" />
       <property role="1wM_3w" value="3" />
+      <node concept="2iieDz" id="HvHQGNLO$T" role="SM5eq">
+        <property role="2iieDw" value="svc" />
+        <property role="2iieDI" value="xService" />
+      </node>
+      <node concept="2iieDz" id="HvHQGNLO$V" role="SM5eq">
+        <property role="2iieDw" value="svc-again" />
+        <property role="2iieDI" value="xService" />
+      </node>
       <node concept="14zviF" id="3c0mEf98lJA" role="3wWJSQ">
         <property role="14zuU9" value="xHostname" />
         <property role="14zujt" value="Always" />

@@ -153,6 +153,7 @@
       <concept id="1722980698497626400" name="jetbrains.mps.lang.generator.structure.ITemplateCall" flags="ng" index="v9R3L">
         <reference id="1722980698497626483" name="template" index="v9R2y" />
       </concept>
+      <concept id="5133195082121471908" name="jetbrains.mps.lang.generator.structure.LabelMacro" flags="ln" index="2ZBi8u" />
       <concept id="1167169188348" name="jetbrains.mps.lang.generator.structure.TemplateFunctionParameter_sourceNode" flags="nn" index="30H73N" />
       <concept id="1167169308231" name="jetbrains.mps.lang.generator.structure.BaseMappingRule" flags="ng" index="30H$t8">
         <reference id="1167169349424" name="applicableConcept" index="30HIoZ" />
@@ -514,6 +515,16 @@
       <ref role="2rTdP9" to="4abx:62AVSjwwOHf" resolve="CronJob" />
       <ref role="2rZz_L" to="9rr7:2hvaCGv18J4" resolve="Component" />
     </node>
+    <node concept="2rT7sh" id="557wPCpONmg" role="2rTMjI">
+      <property role="TrG5h" value="HostedOnRelationType" />
+      <ref role="2rTdP9" to="4abx:4wLeArqywgg" resolve="KubernetesDeploymentModel" />
+      <ref role="2rZz_L" to="9rr7:2hvaCGv18IW" resolve="RelationType" />
+    </node>
+    <node concept="2rT7sh" id="557wPCpW8sa" role="2rTMjI">
+      <property role="TrG5h" value="DefaultClusterComponent" />
+      <ref role="2rTdP9" to="4abx:4wLeArqywgg" resolve="KubernetesDeploymentModel" />
+      <ref role="2rZz_L" to="9rr7:2hvaCGv18J4" resolve="Component" />
+    </node>
     <node concept="1puMqW" id="1KdCJwrrF$5" role="1pvy6N">
       <ref role="1puQsG" node="6gXylHIn8yi" resolve="refinePropertyNames" />
     </node>
@@ -659,6 +670,66 @@
                   <node concept="1iwH70" id="5XX0fweRIa0" role="2OqNvi">
                     <ref role="1iwH77" node="621JQu814WZ" resolve="deploymentComponent" />
                     <node concept="30H73N" id="5XX0fweRIa1" role="1iwH7V" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1ZhdrF" id="557wPCpOPoO" role="lGtFl">
+          <property role="2qtEX8" value="type" />
+          <property role="P3scX" value="f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c/2620860285162130367/2620860285162130370" />
+          <node concept="3$xsQk" id="557wPCpOPoP" role="3$ytzL">
+            <node concept="3clFbS" id="557wPCpOPoQ" role="2VODD2">
+              <node concept="3clFbF" id="557wPCpOPDL" role="3cqZAp">
+                <node concept="2OqwBi" id="557wPCpOPDM" role="3clFbG">
+                  <node concept="1iwH7S" id="557wPCpOPDN" role="2Oq$k0" />
+                  <node concept="1iwH70" id="557wPCpOPDO" role="2OqNvi">
+                    <ref role="1iwH77" node="557wPCpONmg" resolve="HostedOnRelationType" />
+                    <node concept="2OqwBi" id="557wPCpOPDP" role="1iwH7V">
+                      <node concept="2OqwBi" id="557wPCpOPDQ" role="2Oq$k0">
+                        <node concept="2OqwBi" id="557wPCpOPDR" role="2Oq$k0">
+                          <node concept="1iwH7S" id="557wPCpOPDS" role="2Oq$k0" />
+                          <node concept="1r8y6K" id="557wPCpOPDT" role="2OqNvi" />
+                        </node>
+                        <node concept="2SmgA7" id="557wPCpOPDU" role="2OqNvi">
+                          <node concept="chp4Y" id="557wPCpOPDV" role="1dBWTz">
+                            <ref role="cht4Q" to="4abx:4wLeArqywgg" resolve="KubernetesDeploymentModel" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="1uHKPH" id="557wPCpOPDW" role="2OqNvi" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1ZhdrF" id="557wPCpW8ZV" role="lGtFl">
+          <property role="2qtEX8" value="target" />
+          <property role="P3scX" value="f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c/2620860285162130367/2620860285162130378" />
+          <node concept="3$xsQk" id="557wPCpW8ZW" role="3$ytzL">
+            <node concept="3clFbS" id="557wPCpW8ZX" role="2VODD2">
+              <node concept="3clFbF" id="557wPCpW9jy" role="3cqZAp">
+                <node concept="2OqwBi" id="557wPCpW9j$" role="3clFbG">
+                  <node concept="1iwH7S" id="557wPCpW9j_" role="2Oq$k0" />
+                  <node concept="1iwH70" id="557wPCpW9jA" role="2OqNvi">
+                    <ref role="1iwH77" node="557wPCpW8sa" resolve="DefaultClusterComponent" />
+                    <node concept="2OqwBi" id="557wPCpW9jB" role="1iwH7V">
+                      <node concept="2OqwBi" id="557wPCpW9jC" role="2Oq$k0">
+                        <node concept="2OqwBi" id="557wPCpW9jD" role="2Oq$k0">
+                          <node concept="1iwH7S" id="557wPCpW9jE" role="2Oq$k0" />
+                          <node concept="1r8y6K" id="557wPCpW9jF" role="2OqNvi" />
+                        </node>
+                        <node concept="2SmgA7" id="557wPCpW9jG" role="2OqNvi">
+                          <node concept="chp4Y" id="557wPCpW9jH" role="1dBWTz">
+                            <ref role="cht4Q" to="4abx:4wLeArqywgg" resolve="KubernetesDeploymentModel" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="1uHKPH" id="557wPCpW9jI" role="2OqNvi" />
+                    </node>
                   </node>
                 </node>
               </node>
@@ -2365,6 +2436,66 @@
             </node>
           </node>
         </node>
+        <node concept="1ZhdrF" id="557wPCqwSmA" role="lGtFl">
+          <property role="2qtEX8" value="type" />
+          <property role="P3scX" value="f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c/2620860285162130367/2620860285162130370" />
+          <node concept="3$xsQk" id="557wPCqwSmB" role="3$ytzL">
+            <node concept="3clFbS" id="557wPCqwSmC" role="2VODD2">
+              <node concept="3clFbF" id="557wPCqwSy_" role="3cqZAp">
+                <node concept="2OqwBi" id="557wPCqwSyA" role="3clFbG">
+                  <node concept="1iwH7S" id="557wPCqwSyB" role="2Oq$k0" />
+                  <node concept="1iwH70" id="557wPCqwSyC" role="2OqNvi">
+                    <ref role="1iwH77" node="557wPCpONmg" resolve="HostedOnRelationType" />
+                    <node concept="2OqwBi" id="557wPCqwSyD" role="1iwH7V">
+                      <node concept="2OqwBi" id="557wPCqwSyE" role="2Oq$k0">
+                        <node concept="2OqwBi" id="557wPCqwSyF" role="2Oq$k0">
+                          <node concept="1iwH7S" id="557wPCqwSyG" role="2Oq$k0" />
+                          <node concept="1r8y6K" id="557wPCqwSyH" role="2OqNvi" />
+                        </node>
+                        <node concept="2SmgA7" id="557wPCqwSyI" role="2OqNvi">
+                          <node concept="chp4Y" id="557wPCqwSyJ" role="1dBWTz">
+                            <ref role="cht4Q" to="4abx:4wLeArqywgg" resolve="KubernetesDeploymentModel" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="1uHKPH" id="557wPCqwSyK" role="2OqNvi" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1ZhdrF" id="557wPCqwSX9" role="lGtFl">
+          <property role="2qtEX8" value="target" />
+          <property role="P3scX" value="f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c/2620860285162130367/2620860285162130378" />
+          <node concept="3$xsQk" id="557wPCqwSXa" role="3$ytzL">
+            <node concept="3clFbS" id="557wPCqwSXb" role="2VODD2">
+              <node concept="3clFbF" id="557wPCqwT4z" role="3cqZAp">
+                <node concept="2OqwBi" id="557wPCqwT4$" role="3clFbG">
+                  <node concept="1iwH7S" id="557wPCqwT4_" role="2Oq$k0" />
+                  <node concept="1iwH70" id="557wPCqwT4A" role="2OqNvi">
+                    <ref role="1iwH77" node="557wPCpW8sa" resolve="DefaultClusterComponent" />
+                    <node concept="2OqwBi" id="557wPCqwT4B" role="1iwH7V">
+                      <node concept="2OqwBi" id="557wPCqwT4C" role="2Oq$k0">
+                        <node concept="2OqwBi" id="557wPCqwT4D" role="2Oq$k0">
+                          <node concept="1iwH7S" id="557wPCqwT4E" role="2Oq$k0" />
+                          <node concept="1r8y6K" id="557wPCqwT4F" role="2OqNvi" />
+                        </node>
+                        <node concept="2SmgA7" id="557wPCqwT4G" role="2OqNvi">
+                          <node concept="chp4Y" id="557wPCqwT4H" role="1dBWTz">
+                            <ref role="cht4Q" to="4abx:4wLeArqywgg" resolve="KubernetesDeploymentModel" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="1uHKPH" id="557wPCqwT4I" role="2OqNvi" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="VmU5f" id="3KmoOC3qxIl" role="VmU7O">
         <property role="TrG5h" value="DummyVolume" />
@@ -2587,6 +2718,66 @@
                   <node concept="1iwH70" id="4loFNnEb2nr" role="2OqNvi">
                     <ref role="1iwH77" node="61T1DqJLpNK" resolve="cronJobComponent" />
                     <node concept="30H73N" id="4loFNnEb2ns" role="1iwH7V" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1ZhdrF" id="557wPCqwRSW" role="lGtFl">
+          <property role="2qtEX8" value="type" />
+          <property role="P3scX" value="f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c/2620860285162130367/2620860285162130370" />
+          <node concept="3$xsQk" id="557wPCqwRSX" role="3$ytzL">
+            <node concept="3clFbS" id="557wPCqwRSY" role="2VODD2">
+              <node concept="3clFbF" id="557wPCqwS9T" role="3cqZAp">
+                <node concept="2OqwBi" id="557wPCqwS9U" role="3clFbG">
+                  <node concept="1iwH7S" id="557wPCqwS9V" role="2Oq$k0" />
+                  <node concept="1iwH70" id="557wPCqwS9W" role="2OqNvi">
+                    <ref role="1iwH77" node="557wPCpONmg" resolve="HostedOnRelationType" />
+                    <node concept="2OqwBi" id="557wPCqwS9X" role="1iwH7V">
+                      <node concept="2OqwBi" id="557wPCqwS9Y" role="2Oq$k0">
+                        <node concept="2OqwBi" id="557wPCqwS9Z" role="2Oq$k0">
+                          <node concept="1iwH7S" id="557wPCqwSa0" role="2Oq$k0" />
+                          <node concept="1r8y6K" id="557wPCqwSa1" role="2OqNvi" />
+                        </node>
+                        <node concept="2SmgA7" id="557wPCqwSa2" role="2OqNvi">
+                          <node concept="chp4Y" id="557wPCqwSa3" role="1dBWTz">
+                            <ref role="cht4Q" to="4abx:4wLeArqywgg" resolve="KubernetesDeploymentModel" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="1uHKPH" id="557wPCqwSa4" role="2OqNvi" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1ZhdrF" id="557wPCqwSGt" role="lGtFl">
+          <property role="2qtEX8" value="target" />
+          <property role="P3scX" value="f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c/2620860285162130367/2620860285162130378" />
+          <node concept="3$xsQk" id="557wPCqwSGu" role="3$ytzL">
+            <node concept="3clFbS" id="557wPCqwSGv" role="2VODD2">
+              <node concept="3clFbF" id="557wPCqwSLc" role="3cqZAp">
+                <node concept="2OqwBi" id="557wPCqwSLd" role="3clFbG">
+                  <node concept="1iwH7S" id="557wPCqwSLe" role="2Oq$k0" />
+                  <node concept="1iwH70" id="557wPCqwSLf" role="2OqNvi">
+                    <ref role="1iwH77" node="557wPCpW8sa" resolve="DefaultClusterComponent" />
+                    <node concept="2OqwBi" id="557wPCqwSLg" role="1iwH7V">
+                      <node concept="2OqwBi" id="557wPCqwSLh" role="2Oq$k0">
+                        <node concept="2OqwBi" id="557wPCqwSLi" role="2Oq$k0">
+                          <node concept="1iwH7S" id="557wPCqwSLj" role="2Oq$k0" />
+                          <node concept="1r8y6K" id="557wPCqwSLk" role="2OqNvi" />
+                        </node>
+                        <node concept="2SmgA7" id="557wPCqwSLl" role="2OqNvi">
+                          <node concept="chp4Y" id="557wPCqwSLm" role="1dBWTz">
+                            <ref role="cht4Q" to="4abx:4wLeArqywgg" resolve="KubernetesDeploymentModel" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="1uHKPH" id="557wPCqwSLn" role="2OqNvi" />
+                    </node>
                   </node>
                 </node>
               </node>
@@ -3659,6 +3850,9 @@
     <node concept="VmU4R" id="4loFNnErpyM" role="VmU7O">
       <property role="TrG5h" value="HostedOn" />
       <ref role="3hVhlN" node="4loFNnErpyA" resolve="DependsOn" />
+      <node concept="2ZBi8u" id="557wPCpOP9O" role="lGtFl">
+        <ref role="2rW$FS" node="557wPCpONmg" resolve="HostedOnRelationType" />
+      </node>
     </node>
     <node concept="VmU4M" id="4loFNnErp4v" role="VmU7O">
       <property role="TrG5h" value="BaseType" />
@@ -3747,6 +3941,9 @@
     <node concept="VmU5f" id="4loFNnErokn" role="VmU7O">
       <property role="TrG5h" value="defaultKubernetesCluster" />
       <ref role="VmU5e" node="4loFNnErp4y" resolve="DefaultKubernetesCluster" />
+      <node concept="2ZBi8u" id="557wPCq3sG_" role="lGtFl">
+        <ref role="2rW$FS" node="557wPCpW8sa" resolve="DefaultClusterComponent" />
+      </node>
     </node>
     <node concept="VmU5f" id="4loFNnEroko" role="VmU7O">
       <property role="TrG5h" value="NewComponent" />

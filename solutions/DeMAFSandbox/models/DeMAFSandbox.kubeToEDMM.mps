@@ -145,6 +145,10 @@
         <node concept="2iieDQ" id="57VPsWd_2A2" role="14z1RQ">
           <property role="2iieDR" value="storageTestContainer" />
           <property role="2iieDP" value="storage:1.22" />
+          <node concept="2iieD6" id="6ziswUwaLM5" role="2iieDe">
+            <property role="2iieD5" value="http://serviceForX:123" />
+            <property role="2iieD7" value="storageconnection" />
+          </node>
           <node concept="1wMHEX" id="57VPsWd_2Aj" role="1wM_f6">
             <property role="1wMHEY" value="storageTest-storage" />
             <property role="1wMHF2" value="storageTest" />

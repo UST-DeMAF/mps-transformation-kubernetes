@@ -93,6 +93,7 @@
       <concept id="1114729360583" name="jetbrains.mps.lang.generator.structure.CopySrcListMacro" flags="ln" index="2b32R4">
         <child id="1168278589236" name="sourceNodesQuery" index="2P8S$" />
       </concept>
+      <concept id="1202776937179" name="jetbrains.mps.lang.generator.structure.AbandonInput_RuleConsequence" flags="lg" index="b5Tf3" />
       <concept id="1095416546421" name="jetbrains.mps.lang.generator.structure.MappingConfiguration" flags="ig" index="bUwia">
         <child id="1200911492601" name="mappingLabel" index="2rTMjI" />
         <child id="1167328349397" name="reductionMappingRule" index="3acgRq" />
@@ -656,9 +657,7 @@
           </node>
         </node>
       </node>
-      <node concept="j$656" id="4loFNnDvglP" role="1lVwrX">
-        <ref role="v9R2y" node="4loFNnDvglN" resolve="remove_DefaultClusterComponent" />
-      </node>
+      <node concept="b5Tf3" id="7k8CLlup63E" role="1lVwrX" />
     </node>
     <node concept="3aamgX" id="4loFNnE1Oax" role="3acgRq">
       <ref role="30HIoZ" to="9rr7:2hvaCGv18IT" resolve="ComponentType" />
@@ -722,9 +721,7 @@
           </node>
         </node>
       </node>
-      <node concept="j$656" id="4loFNnE20Kz" role="1lVwrX">
-        <ref role="v9R2y" node="4loFNnE20Kx" resolve="removeDefaultClusterComponentType" />
-      </node>
+      <node concept="b5Tf3" id="7k8CLluhOit" role="1lVwrX" />
     </node>
     <node concept="2rT7sh" id="4MnaJj$bu5_" role="2rTMjI">
       <property role="TrG5h" value="deploymentModel" />
@@ -936,24 +933,6 @@
           </node>
         </node>
       </node>
-    </node>
-  </node>
-  <node concept="13MO4I" id="4loFNnDvglN">
-    <property role="TrG5h" value="remove_DefaultClusterComponent" />
-    <ref role="3gUMe" to="9rr7:2hvaCGv18J4" resolve="Component" />
-    <node concept="VmU4a" id="4loFNnDTf$a" role="13RCb5">
-      <property role="VmU49" value="dummy" />
-      <property role="VmU4f" value="dummy" />
-      <node concept="raruj" id="4loFNnDTf$b" role="lGtFl" />
-    </node>
-  </node>
-  <node concept="13MO4I" id="4loFNnE20Kx">
-    <property role="TrG5h" value="removeDefaultClusterComponentType" />
-    <ref role="3gUMe" to="9rr7:2hvaCGv18IT" resolve="ComponentType" />
-    <node concept="VmU4a" id="4loFNnE20OR" role="13RCb5">
-      <property role="VmU49" value="dummy" />
-      <property role="VmU4f" value="dummy" />
-      <node concept="raruj" id="4loFNnE20OS" role="lGtFl" />
     </node>
   </node>
 </model>

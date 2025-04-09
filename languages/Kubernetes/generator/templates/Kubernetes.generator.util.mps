@@ -12,9 +12,9 @@
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
     <import index="r9z2" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:org.jdom.input(MPS.Core/)" />
     <import index="mmaq" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:org.jdom(MPS.Core/)" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" implicit="true" />
     <import index="9rr7" ref="r:775c6bb1-2ef0-4cbc-bf58-15eda5ee6023(EDMM.structure)" implicit="true" />
-    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -188,6 +188,9 @@
       <concept id="1145383075378" name="jetbrains.mps.lang.smodel.structure.SNodeListType" flags="in" index="2I9FWS">
         <reference id="1145383142433" name="elementConcept" index="2I9WkF" />
       </concept>
+      <concept id="1171315804604" name="jetbrains.mps.lang.smodel.structure.Model_RootsOperation" flags="nn" index="2RRcyG">
+        <child id="6750920497477046361" name="conceptArgument" index="3MHsoP" />
+      </concept>
       <concept id="1171323947159" name="jetbrains.mps.lang.smodel.structure.Model_NodesOperation" flags="nn" index="2SmgA7">
         <child id="1758937410080001570" name="conceptArgument" index="1dBWTz" />
       </concept>
@@ -273,6 +276,7 @@
       <concept id="1167380149909" name="jetbrains.mps.baseLanguage.collections.structure.RemoveElementOperation" flags="nn" index="3dhRuq" />
       <concept id="1178286324487" name="jetbrains.mps.baseLanguage.collections.structure.SortDirection" flags="nn" index="1nlBCl" />
       <concept id="1165525191778" name="jetbrains.mps.baseLanguage.collections.structure.GetFirstOperation" flags="nn" index="1uHKPH" />
+      <concept id="1165530316231" name="jetbrains.mps.baseLanguage.collections.structure.IsEmptyOperation" flags="nn" index="1v1jN8" />
       <concept id="1225727723840" name="jetbrains.mps.baseLanguage.collections.structure.FindFirstOperation" flags="nn" index="1z4cxt" />
       <concept id="1202120902084" name="jetbrains.mps.baseLanguage.collections.structure.WhereOperation" flags="nn" index="3zZkjj" />
       <concept id="1202128969694" name="jetbrains.mps.baseLanguage.collections.structure.SelectOperation" flags="nn" index="3$u5V9" />
@@ -286,10 +290,6 @@
     <node concept="2tJIrI" id="6ziswUw1LWk" role="jymVt" />
     <node concept="2YIFZL" id="6ziswUw1N8S" role="jymVt">
       <property role="TrG5h" value="createMatchingServicesAndDeployments" />
-      <node concept="37vLTG" id="6ziswUw1NGF" role="3clF46">
-        <property role="TrG5h" value="genContext" />
-        <node concept="1iwH7U" id="6ziswUw1NGG" role="1tU5fm" />
-      </node>
       <node concept="3clFbS" id="6ziswUw1N8V" role="3clF47">
         <node concept="3cpWs8" id="6ziswUw1NRu" role="3cqZAp">
           <node concept="3cpWsn" id="6ziswUw1NRv" role="3cpWs9">
@@ -399,17 +399,12 @@
                   <ref role="ehGHo" to="4abx:4wLeArqu9I9" resolve="Deployment" />
                 </node>
               </node>
-              <node concept="2OqwBi" id="6ziswUw1Tsp" role="1DdaDG">
-                <node concept="2OqwBi" id="6ziswUw1Tsq" role="2Oq$k0">
-                  <node concept="1r8y6K" id="6ziswUw1Tsr" role="2OqNvi" />
-                  <node concept="37vLTw" id="6ziswUw1Tss" role="2Oq$k0">
-                    <ref role="3cqZAo" node="6ziswUw1NGF" resolve="genContext" />
-                  </node>
+              <node concept="2OqwBi" id="5JFAvevbSAD" role="1DdaDG">
+                <node concept="37vLTw" id="5JFAvevbRxY" role="2Oq$k0">
+                  <ref role="3cqZAo" node="5JFAvevbGhX" resolve="deploymentModel" />
                 </node>
-                <node concept="2SmgA7" id="6ziswUw1Tst" role="2OqNvi">
-                  <node concept="chp4Y" id="6ziswUw1Tsu" role="1dBWTz">
-                    <ref role="cht4Q" to="4abx:4wLeArqu9I9" resolve="Deployment" />
-                  </node>
+                <node concept="3Tsc0h" id="5JFAvevbToJ" role="2OqNvi">
+                  <ref role="3TtcxE" to="4abx:4wLeArqywgh" resolve="deployments" />
                 </node>
               </node>
             </node>
@@ -421,16 +416,11 @@
             </node>
           </node>
           <node concept="2OqwBi" id="6ziswUw1NSb" role="1DdaDG">
-            <node concept="2OqwBi" id="6ziswUw1NSc" role="2Oq$k0">
-              <node concept="1r8y6K" id="6ziswUw1NSd" role="2OqNvi" />
-              <node concept="37vLTw" id="6ziswUw1NSe" role="2Oq$k0">
-                <ref role="3cqZAo" node="6ziswUw1NGF" resolve="genContext" />
-              </node>
+            <node concept="37vLTw" id="5JFAvevbMZd" role="2Oq$k0">
+              <ref role="3cqZAo" node="5JFAvevbGhX" resolve="deploymentModel" />
             </node>
-            <node concept="2SmgA7" id="6ziswUw1NSf" role="2OqNvi">
-              <node concept="chp4Y" id="6ziswUw1NSg" role="1dBWTz">
-                <ref role="cht4Q" to="4abx:4wLeArquw2M" resolve="Service" />
-              </node>
+            <node concept="3Tsc0h" id="5JFAvevbO$$" role="2OqNvi">
+              <ref role="3TtcxE" to="4abx:4wLeArqywgj" resolve="services" />
             </node>
           </node>
         </node>
@@ -444,6 +434,12 @@
       <node concept="A3Dl8" id="6ziswUw1Nye" role="3clF45">
         <node concept="3Tqbb2" id="6ziswUw1Nyf" role="A3Ik2">
           <ref role="ehGHo" to="4abx:3p0Gq6VdP_s" resolve="MatchingServiceAndDeployment" />
+        </node>
+      </node>
+      <node concept="37vLTG" id="5JFAvevbGhX" role="3clF46">
+        <property role="TrG5h" value="deploymentModel" />
+        <node concept="3Tqbb2" id="5JFAvevbGhY" role="1tU5fm">
+          <ref role="ehGHo" to="4abx:4wLeArqywgg" resolve="KubernetesDeploymentModel" />
         </node>
       </node>
     </node>
@@ -11164,8 +11160,46 @@
             <node concept="2YIFZM" id="6ziswUwLkPf" role="33vP2m">
               <ref role="37wK5l" node="6ziswUw1N8S" resolve="createMatchingServicesAndDeployments" />
               <ref role="1Pybhc" node="3p0Gq6VeiQb" resolve="MatcherUtil" />
-              <node concept="37vLTw" id="7fvWACmh5UD" role="37wK5m">
-                <ref role="3cqZAo" node="4uFYHMEIvH2" resolve="genContext" />
+              <node concept="2OqwBi" id="5JFAvevcb5i" role="37wK5m">
+                <node concept="2OqwBi" id="5JFAvevc0kd" role="2Oq$k0">
+                  <node concept="2OqwBi" id="5JFAvevbXrF" role="2Oq$k0">
+                    <node concept="2OqwBi" id="5JFAvevbWgB" role="2Oq$k0">
+                      <node concept="37vLTw" id="5JFAvevnJyi" role="2Oq$k0">
+                        <ref role="3cqZAo" node="4uFYHMEIvH2" resolve="genContext" />
+                      </node>
+                      <node concept="1r8y6K" id="5JFAvevbX5O" role="2OqNvi" />
+                    </node>
+                    <node concept="2RRcyG" id="5JFAvevbXHn" role="2OqNvi">
+                      <node concept="chp4Y" id="5JFAvevbYfb" role="3MHsoP">
+                        <ref role="cht4Q" to="4abx:4wLeArqywgg" resolve="KubernetesDeploymentModel" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3zZkjj" id="5JFAvevc3Hq" role="2OqNvi">
+                    <node concept="1bVj0M" id="5JFAvevc3Hs" role="23t8la">
+                      <node concept="3clFbS" id="5JFAvevc3Ht" role="1bW5cS">
+                        <node concept="3clFbF" id="5JFAvevc41a" role="3cqZAp">
+                          <node concept="2OqwBi" id="5JFAvevc7bN" role="3clFbG">
+                            <node concept="2OqwBi" id="5JFAvevc4m0" role="2Oq$k0">
+                              <node concept="37vLTw" id="5JFAvevc419" role="2Oq$k0">
+                                <ref role="3cqZAo" node="5JFAvevc3Hu" resolve="it" />
+                              </node>
+                              <node concept="3Tsc0h" id="5JFAvevc4Nw" role="2OqNvi">
+                                <ref role="3TtcxE" to="tpck:4uZwTti3__2" resolve="smodelAttribute" />
+                              </node>
+                            </node>
+                            <node concept="1v1jN8" id="5JFAvevcaFk" role="2OqNvi" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="Rh6nW" id="5JFAvevc3Hu" role="1bW2Oz">
+                        <property role="TrG5h" value="it" />
+                        <node concept="2jxLKc" id="5JFAvevc3Hv" role="1tU5fm" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="1uHKPH" id="5JFAvevcbY5" role="2OqNvi" />
               </node>
             </node>
           </node>
@@ -11427,11 +11461,625 @@
         </node>
         <node concept="TZ5HA" id="4aphak$19AC" role="TZ5H$">
           <node concept="1dT_AC" id="4aphak$19AD" role="1dT_Ay">
-            <property role="1dT_AB" value="3. Filter out duplicate matches." />
+            <property role="1dT_AB" value="3. Filter out duplicate matches" />
           </node>
         </node>
       </node>
     </node>
+    <node concept="2tJIrI" id="5JFAvevaPhq" role="jymVt" />
+    <node concept="2YIFZL" id="5JFAvevaPBf" role="jymVt">
+      <property role="TrG5h" value="filterEnvVarsForRelationReferencesInExistingModel" />
+      <node concept="3clFbS" id="5JFAvevaPBg" role="3clF47">
+        <node concept="3cpWs8" id="5JFAvevbvXg" role="3cqZAp">
+          <node concept="3cpWsn" id="5JFAvevbvXj" role="3cpWs9">
+            <property role="TrG5h" value="existingKubernetesDeploymentModel" />
+            <node concept="3Tqbb2" id="5JFAvevbvXe" role="1tU5fm">
+              <ref role="ehGHo" to="4abx:4wLeArqywgg" resolve="KubernetesDeploymentModel" />
+            </node>
+            <node concept="2OqwBi" id="5JFAvevbBM_" role="33vP2m">
+              <node concept="2OqwBi" id="5JFAvevbf$_" role="2Oq$k0">
+                <node concept="2OqwBi" id="5JFAvevbbO8" role="2Oq$k0">
+                  <node concept="2OqwBi" id="5JFAvevbarf" role="2Oq$k0">
+                    <node concept="37vLTw" id="5JFAvevb9Cb" role="2Oq$k0">
+                      <ref role="3cqZAo" node="5JFAvevaPCX" resolve="genContext" />
+                    </node>
+                    <node concept="1r8y6K" id="5JFAvevbb5U" role="2OqNvi" />
+                  </node>
+                  <node concept="2RRcyG" id="5JFAvevbcux" role="2OqNvi">
+                    <node concept="chp4Y" id="5JFAvevbd3K" role="3MHsoP">
+                      <ref role="cht4Q" to="4abx:4wLeArqywgg" resolve="KubernetesDeploymentModel" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="3zZkjj" id="5JFAvevbhJB" role="2OqNvi">
+                  <node concept="1bVj0M" id="5JFAvevbhJD" role="23t8la">
+                    <node concept="3clFbS" id="5JFAvevbhJE" role="1bW5cS">
+                      <node concept="3clFbF" id="5JFAvevbiDV" role="3cqZAp">
+                        <node concept="2OqwBi" id="5JFAvevbnr0" role="3clFbG">
+                          <node concept="2OqwBi" id="5JFAvevbj_Z" role="2Oq$k0">
+                            <node concept="37vLTw" id="5JFAvevbiDU" role="2Oq$k0">
+                              <ref role="3cqZAo" node="5JFAvevbhJF" resolve="it" />
+                            </node>
+                            <node concept="3Tsc0h" id="5JFAvevbkza" role="2OqNvi">
+                              <ref role="3TtcxE" to="tpck:4uZwTti3__2" resolve="smodelAttribute" />
+                            </node>
+                          </node>
+                          <node concept="3GX2aA" id="5JFAvevbre3" role="2OqNvi" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="Rh6nW" id="5JFAvevbhJF" role="1bW2Oz">
+                      <property role="TrG5h" value="it" />
+                      <node concept="2jxLKc" id="5JFAvevbhJG" role="1tU5fm" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="1uHKPH" id="5JFAvevbD0H" role="2OqNvi" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="5JFAvevaPBh" role="3cqZAp">
+          <node concept="3cpWsn" id="5JFAvevaPBi" role="3cpWs9">
+            <property role="TrG5h" value="filteredEnvironmentVariables" />
+            <node concept="2I9FWS" id="5JFAvevaPBj" role="1tU5fm">
+              <ref role="2I9WkF" to="4abx:4wLeArqut0w" resolve="EnvironmentVariable" />
+            </node>
+            <node concept="2ShNRf" id="5JFAvevaPBk" role="33vP2m">
+              <node concept="2T8Vx0" id="5JFAvevaPBl" role="2ShVmc">
+                <node concept="2I9FWS" id="5JFAvevaPBm" role="2T96Bj">
+                  <ref role="2I9WkF" to="4abx:4wLeArqut0w" resolve="EnvironmentVariable" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="5JFAvevaPBn" role="3cqZAp">
+          <node concept="3cpWsn" id="5JFAvevaPBo" role="3cpWs9">
+            <property role="TrG5h" value="previousMatches" />
+            <node concept="2I9FWS" id="5JFAvevaPBp" role="1tU5fm">
+              <ref role="2I9WkF" to="4abx:3p0Gq6VdP_s" resolve="MatchingServiceAndDeployment" />
+            </node>
+            <node concept="2ShNRf" id="5JFAvevaPBq" role="33vP2m">
+              <node concept="2T8Vx0" id="5JFAvevaPBr" role="2ShVmc">
+                <node concept="2I9FWS" id="5JFAvevaPBs" role="2T96Bj">
+                  <ref role="2I9WkF" to="4abx:3p0Gq6VdP_s" resolve="MatchingServiceAndDeployment" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="5JFAvevaPBt" role="3cqZAp">
+          <node concept="3cpWsn" id="5JFAvevaPBu" role="3cpWs9">
+            <property role="TrG5h" value="matchingServicesAndDeployments" />
+            <node concept="A3Dl8" id="5JFAvevaPBv" role="1tU5fm">
+              <node concept="3Tqbb2" id="5JFAvevaPBw" role="A3Ik2">
+                <ref role="ehGHo" to="4abx:3p0Gq6VdP_s" resolve="MatchingServiceAndDeployment" />
+              </node>
+            </node>
+            <node concept="2YIFZM" id="5JFAvevaPBx" role="33vP2m">
+              <ref role="37wK5l" node="6ziswUw1N8S" resolve="createMatchingServicesAndDeployments" />
+              <ref role="1Pybhc" node="3p0Gq6VeiQb" resolve="MatcherUtil" />
+              <node concept="37vLTw" id="5JFAvevbETh" role="37wK5m">
+                <ref role="3cqZAo" node="5JFAvevbvXj" resolve="existingKubernetesDeploymentModel" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2Gpval" id="5JFAvevaPBz" role="3cqZAp">
+          <node concept="2GrKxI" id="5JFAvevaPB$" role="2Gsz3X">
+            <property role="TrG5h" value="envVar" />
+          </node>
+          <node concept="2OqwBi" id="5JFAvevaPB_" role="2GsD0m">
+            <node concept="37vLTw" id="5JFAvevaPBA" role="2Oq$k0">
+              <ref role="3cqZAo" node="5JFAvevaPCZ" resolve="environmentVariables" />
+            </node>
+            <node concept="3zZkjj" id="5JFAvevaPBB" role="2OqNvi">
+              <node concept="1bVj0M" id="5JFAvevaPBC" role="23t8la">
+                <node concept="3clFbS" id="5JFAvevaPBD" role="1bW5cS">
+                  <node concept="3clFbF" id="5JFAvevaPBE" role="3cqZAp">
+                    <node concept="2OqwBi" id="5JFAvevaPBF" role="3clFbG">
+                      <node concept="37vLTw" id="5JFAvevaPDw" role="2Oq$k0">
+                        <ref role="3cqZAo" node="6ziswUw2Kho" resolve="PROPERTY_KEYWORDS" />
+                      </node>
+                      <node concept="2HwmR7" id="5JFAvevaPBG" role="2OqNvi">
+                        <node concept="1bVj0M" id="5JFAvevaPBH" role="23t8la">
+                          <node concept="3clFbS" id="5JFAvevaPBI" role="1bW5cS">
+                            <node concept="3clFbF" id="5JFAvevaPBJ" role="3cqZAp">
+                              <node concept="2OqwBi" id="5JFAvevaPBK" role="3clFbG">
+                                <node concept="2OqwBi" id="5JFAvevaPBL" role="2Oq$k0">
+                                  <node concept="2OqwBi" id="5JFAvevaPBM" role="2Oq$k0">
+                                    <node concept="37vLTw" id="5JFAvevaPBN" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="5JFAvevaPBU" resolve="envVar" />
+                                    </node>
+                                    <node concept="3TrcHB" id="5JFAvevaPBO" role="2OqNvi">
+                                      <ref role="3TsBF5" to="4abx:4wLeArqut0x" resolve="key" />
+                                    </node>
+                                  </node>
+                                  <node concept="liA8E" id="5JFAvevaPBP" role="2OqNvi">
+                                    <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+                                  </node>
+                                </node>
+                                <node concept="liA8E" id="5JFAvevaPBQ" role="2OqNvi">
+                                  <ref role="37wK5l" to="wyt6:~String.contains(java.lang.CharSequence)" resolve="contains" />
+                                  <node concept="37vLTw" id="5JFAvevaPBR" role="37wK5m">
+                                    <ref role="3cqZAo" node="5JFAvevaPBS" resolve="it" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="Rh6nW" id="5JFAvevaPBS" role="1bW2Oz">
+                            <property role="TrG5h" value="it" />
+                            <node concept="2jxLKc" id="5JFAvevaPBT" role="1tU5fm" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="Rh6nW" id="5JFAvevaPBU" role="1bW2Oz">
+                  <property role="TrG5h" value="envVar" />
+                  <node concept="2jxLKc" id="5JFAvevaPBV" role="1tU5fm" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbS" id="5JFAvevaPBW" role="2LFqv$">
+            <node concept="3cpWs8" id="5JFAvevaPBX" role="3cqZAp">
+              <node concept="3cpWsn" id="5JFAvevaPBY" role="3cpWs9">
+                <property role="TrG5h" value="match" />
+                <node concept="3Tqbb2" id="5JFAvevaPBZ" role="1tU5fm">
+                  <ref role="ehGHo" to="4abx:3p0Gq6VdP_s" resolve="MatchingServiceAndDeployment" />
+                </node>
+                <node concept="2OqwBi" id="5JFAvevaPC0" role="33vP2m">
+                  <node concept="2OqwBi" id="5JFAvevaPC1" role="2Oq$k0">
+                    <node concept="2OqwBi" id="5JFAvevaPC2" role="2Oq$k0">
+                      <node concept="37vLTw" id="5JFAvevaPC3" role="2Oq$k0">
+                        <ref role="3cqZAo" node="5JFAvevaPBu" resolve="matchingServicesAndDeployments" />
+                      </node>
+                      <node concept="3zZkjj" id="5JFAvevaPC4" role="2OqNvi">
+                        <node concept="1bVj0M" id="5JFAvevaPC5" role="23t8la">
+                          <node concept="3clFbS" id="5JFAvevaPC6" role="1bW5cS">
+                            <node concept="3clFbF" id="5JFAvevaPC7" role="3cqZAp">
+                              <node concept="2OqwBi" id="5JFAvevaPC8" role="3clFbG">
+                                <node concept="2OqwBi" id="5JFAvevaPC9" role="2Oq$k0">
+                                  <node concept="2OqwBi" id="5JFAvevaPCa" role="2Oq$k0">
+                                    <node concept="2GrUjf" id="5JFAvevaPCb" role="2Oq$k0">
+                                      <ref role="2Gs0qQ" node="5JFAvevaPB$" resolve="envVar" />
+                                    </node>
+                                    <node concept="3TrcHB" id="5JFAvevaPCc" role="2OqNvi">
+                                      <ref role="3TsBF5" to="4abx:4wLeArqut0z" resolve="value" />
+                                    </node>
+                                  </node>
+                                  <node concept="liA8E" id="5JFAvevaPCd" role="2OqNvi">
+                                    <ref role="37wK5l" to="wyt6:~String.toString()" resolve="toString" />
+                                  </node>
+                                </node>
+                                <node concept="liA8E" id="5JFAvevaPCe" role="2OqNvi">
+                                  <ref role="37wK5l" to="wyt6:~String.contains(java.lang.CharSequence)" resolve="contains" />
+                                  <node concept="2OqwBi" id="5JFAvevaPCf" role="37wK5m">
+                                    <node concept="2OqwBi" id="5JFAvevaPCg" role="2Oq$k0">
+                                      <node concept="37vLTw" id="5JFAvevaPCh" role="2Oq$k0">
+                                        <ref role="3cqZAo" node="5JFAvevaPCk" resolve="it" />
+                                      </node>
+                                      <node concept="3TrEf2" id="5JFAvevaPCi" role="2OqNvi">
+                                        <ref role="3Tt5mk" to="4abx:3p0Gq6VggFc" resolve="service" />
+                                      </node>
+                                    </node>
+                                    <node concept="3TrcHB" id="5JFAvevaPCj" role="2OqNvi">
+                                      <ref role="3TsBF5" to="4abx:4wLeArquw2N" resolve="name" />
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="Rh6nW" id="5JFAvevaPCk" role="1bW2Oz">
+                            <property role="TrG5h" value="it" />
+                            <node concept="2jxLKc" id="5JFAvevaPCl" role="1tU5fm" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="1XvEQZ" id="5JFAvevaPCm" role="2OqNvi">
+                      <node concept="1bVj0M" id="5JFAvevaPCn" role="23t8la">
+                        <node concept="3clFbS" id="5JFAvevaPCo" role="1bW5cS">
+                          <node concept="3clFbF" id="5JFAvevaPCp" role="3cqZAp">
+                            <node concept="2OqwBi" id="5JFAvevaPCq" role="3clFbG">
+                              <node concept="2OqwBi" id="5JFAvevaPCr" role="2Oq$k0">
+                                <node concept="2OqwBi" id="5JFAvevaPCs" role="2Oq$k0">
+                                  <node concept="37vLTw" id="5JFAvevaPCt" role="2Oq$k0">
+                                    <ref role="3cqZAo" node="5JFAvevaPCx" resolve="it" />
+                                  </node>
+                                  <node concept="3TrEf2" id="5JFAvevaPCu" role="2OqNvi">
+                                    <ref role="3Tt5mk" to="4abx:3p0Gq6VggFc" resolve="service" />
+                                  </node>
+                                </node>
+                                <node concept="3TrcHB" id="5JFAvevaPCv" role="2OqNvi">
+                                  <ref role="3TsBF5" to="4abx:4wLeArquw2N" resolve="name" />
+                                </node>
+                              </node>
+                              <node concept="liA8E" id="5JFAvevaPCw" role="2OqNvi">
+                                <ref role="37wK5l" to="wyt6:~String.length()" resolve="length" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="Rh6nW" id="5JFAvevaPCx" role="1bW2Oz">
+                          <property role="TrG5h" value="it" />
+                          <node concept="2jxLKc" id="5JFAvevaPCy" role="1tU5fm" />
+                        </node>
+                      </node>
+                      <node concept="1nlBCl" id="5JFAvevaPCz" role="2S7zOq" />
+                    </node>
+                  </node>
+                  <node concept="1uHKPH" id="5JFAvevaPC$" role="2OqNvi" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbJ" id="5JFAvevaPC_" role="3cqZAp">
+              <node concept="3clFbS" id="5JFAvevaPCA" role="3clFbx">
+                <node concept="3clFbF" id="5JFAvevaPCB" role="3cqZAp">
+                  <node concept="2OqwBi" id="5JFAvevaPCC" role="3clFbG">
+                    <node concept="37vLTw" id="5JFAvevaPCD" role="2Oq$k0">
+                      <ref role="3cqZAo" node="5JFAvevaPBi" resolve="filteredEnvironmentVariables" />
+                    </node>
+                    <node concept="TSZUe" id="5JFAvevaPCE" role="2OqNvi">
+                      <node concept="2GrUjf" id="5JFAvevaPCF" role="25WWJ7">
+                        <ref role="2Gs0qQ" node="5JFAvevaPB$" resolve="envVar" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbF" id="5JFAvevaPCG" role="3cqZAp">
+                  <node concept="2OqwBi" id="5JFAvevaPCH" role="3clFbG">
+                    <node concept="37vLTw" id="5JFAvevaPCI" role="2Oq$k0">
+                      <ref role="3cqZAo" node="5JFAvevaPBo" resolve="previousMatches" />
+                    </node>
+                    <node concept="TSZUe" id="5JFAvevaPCJ" role="2OqNvi">
+                      <node concept="37vLTw" id="5JFAvevaPCK" role="25WWJ7">
+                        <ref role="3cqZAo" node="5JFAvevaPBY" resolve="match" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="1Wc70l" id="5JFAvevaPCL" role="3clFbw">
+                <node concept="2OqwBi" id="5JFAvevaPCM" role="3uHU7B">
+                  <node concept="37vLTw" id="5JFAvevaPCN" role="2Oq$k0">
+                    <ref role="3cqZAo" node="5JFAvevaPBY" resolve="match" />
+                  </node>
+                  <node concept="3x8VRR" id="5JFAvevaPCO" role="2OqNvi" />
+                </node>
+                <node concept="3fqX7Q" id="5JFAvevaPCP" role="3uHU7w">
+                  <node concept="2OqwBi" id="5JFAvevaPCQ" role="3fr31v">
+                    <node concept="37vLTw" id="5JFAvevaPCR" role="2Oq$k0">
+                      <ref role="3cqZAo" node="5JFAvevaPBo" resolve="previousMatches" />
+                    </node>
+                    <node concept="3JPx81" id="5JFAvevaPCS" role="2OqNvi">
+                      <node concept="37vLTw" id="5JFAvevaPCT" role="25WWJ7">
+                        <ref role="3cqZAo" node="5JFAvevaPBY" resolve="match" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="5JFAvevaPCU" role="3cqZAp">
+          <node concept="37vLTw" id="5JFAvevaPCV" role="3cqZAk">
+            <ref role="3cqZAo" node="5JFAvevaPBi" resolve="filteredEnvironmentVariables" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="5JFAvevaPCW" role="1B3o_S" />
+      <node concept="37vLTG" id="5JFAvevaPCX" role="3clF46">
+        <property role="TrG5h" value="genContext" />
+        <node concept="1iwH7U" id="5JFAvevaPCY" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="5JFAvevaPCZ" role="3clF46">
+        <property role="TrG5h" value="environmentVariables" />
+        <node concept="A3Dl8" id="5JFAvevaPD0" role="1tU5fm">
+          <node concept="3Tqbb2" id="5JFAvevaPD1" role="A3Ik2">
+            <ref role="ehGHo" to="4abx:4wLeArqut0w" resolve="EnvironmentVariable" />
+          </node>
+        </node>
+      </node>
+      <node concept="2I9FWS" id="5JFAvevaPD2" role="3clF45">
+        <ref role="2I9WkF" to="4abx:4wLeArqut0w" resolve="EnvironmentVariable" />
+      </node>
+      <node concept="P$JXv" id="5JFAvevaPD3" role="lGtFl">
+        <node concept="TZ5HA" id="5JFAvevaPD4" role="TZ5H$">
+          <node concept="1dT_AC" id="5JFAvevaPD5" role="1dT_Ay">
+            <property role="1dT_AB" value="Filter a list of environment variables for relation references to other Kubernetes services in the Kubernetes model " />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="5JFAvewKaM6" role="TZ5H$">
+          <node concept="1dT_AC" id="5JFAvewKaM7" role="1dT_Ay">
+            <property role="1dT_AB" value="of previous transformation processes." />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="5JFAvevaPD6" role="TZ5H$">
+          <node concept="1dT_AC" id="5JFAvevaPD7" role="1dT_Ay">
+            <property role="1dT_AB" value="We apply three filter criteria:" />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="5JFAvevaPD8" role="TZ5H$">
+          <node concept="1dT_AC" id="5JFAvevaPD9" role="1dT_Ay">
+            <property role="1dT_AB" value="1. The environment variable key must contain a keyword specified in the PROPERTY_KEYWORDS list" />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="5JFAvevaPDa" role="TZ5H$">
+          <node concept="1dT_AC" id="5JFAvevaPDb" role="1dT_Ay">
+            <property role="1dT_AB" value="2. The environment variable value must contain the name of a Kubernetes service. If there are several matches, the " />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="5JFAvevaPDc" role="TZ5H$">
+          <node concept="1dT_AC" id="5JFAvevaPDd" role="1dT_Ay">
+            <property role="1dT_AB" value="longest match is chosen, as there may be service names embedded in the names of other service names" />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="5JFAvevaPDe" role="TZ5H$">
+          <node concept="1dT_AC" id="5JFAvevaPDf" role="1dT_Ay">
+            <property role="1dT_AB" value=" (e.g., &quot;my-service&quot; and &quot;my-service-db&quot;)" />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="5JFAvevaPDg" role="TZ5H$">
+          <node concept="1dT_AC" id="5JFAvevaPDh" role="1dT_Ay">
+            <property role="1dT_AB" value="3. Filter out duplicate matches" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="5JFAvewKEfA" role="jymVt" />
+    <node concept="2tJIrI" id="5JFAvewTacu" role="jymVt" />
+    <node concept="2YIFZL" id="5JFAvewKFpJ" role="jymVt">
+      <property role="TrG5h" value="findEnvironmentVariablesInExistingModelWithRelationReferences" />
+      <node concept="37vLTG" id="5JFAvewKFZB" role="3clF46">
+        <property role="TrG5h" value="genContext" />
+        <node concept="1iwH7U" id="5JFAvewKFZC" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="5JFAvewKG3$" role="3clF46">
+        <property role="TrG5h" value="match" />
+        <node concept="3Tqbb2" id="5JFAvewKG7z" role="1tU5fm">
+          <ref role="ehGHo" to="4abx:3p0Gq6VdP_s" resolve="MatchingServiceAndDeployment" />
+        </node>
+      </node>
+      <node concept="3clFbS" id="5JFAvewKFpM" role="3clF47">
+        <node concept="3cpWs8" id="5JFAvewKGjA" role="3cqZAp">
+          <node concept="3cpWsn" id="5JFAvewKGjB" role="3cpWs9">
+            <property role="TrG5h" value="existingKubernetesDeploymentModel" />
+            <node concept="3Tqbb2" id="5JFAvewKGjC" role="1tU5fm">
+              <ref role="ehGHo" to="4abx:4wLeArqywgg" resolve="KubernetesDeploymentModel" />
+            </node>
+            <node concept="2OqwBi" id="5JFAvewKGjD" role="33vP2m">
+              <node concept="2OqwBi" id="5JFAvewKGjE" role="2Oq$k0">
+                <node concept="2OqwBi" id="5JFAvewKGjF" role="2Oq$k0">
+                  <node concept="2OqwBi" id="5JFAvewKGjG" role="2Oq$k0">
+                    <node concept="37vLTw" id="5JFAvewKGjH" role="2Oq$k0">
+                      <ref role="3cqZAo" node="5JFAvewKFZB" resolve="genContext" />
+                    </node>
+                    <node concept="1r8y6K" id="5JFAvewKGjI" role="2OqNvi" />
+                  </node>
+                  <node concept="2RRcyG" id="5JFAvewKGjJ" role="2OqNvi">
+                    <node concept="chp4Y" id="5JFAvewKGjK" role="3MHsoP">
+                      <ref role="cht4Q" to="4abx:4wLeArqywgg" resolve="KubernetesDeploymentModel" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="3zZkjj" id="5JFAvewKGjL" role="2OqNvi">
+                  <node concept="1bVj0M" id="5JFAvewKGjM" role="23t8la">
+                    <node concept="3clFbS" id="5JFAvewKGjN" role="1bW5cS">
+                      <node concept="3clFbF" id="5JFAvewKGjO" role="3cqZAp">
+                        <node concept="2OqwBi" id="5JFAvewKGjP" role="3clFbG">
+                          <node concept="2OqwBi" id="5JFAvewKGjQ" role="2Oq$k0">
+                            <node concept="37vLTw" id="5JFAvewKGjR" role="2Oq$k0">
+                              <ref role="3cqZAo" node="5JFAvewKGjU" resolve="it" />
+                            </node>
+                            <node concept="3Tsc0h" id="5JFAvewKGjS" role="2OqNvi">
+                              <ref role="3TtcxE" to="tpck:4uZwTti3__2" resolve="smodelAttribute" />
+                            </node>
+                          </node>
+                          <node concept="3GX2aA" id="5JFAvewKGjT" role="2OqNvi" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="Rh6nW" id="5JFAvewKGjU" role="1bW2Oz">
+                      <property role="TrG5h" value="it" />
+                      <node concept="2jxLKc" id="5JFAvewKGjV" role="1tU5fm" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="1uHKPH" id="5JFAvewKGjW" role="2OqNvi" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="5JFAvewKGAY" role="3cqZAp">
+          <node concept="3cpWsn" id="5JFAvewKGAZ" role="3cpWs9">
+            <property role="TrG5h" value="foundEnvironmentVariables" />
+            <node concept="2I9FWS" id="5JFAvewKGB0" role="1tU5fm">
+              <ref role="2I9WkF" to="4abx:4wLeArqut0w" resolve="EnvironmentVariable" />
+            </node>
+            <node concept="2ShNRf" id="5JFAvewKGB1" role="33vP2m">
+              <node concept="2T8Vx0" id="5JFAvewKGB2" role="2ShVmc">
+                <node concept="2I9FWS" id="5JFAvewKGB3" role="2T96Bj">
+                  <ref role="2I9WkF" to="4abx:4wLeArqut0w" resolve="EnvironmentVariable" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2Gpval" id="5JFAvewKJNk" role="3cqZAp">
+          <node concept="2GrKxI" id="5JFAvewKJNl" role="2Gsz3X">
+            <property role="TrG5h" value="envVar" />
+          </node>
+          <node concept="2OqwBi" id="5JFAvewKJNm" role="2GsD0m">
+            <node concept="2OqwBi" id="5JFAvewKWzq" role="2Oq$k0">
+              <node concept="2OqwBi" id="5JFAvewKUD0" role="2Oq$k0">
+                <node concept="2OqwBi" id="5JFAvewKPY9" role="2Oq$k0">
+                  <node concept="2OqwBi" id="5JFAvewKN1d" role="2Oq$k0">
+                    <node concept="37vLTw" id="5JFAvewKJNn" role="2Oq$k0">
+                      <ref role="3cqZAo" node="5JFAvewKGjB" resolve="existingKubernetesDeploymentModel" />
+                    </node>
+                    <node concept="3Tsc0h" id="5JFAvewKNUR" role="2OqNvi">
+                      <ref role="3TtcxE" to="4abx:4wLeArqywgh" resolve="deployments" />
+                    </node>
+                  </node>
+                  <node concept="13MTOL" id="5JFAvewKTnp" role="2OqNvi">
+                    <ref role="13MTZf" to="4abx:3DZQwZqzigT" resolve="pods" />
+                  </node>
+                </node>
+                <node concept="13MTOL" id="5JFAvewKV_o" role="2OqNvi">
+                  <ref role="13MTZf" to="4abx:18v7dxm$K4I" resolve="containers" />
+                </node>
+              </node>
+              <node concept="13MTOL" id="5JFAvewKXKX" role="2OqNvi">
+                <ref role="13MTZf" to="4abx:4wLeArqut0C" resolve="environmentVariables" />
+              </node>
+            </node>
+            <node concept="3zZkjj" id="5JFAvewKJNo" role="2OqNvi">
+              <node concept="1bVj0M" id="5JFAvewKJNp" role="23t8la">
+                <node concept="3clFbS" id="5JFAvewKJNq" role="1bW5cS">
+                  <node concept="3clFbF" id="5JFAvewKJNr" role="3cqZAp">
+                    <node concept="2OqwBi" id="5JFAvewKJNs" role="3clFbG">
+                      <node concept="37vLTw" id="5JFAvewKJOW" role="2Oq$k0">
+                        <ref role="3cqZAo" node="6ziswUw2Kho" resolve="PROPERTY_KEYWORDS" />
+                      </node>
+                      <node concept="2HwmR7" id="5JFAvewKJNt" role="2OqNvi">
+                        <node concept="1bVj0M" id="5JFAvewKJNu" role="23t8la">
+                          <node concept="3clFbS" id="5JFAvewKJNv" role="1bW5cS">
+                            <node concept="3clFbF" id="5JFAvewKJNw" role="3cqZAp">
+                              <node concept="2OqwBi" id="5JFAvewKJNx" role="3clFbG">
+                                <node concept="2OqwBi" id="5JFAvewKJNy" role="2Oq$k0">
+                                  <node concept="2OqwBi" id="5JFAvewKJNz" role="2Oq$k0">
+                                    <node concept="37vLTw" id="5JFAvewKJN$" role="2Oq$k0">
+                                      <ref role="3cqZAo" node="5JFAvewKJNF" resolve="envVar" />
+                                    </node>
+                                    <node concept="3TrcHB" id="5JFAvewKJN_" role="2OqNvi">
+                                      <ref role="3TsBF5" to="4abx:4wLeArqut0x" resolve="key" />
+                                    </node>
+                                  </node>
+                                  <node concept="liA8E" id="5JFAvewKJNA" role="2OqNvi">
+                                    <ref role="37wK5l" to="wyt6:~String.toLowerCase()" resolve="toLowerCase" />
+                                  </node>
+                                </node>
+                                <node concept="liA8E" id="5JFAvewKJNB" role="2OqNvi">
+                                  <ref role="37wK5l" to="wyt6:~String.contains(java.lang.CharSequence)" resolve="contains" />
+                                  <node concept="37vLTw" id="5JFAvewKJNC" role="37wK5m">
+                                    <ref role="3cqZAo" node="5JFAvewKJND" resolve="it" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="Rh6nW" id="5JFAvewKJND" role="1bW2Oz">
+                            <property role="TrG5h" value="it" />
+                            <node concept="2jxLKc" id="5JFAvewKJNE" role="1tU5fm" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="Rh6nW" id="5JFAvewKJNF" role="1bW2Oz">
+                  <property role="TrG5h" value="envVar" />
+                  <node concept="2jxLKc" id="5JFAvewKJNG" role="1tU5fm" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbS" id="5JFAvewKJNH" role="2LFqv$">
+            <node concept="3clFbJ" id="5JFAvewKJOm" role="3cqZAp">
+              <node concept="3clFbS" id="5JFAvewKJOn" role="3clFbx">
+                <node concept="3clFbF" id="5JFAvewKJOo" role="3cqZAp">
+                  <node concept="2OqwBi" id="5JFAvewKJOp" role="3clFbG">
+                    <node concept="37vLTw" id="5JFAvewKJOq" role="2Oq$k0">
+                      <ref role="3cqZAo" node="5JFAvewKGAZ" resolve="foundEnvironmentVariables" />
+                    </node>
+                    <node concept="TSZUe" id="5JFAvewKJOr" role="2OqNvi">
+                      <node concept="2GrUjf" id="5JFAvewKJOs" role="25WWJ7">
+                        <ref role="2Gs0qQ" node="5JFAvewKJNl" resolve="envVar" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="5JFAvewL6yH" role="3clFbw">
+                <node concept="2OqwBi" id="5JFAvewL4Gh" role="2Oq$k0">
+                  <node concept="2OqwBi" id="5JFAvewL1IN" role="2Oq$k0">
+                    <node concept="2GrUjf" id="5JFAvewL1uh" role="2Oq$k0">
+                      <ref role="2Gs0qQ" node="5JFAvewKJNl" resolve="envVar" />
+                    </node>
+                    <node concept="3TrcHB" id="5JFAvewL3ru" role="2OqNvi">
+                      <ref role="3TsBF5" to="4abx:4wLeArqut0z" resolve="value" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="5JFAvewL5Lu" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~String.toString()" resolve="toString" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="5JFAvewL8DV" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~String.contains(java.lang.CharSequence)" resolve="contains" />
+                  <node concept="2OqwBi" id="5JFAvewLbr1" role="37wK5m">
+                    <node concept="2OqwBi" id="5JFAvewLa5o" role="2Oq$k0">
+                      <node concept="37vLTw" id="5JFAvewL9o2" role="2Oq$k0">
+                        <ref role="3cqZAo" node="5JFAvewKG3$" resolve="match" />
+                      </node>
+                      <node concept="3TrEf2" id="5JFAvewLaQn" role="2OqNvi">
+                        <ref role="3Tt5mk" to="4abx:3p0Gq6VggFc" resolve="service" />
+                      </node>
+                    </node>
+                    <node concept="3TrcHB" id="5JFAvewLce4" role="2OqNvi">
+                      <ref role="3TsBF5" to="4abx:4wLeArquw2N" resolve="name" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="5JFAvewKGV_" role="3cqZAp">
+          <node concept="37vLTw" id="5JFAvewKH2Q" role="3cqZAk">
+            <ref role="3cqZAo" node="5JFAvewKGAZ" resolve="foundEnvironmentVariables" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="5JFAvewKEPO" role="1B3o_S" />
+      <node concept="2I9FWS" id="5JFAvewKFWa" role="3clF45">
+        <ref role="2I9WkF" to="4abx:4wLeArqut0w" resolve="EnvironmentVariable" />
+      </node>
+      <node concept="P$JXv" id="5JFAvewTaY3" role="lGtFl">
+        <node concept="TZ5HA" id="5JFAvewTaY4" role="TZ5H$">
+          <node concept="1dT_AC" id="5JFAvewTaY5" role="1dT_Ay">
+            <property role="1dT_AB" value="Search the Kubernetes Model from previous transformation process for environment variable references to the " />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="5JFAvewTby$" role="TZ5H$">
+          <node concept="1dT_AC" id="5JFAvewTby_" role="1dT_Ay">
+            <property role="1dT_AB" value="Deployment in the given match." />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="5JFAvewTc1h" role="TZ5H$">
+          <node concept="1dT_AC" id="5JFAvewTc1i" role="1dT_Ay">
+            <property role="1dT_AB" value="We apply two filter criteria:" />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="5JFAvewTc1j" role="TZ5H$">
+          <node concept="1dT_AC" id="5JFAvewTc1k" role="1dT_Ay">
+            <property role="1dT_AB" value="1. The environment variable key must contain a keyword specified in the PROPERTY_KEYWORDS list" />
+          </node>
+        </node>
+        <node concept="TZ5HA" id="5JFAvewTc1l" role="TZ5H$">
+          <node concept="1dT_AC" id="5JFAvewTc1m" role="1dT_Ay">
+            <property role="1dT_AB" value="2. The environment variable value must contain the name of the Kubernetes service in the match" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="5JFAvevaPnv" role="jymVt" />
     <node concept="3Tm1VV" id="4uFYHMEImBK" role="1B3o_S" />
   </node>
 </model>

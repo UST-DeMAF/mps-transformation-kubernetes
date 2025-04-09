@@ -140,6 +140,83 @@
             <confidence>SUSPECTED</confidence>
             <confirmed>false</confirmed>
         </components>
+        <components>
+            <id>ac4396af-f68a-46f7-a6ee-479c2b1f9d63</id>
+            <name>dummyExistingDeployment</name>
+            <description />
+            <properties>
+                <properties>
+                    <key>containerPort</key>
+                    <type>INTEGER</type>
+                    <required>false</required>
+                    <value>8080</value>
+                    <confidence>CONFIRMED</confidence>
+                </properties>
+                <properties>
+                    <key>dummyEnv</key>
+                    <type>STRING</type>
+                    <required>false</required>
+                    <value>dummyEnvVal</value>
+                    <confidence>CONFIRMED</confidence>
+                </properties>
+                <properties>
+                    <key>exposedPort_defaultPort</key>
+                    <type>STRING</type>
+                    <required>false</required>
+                    <value>80:8080</value>
+                    <confidence>CONFIRMED</confidence>
+                </properties>
+            </properties>
+            <operations />
+            <type>
+                <id>d05803b9-5f87-45c1-95fa-b3a7a3f3u8a2</id>
+                <name>dummyExistingDeploymentType</name>
+                <description />
+                <properties>
+                    <properties>
+                        <key>containerPort</key>
+                        <type>INTEGER</type>
+                        <required>false</required>
+                        <value>8080</value>
+                        <confidence>CONFIRMED</confidence>
+                    </properties>
+                    <properties>
+                        <key>dummyEnv</key>
+                        <type>STRING</type>
+                        <required>false</required>
+                        <value>dummyEnvVal</value>
+                        <confidence>CONFIRMED</confidence>
+                    </properties>
+                    <properties>
+                        <key>exposedPort_defaultPort</key>
+                        <type>STRING</type>
+                        <required>false</required>
+                        <value>80:8080</value>
+                        <confidence>CONFIRMED</confidence>
+                    </properties>
+                </properties>
+                <operations />
+                <parentType>
+                    <id>f8c33dc1-c0d6-435b-a8c0-cb84c0454161</id>
+                    <name>BaseType</name>
+                    <description />
+                    <properties />
+                    <operations />
+                    <parentType />
+                </parentType>
+            </type>
+            <artifacts>
+                <artifacts>
+                    <name>dummyRepo/dummyExistingDeployment:main</name>
+                    <type>docker_image</type>
+                    <fileURI />
+                    <confidence>SUSPECTED</confidence>
+                    <confirmed>false</confirmed>
+                </artifacts>
+            </artifacts>
+            <confidence>SUSPECTED</confidence>
+            <confirmed>false</confirmed>
+        </components>
     </components>
     <relations>
         <relations>
@@ -374,6 +451,43 @@
                     <type>STRING</type>
                     <required>false</required>
                     <value>https://dummyService:80</value>
+                    <confidence>CONFIRMED</confidence>
+                </properties>
+            </properties>
+            <operations />
+            <parentType>
+                <id>f8c33dc1-c0d6-435b-a8c0-cb84c0454161</id>
+                <name>BaseType</name>
+                <description />
+                <properties />
+                <operations />
+                <parentType />
+            </parentType>
+        </componentTypes>
+        <componentTypes>
+            <id>d05803b9-5f87-45c1-95fa-b3a7a3f3u8a2</id>
+            <name>dummyExistingDeploymentType</name>
+            <description />
+            <properties>
+                <properties>
+                    <key>containerPort</key>
+                    <type>INTEGER</type>
+                    <required>false</required>
+                    <value>8080</value>
+                    <confidence>CONFIRMED</confidence>
+                </properties>
+                <properties>
+                    <key>dummyEnv</key>
+                    <type>STRING</type>
+                    <required>false</required>
+                    <value>dummyEnvVal</value>
+                    <confidence>CONFIRMED</confidence>
+                </properties>
+                <properties>
+                    <key>exposedPort_defaultPort</key>
+                    <type>STRING</type>
+                    <required>false</required>
+                    <value>80:8080</value>
                     <confidence>CONFIRMED</confidence>
                 </properties>
             </properties>

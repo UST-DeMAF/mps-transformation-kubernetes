@@ -141,6 +141,7 @@
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c(EDMM)" kind="cl" />
           <module ref="ddc037a1-a551-4922-9271-aa3b6cf83a39(Kubernetes)" kind="cl" />
+          <module ref="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c:EDMM" />

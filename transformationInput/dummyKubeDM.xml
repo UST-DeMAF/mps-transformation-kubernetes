@@ -12,6 +12,12 @@
                     <value>dummyApp</value>
                 </labels>
             </labels>
+            <selectorMatchLabels>
+                <selectorMatchLabels>
+                    <key>app</key>
+                    <value>dummyApp</value>
+                </selectorMatchLabels>
+            </selectorMatchLabels>
             <podSpecs>
                 <podSpecs>
                     <hostname>testPod</hostname>
@@ -34,6 +40,10 @@
                                 <environmentVariables>
                                     <key>dummyEnv</key>
                                     <value>dummyEnvVal</value>
+                                </environmentVariables>
+                                <environmentVariables>
+                                    <key>dummyExistingDeploymentEndpoint</key>
+                                    <value>dummyExistingDeploymentService:8080</value>
                                 </environmentVariables>
                             </environmentVariables>
                             <volumeMounts>
@@ -72,6 +82,7 @@
                     <value>dummyApp</value>
                 </labels>
             </labels>
+            <selectorMatchLabels/>
             <podSpecs>
                 <podSpecs>
                     <hostname>testPod</hostname>
@@ -94,6 +105,10 @@
                                 <environmentVariables>
                                     <key>dummyEnv</key>
                                     <value>dummyEnvVal</value>
+                                </environmentVariables>
+                                <environmentVariables>
+                                    <key>url</key>
+                                    <value>dummyService</value>
                                 </environmentVariables>
                             </environmentVariables>
                             <volumeMounts>

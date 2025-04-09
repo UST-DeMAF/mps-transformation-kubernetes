@@ -27,6 +27,7 @@
       <dependencies>
         <dependency reexport="false">f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c(EDMM)</dependency>
         <dependency reexport="false">ddc037a1-a551-4922-9271-aa3b6cf83a39(Kubernetes)</dependency>
+        <dependency reexport="false">ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)</dependency>
       </dependencies>
       <languageVersions>
         <language slang="l:f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c:EDMM" version="0" />

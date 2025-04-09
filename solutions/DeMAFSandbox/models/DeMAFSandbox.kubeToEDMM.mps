@@ -120,8 +120,23 @@
         <property role="2iiNE$" value="xService" />
       </node>
     </node>
+    <node concept="2iiNFk" id="4uFYHMEBiuG" role="2iINTP">
+      <property role="2iiNFl" value="serviceForXStorage" />
+      <node concept="2iiNFj" id="4uFYHMEBiuH" role="2iiNEz">
+        <property role="2iiNFu" value="5666" />
+        <property role="2iiNFt" value="123" />
+      </node>
+      <node concept="2iiNFp" id="4uFYHMEBiuI" role="2iiNEx">
+        <property role="2iiNEA" value="storageTest2" />
+        <property role="2iiNE$" value="storageTest2" />
+      </node>
+    </node>
     <node concept="2iiq7J" id="2a6zCQLu9lD" role="2iINTR">
       <property role="2iieDA" value="storageTest2" />
+      <node concept="2iieDz" id="4uFYHMEBiv2" role="SM5eq">
+        <property role="2iieDw" value="storageTest2" />
+        <property role="2iieDI" value="storageTest2" />
+      </node>
       <node concept="2iieDz" id="2a6zCQLu9lE" role="2iieDH" />
       <node concept="14zviF" id="2a6zCQLu9lF" role="3wWJSQ">
         <node concept="2iieDQ" id="2a6zCQLu9lG" role="14z1RQ">
@@ -146,8 +161,12 @@
           <property role="2iieDR" value="storageTestContainer" />
           <property role="2iieDP" value="storage:1.22" />
           <node concept="2iieD6" id="6ziswUwaLM5" role="2iieDe">
-            <property role="2iieD5" value="http://serviceForX:123" />
+            <property role="2iieD5" value="http://serviceForXStorage:123" />
             <property role="2iieD7" value="storageconnection" />
+          </node>
+          <node concept="2iieD6" id="4uFYHMEBjXR" role="2iieDe">
+            <property role="2iieD7" value="host" />
+            <property role="2iieD5" value="serviceForXStorage" />
           </node>
           <node concept="1wMHEX" id="57VPsWd_2Aj" role="1wM_f6">
             <property role="1wMHEY" value="storageTest-storage" />

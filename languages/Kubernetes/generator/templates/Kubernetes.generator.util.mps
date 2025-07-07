@@ -180,6 +180,12 @@
       <concept id="1216860049633" name="jetbrains.mps.lang.generator.generationContext.structure.GenerationContextType" flags="in" index="1iwH7U" />
       <concept id="1217004708011" name="jetbrains.mps.lang.generator.generationContext.structure.GenerationContextOp_GetInputModel" flags="nn" index="1r8y6K" />
     </language>
+    <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
+      <concept id="6332851714983831325" name="jetbrains.mps.baseLanguage.logging.structure.MsgStatement" flags="ng" index="2xdQw9">
+        <property id="6332851714983843871" name="severity" index="2xdLsb" />
+        <child id="5721587534047265374" name="message" index="9lYJi" />
+      </concept>
+    </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
       <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
         <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
@@ -8956,6 +8962,27 @@
                     </node>
                   </node>
                 </node>
+                <node concept="3clFbJ" id="3fxf0dvfOs" role="3cqZAp">
+                  <node concept="3clFbS" id="3fxf0dvfOu" role="3clFbx">
+                    <node concept="3cpWs6" id="3fxf0dvx41" role="3cqZAp" />
+                  </node>
+                  <node concept="1Wc70l" id="3fxf0dvl8m" role="3clFbw">
+                    <node concept="2OqwBi" id="3fxf0dvig0" role="3uHU7B">
+                      <node concept="37vLTw" id="3fxf0dvh$s" role="2Oq$k0">
+                        <ref role="3cqZAo" node="6ziswUvL0Vc" resolve="matchedExistingComponent" />
+                      </node>
+                      <node concept="3x8VRR" id="3fxf0dvjIz" role="2OqNvi" />
+                    </node>
+                    <node concept="3clFbC" id="3fxf0dvtLr" role="3uHU7w">
+                      <node concept="37vLTw" id="3fxf0dvvfI" role="3uHU7w">
+                        <ref role="3cqZAo" node="6ziswUvL0Vc" resolve="matchedExistingComponent" />
+                      </node>
+                      <node concept="2GrUjf" id="3fxf0dvpys" role="3uHU7B">
+                        <ref role="2Gs0qQ" node="6ziswUvKK37" resolve="newComponent" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
                 <node concept="3clFbJ" id="6ziswUvL6LG" role="3cqZAp">
                   <node concept="3clFbS" id="6ziswUvL6LI" role="3clFbx">
                     <node concept="3clFbF" id="6ziswUvMtLA" role="3cqZAp">
@@ -11233,6 +11260,17 @@
     <node concept="2YIFZL" id="7L785AC$sps" role="jymVt">
       <property role="TrG5h" value="mergeWithExistingKubernetesDeploymentComponent" />
       <node concept="3clFbS" id="7L785AC$spv" role="3clF47">
+        <node concept="2xdQw9" id="3fxf0cVVMw" role="3cqZAp">
+          <property role="2xdLsb" value="h1akgim/info" />
+          <node concept="3cpWs3" id="3fxf0cVVMx" role="9lYJi">
+            <node concept="37vLTw" id="3fxf0cVVMy" role="3uHU7w">
+              <ref role="3cqZAo" node="7L785AC$zTO" resolve="newComponent" />
+            </node>
+            <node concept="Xl_RD" id="3fxf0cVVMz" role="3uHU7B">
+              <property role="Xl_RC" value="kube for " />
+            </node>
+          </node>
+        </node>
         <node concept="3cpWs8" id="7L785AC$TVF" role="3cqZAp">
           <node concept="3cpWsn" id="7L785AC$TVI" role="3cpWs9">
             <property role="TrG5h" value="existingKubeDeploymentComponent" />
@@ -11526,29 +11564,29 @@
                 </node>
               </node>
             </node>
+            <node concept="3clFbF" id="7L785ACEQDQ" role="3cqZAp">
+              <node concept="2OqwBi" id="7L785ACAjL_" role="3clFbG">
+                <node concept="2OqwBi" id="7L785ACAjLA" role="2Oq$k0">
+                  <node concept="37vLTw" id="7L785ACAjLB" role="2Oq$k0">
+                    <ref role="3cqZAo" node="7L785AC$zTQ" resolve="existingTADM" />
+                  </node>
+                  <node concept="3Tsc0h" id="7L785ACAjLC" role="2OqNvi">
+                    <ref role="3TtcxE" to="9rr7:2hvaCGv18HZ" resolve="modelEntities" />
+                  </node>
+                </node>
+                <node concept="TSZUe" id="7L785ACAjLD" role="2OqNvi">
+                  <node concept="37vLTw" id="7L785ACAl0G" role="25WWJ7">
+                    <ref role="3cqZAo" node="7L785AC$zTO" resolve="newComponent" />
+                  </node>
+                </node>
+              </node>
+            </node>
           </node>
           <node concept="2OqwBi" id="7L785ACAeWg" role="3clFbw">
             <node concept="37vLTw" id="7L785ACAdMz" role="2Oq$k0">
               <ref role="3cqZAo" node="7L785AC$TVI" resolve="existingKubeDeploymentComponent" />
             </node>
             <node concept="3x8VRR" id="7L785ACAg5s" role="2OqNvi" />
-          </node>
-        </node>
-        <node concept="3clFbF" id="7L785ACEQDQ" role="3cqZAp">
-          <node concept="2OqwBi" id="7L785ACAjL_" role="3clFbG">
-            <node concept="2OqwBi" id="7L785ACAjLA" role="2Oq$k0">
-              <node concept="37vLTw" id="7L785ACAjLB" role="2Oq$k0">
-                <ref role="3cqZAo" node="7L785AC$zTQ" resolve="existingTADM" />
-              </node>
-              <node concept="3Tsc0h" id="7L785ACAjLC" role="2OqNvi">
-                <ref role="3TtcxE" to="9rr7:2hvaCGv18HZ" resolve="modelEntities" />
-              </node>
-            </node>
-            <node concept="TSZUe" id="7L785ACAjLD" role="2OqNvi">
-              <node concept="37vLTw" id="7L785ACAl0G" role="25WWJ7">
-                <ref role="3cqZAo" node="7L785AC$zTO" resolve="newComponent" />
-              </node>
-            </node>
           </node>
         </node>
       </node>
@@ -11785,29 +11823,29 @@
                 </node>
               </node>
             </node>
+            <node concept="3clFbF" id="7L785ADCUJV" role="3cqZAp">
+              <node concept="2OqwBi" id="7L785ADCUJW" role="3clFbG">
+                <node concept="2OqwBi" id="7L785ADCUJX" role="2Oq$k0">
+                  <node concept="37vLTw" id="7L785ADCUJY" role="2Oq$k0">
+                    <ref role="3cqZAo" node="7L785ADCUK6" resolve="existingTADM" />
+                  </node>
+                  <node concept="3Tsc0h" id="7L785ADCUJZ" role="2OqNvi">
+                    <ref role="3TtcxE" to="9rr7:2hvaCGv18HZ" resolve="modelEntities" />
+                  </node>
+                </node>
+                <node concept="TSZUe" id="7L785ADCUK0" role="2OqNvi">
+                  <node concept="37vLTw" id="7L785ADCUK1" role="25WWJ7">
+                    <ref role="3cqZAo" node="7L785ADCUK4" resolve="newComponent" />
+                  </node>
+                </node>
+              </node>
+            </node>
           </node>
           <node concept="2OqwBi" id="7L785ADCUJS" role="3clFbw">
             <node concept="37vLTw" id="7L785ADCUJT" role="2Oq$k0">
               <ref role="3cqZAo" node="7L785ADCUHZ" resolve="existingKubeDeploymentComponent" />
             </node>
             <node concept="3x8VRR" id="7L785ADCUJU" role="2OqNvi" />
-          </node>
-        </node>
-        <node concept="3clFbF" id="7L785ADCUJV" role="3cqZAp">
-          <node concept="2OqwBi" id="7L785ADCUJW" role="3clFbG">
-            <node concept="2OqwBi" id="7L785ADCUJX" role="2Oq$k0">
-              <node concept="37vLTw" id="7L785ADCUJY" role="2Oq$k0">
-                <ref role="3cqZAo" node="7L785ADCUK6" resolve="existingTADM" />
-              </node>
-              <node concept="3Tsc0h" id="7L785ADCUJZ" role="2OqNvi">
-                <ref role="3TtcxE" to="9rr7:2hvaCGv18HZ" resolve="modelEntities" />
-              </node>
-            </node>
-            <node concept="TSZUe" id="7L785ADCUK0" role="2OqNvi">
-              <node concept="37vLTw" id="7L785ADCUK1" role="25WWJ7">
-                <ref role="3cqZAo" node="7L785ADCUK4" resolve="newComponent" />
-              </node>
-            </node>
           </node>
         </node>
       </node>

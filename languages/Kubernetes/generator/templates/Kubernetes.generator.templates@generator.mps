@@ -2259,10 +2259,32 @@
         <node concept="3zFVjK" id="3p0Gq6VcEov" role="3zH0cK">
           <node concept="3clFbS" id="3p0Gq6VcEow" role="2VODD2">
             <node concept="3clFbF" id="3p0Gq6VcEpz" role="3cqZAp">
-              <node concept="2OqwBi" id="3p0Gq6VcE_d" role="3clFbG">
-                <node concept="30H73N" id="3p0Gq6VcEpy" role="2Oq$k0" />
-                <node concept="3TrcHB" id="3p0Gq6VcEGL" role="2OqNvi">
-                  <ref role="3TsBF5" to="4abx:4wLeArqut0z" resolve="value" />
+              <node concept="2OqwBi" id="7OeBfeRqZ$r" role="3clFbG">
+                <node concept="2OqwBi" id="7OeBfeRqXAD" role="2Oq$k0">
+                  <node concept="2OqwBi" id="3p0Gq6VcE_d" role="2Oq$k0">
+                    <node concept="30H73N" id="3p0Gq6VcEpy" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="3p0Gq6VcEGL" role="2OqNvi">
+                      <ref role="3TsBF5" to="4abx:4wLeArqut0z" resolve="value" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="7OeBfeRqYs5" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~String.replaceAll(java.lang.String,java.lang.String)" resolve="replaceAll" />
+                    <node concept="Xl_RD" id="7OeBfeRqYzc" role="37wK5m">
+                      <property role="Xl_RC" value="^'" />
+                    </node>
+                    <node concept="Xl_RD" id="7OeBfeRqZ9u" role="37wK5m">
+                      <property role="Xl_RC" value="\&quot;" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="7OeBfeRr0Is" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~String.replaceAll(java.lang.String,java.lang.String)" resolve="replaceAll" />
+                  <node concept="Xl_RD" id="7OeBfeRr0KX" role="37wK5m">
+                    <property role="Xl_RC" value="'$" />
+                  </node>
+                  <node concept="Xl_RD" id="7OeBfeRr0Ru" role="37wK5m">
+                    <property role="Xl_RC" value="\&quot;" />
+                  </node>
                 </node>
               </node>
             </node>

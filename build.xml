@@ -277,7 +277,6 @@
       <module namespace="DeMAFSandbox" type="solution" uuid="2e78df07-0ac0-4aec-8fe4-49e5ef4ce562">
         <dependencies />
         <uses>
-          <language id="l:f14a2376-c0aa-410c-b33a-ef6b7f4e7a0c:EDMM" />
           <language id="l:ddc037a1-a551-4922-9271-aa3b6cf83a39:Kubernetes" />
         </uses>
         <classpath>

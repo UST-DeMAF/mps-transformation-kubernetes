@@ -69,7 +69,7 @@
           <lesser-priority-mapping>
             <generator generatorUID="8a72f140-e092-4130-a870-cd3b05159b5f(Kubernetes.generator)" />
             <external-mapping>
-              <mapping-node modelUID="r:4843e833-b6b8-4441-9f07-c3cf6d5dd864(Kubernetes.generator.templates@generator)" nodeID="3361841065597160560" />
+              <mapping-node modelUID="r:4843e833-b6b8-4441-9f07-c3cf6d5dd864(Kubernetes.generator.templates@generator)" nodeID="5202003258016045960" />
             </external-mapping>
           </lesser-priority-mapping>
         </mapping-priority-rule>
